@@ -16,14 +16,6 @@ func _ready() -> void:
 	if DoorAnchor:
 		ClosedRotation = DoorAnchor.rotation_degrees.y
 
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
-
-func _on_area_3d_body_entered(body: Node3D) -> void:
-	print("Overlap detected!")
-
 func interact() -> void:
 	if IsOpen:
 		close_door()
@@ -52,6 +44,5 @@ func close_door() -> void:
 	)
 
 
-func _on_area_3d_interacted(body: Variant) -> void:
+func _on_area_3d_interacted() -> void:
 	interact()
-	print("Interacted with door")

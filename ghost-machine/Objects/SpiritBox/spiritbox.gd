@@ -17,7 +17,6 @@ func _process(delta: float) -> void:
 func pickup(slot: Node):
 	_original_parent = get_parent()
 	collision_shape.disabled = true  
-	print(position)
 	position = Vector3.ZERO
 	rotation = Vector3.ZERO
 
