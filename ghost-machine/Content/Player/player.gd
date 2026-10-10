@@ -3,7 +3,7 @@ class_name Player extends CharacterBody3D
 @export var sensitivity := 0.002
 @export var cam: Camera3D
 
-@export var hand_slot: BoneAttachment3D
+@export var hand_slot: Node3D
 @export var pickup_area: Area3D
 
 const SPEED = 5.0
@@ -27,7 +27,6 @@ func _unhandled_input(event: InputEvent) -> void:
 		cam.rotation.x = clamp(cam.rotation.x, -1.5, 1.5)
 	
 	if event.is_action_pressed("interact"):
-		print(held_item)
 		if held_item == null:
 			_try_pickup()
 		else:

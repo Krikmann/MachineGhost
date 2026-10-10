@@ -14,7 +14,7 @@ collision_layer = 2
 collision_mask = 65535
 script = ExtResource("1_thq5r")
 cam = NodePath("Camera3D")
-hand_slot = NodePath("Camera3D/Skeleton3D/BoneAttachment3D")
+hand_slot = NodePath("Camera3D/Node3D")
 pickup_area = NodePath("Area3D")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=336464480]
@@ -31,7 +31,8 @@ shape = SubResource("SphereShape3D_g4v7s")
 [node name="Camera3D" type="Camera3D" parent="." unique_id=1772030264]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.647, 0)
 
+[node name="Node3D" type="Node3D" parent="Camera3D" unique_id=92378537]
+
 [node name="Skeleton3D" type="Skeleton3D" parent="Camera3D" unique_id=871092802]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.6465173, 0.5467455)
 
 [node name="BoneAttachment3D" type="BoneAttachment3D" parent="Camera3D/Skeleton3D" unique_id=192659059]

@@ -16,8 +16,15 @@ func _process(delta: float) -> void:
 
 func pickup(slot: Node):
 	_original_parent = get_parent()
-	collision_shape.disabled = true   
-	reparent(slot, true)  # true = keep global transform (no snap)
+	collision_shape.disabled = true  
+	print(position)
+	position = Vector3.ZERO
+	rotation = Vector3.ZERO
+
+	position = Vector3(0.7,-0.5,-1)
+	rotation_degrees = Vector3(0, 90, 0)
+ 
+	reparent(slot, false)
 
 func drop():
 	collision_shape.disabled = false
