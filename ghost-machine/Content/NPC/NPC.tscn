@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://dq7owr1bk48yd"]
+
+[ext_resource type="PackedScene" uid="uid://bqhfyjiaw7vgl" path="res://Objects/Door/naaaber.glb" id="1_nrpu0"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_pbxjb"]
+radius = 0.64501953
+height = 3.8068848
+
+[node name="Npc" type="CharacterBody3D" unique_id=1202752648]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1703135286]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.484614, -0.45914134, -0.9139561)
+shape = SubResource("CapsuleShape3D_pbxjb")
+
+[node name="naaaber" parent="." unique_id=1386556994 instance=ExtResource("1_nrpu0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.3584174, 0, -1.0032063)

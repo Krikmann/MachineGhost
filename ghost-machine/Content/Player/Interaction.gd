@@ -7,7 +7,7 @@ var last_collider
 
 var CanInteractVar : String = "can_interact"
 
-func _physics_process(delta: float) -> void:
+func _physics_process(_delta: float) -> void:
 	if is_colliding():
 		collider = get_collider()
 		
