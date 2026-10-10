@@ -13,7 +13,6 @@ shader_parameter/Color = Color(0.321569, 0.321569, 0.321569, 1)
 shader_parameter/Speed = Vector2(0, 0.03)
 shader_parameter/Num_of_Lines = 120.0
 shader_parameter/Line_Thickness = -10.0
-shader_parameter/overlay_strength = 0.0
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_giwwx"]
 resource_name = "Material"
@@ -215,7 +214,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.65000004, 0)
 shape = SubResource("BoxShape3D_xakdj")
 
 [node name="Secret wash2" type="Node3D" parent="." unique_id=1993319414]
-transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
+transform = Transform3D(-2.1855694e-08, 0, 0.5, 0, 0.5, 0, -0.5, 0, -2.1855694e-08, 0, 0, 0)
 
 [node name="Secret wash" type="MeshInstance3D" parent="Secret wash2" unique_id=2135285177]
 material_overlay = SubResource("ShaderMaterial_xakdj")

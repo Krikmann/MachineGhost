@@ -1,5 +1,5 @@
 @tool
-extends Node3D
+class_name Door extends Node3D
 
 @export_tool_button("Door Open") var openginDoor = interact
 
@@ -71,7 +71,7 @@ func call_neighbour() -> void:
 	hide_text()
 
 func leave_neighbour() -> void:
-	get_parent_node_3d().get_node("AnimationPlayer").play("new_animation_2")
+	get_parent_node_3d().get_node("AnimationPlayer").play_backwards("new_animation")
 	hide_text()
 
 func hide_text() -> void:

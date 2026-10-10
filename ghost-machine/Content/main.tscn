@@ -2,14 +2,15 @@
 
 [ext_resource type="PackedScene" uid="uid://bdyq3s8it2vn6" path="res://Content/Menus/PauseMenu/pause_menu.tscn" id="1_nf1mn"]
 [ext_resource type="PackedScene" uid="uid://bh0f4pqhqta3q" path="res://Content/Player/player.tscn" id="1_u3q0n"]
-[ext_resource type="PackedScene" uid="uid://bnvylwcddx1jo" path="res://Content/Rooms/korrus.tscn" id="3_2jbd6"]
+[ext_resource type="PackedScene" uid="uid://dmc5qhj0om5id" path="res://Content/Rooms/i_korrus.tscn" id="3_bwj4m"]
+[ext_resource type="PackedScene" uid="uid://mfq6th4l64g0" path="res://Content/Rooms/ii_korrus.tscn" id="4_abdvo"]
 [ext_resource type="PackedScene" uid="uid://csdx6ivtf8pbs" path="res://Objects/SpiritBox/spiritbox.tscn" id="4_gpam4"]
 [ext_resource type="PackedScene" uid="uid://2bpyhwiiblkv" path="res://Content/Rooms/Lift/lift.tscn" id="5_r6sel"]
-[ext_resource type="PackedScene" uid="uid://c7pjas5aodici" path="res://Objects/Door/door.tscn" id="6_6j1t0"]
 [ext_resource type="PackedScene" uid="uid://cqon3a8htdjql" path="res://Content/Rooms/pesumaja.tscn" id="7_p3qnk"]
 [ext_resource type="Script" uid="uid://brs6mop14ddta" path="res://Content/ui.gd" id="8_blo7t"]
 [ext_resource type="PackedScene" uid="uid://kntd225lupx0" path="res://Content/Rooms/Room/room.tscn" id="9_yet4f"]
-[ext_resource type="PackedScene" uid="uid://hglr4thtvedg" path="res://Content/Rooms/FriendsRoom/friends_room.tscn" id="10_bwj4m"]
+[ext_resource type="PackedScene" uid="uid://c37eww03kyygc" path="res://Content/Rooms/iii_korrus.tscn" id="10_bwj4m"]
+[ext_resource type="PackedScene" uid="uid://hglr4thtvedg" path="res://Content/Rooms/FriendsRoom/friends_room.tscn" id="11_abdvo"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_u3q0n"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -21,12 +22,6 @@ sky_material = SubResource("ProceduralSkyMaterial_u3q0n")
 [sub_resource type="Environment" id="Environment_2jbd6"]
 background_mode = 2
 sky = SubResource("Sky_nf1mn")
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qtc24"]
-albedo_color = Color(0.6244328, 0.513414, 0.37405667, 1)
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6j1t0"]
-albedo_color = Color(0.43068385, 0.58958924, 0.6183514, 1)
 
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_6j1t0"]
 data = PackedVector3Array(-1.600001, -8.6, -1.75, -1.600001, -5.4, -1.75, -1.600001, -8.6, -2, -1.600001, -5.4, -1.75, -1.600001, -5.4, -2, -1.600001, -8.6, -2, -2, -9, -2, -1.600001, -8.6, -2, -2, 9, -2, -1.6, -2.6000004, -2, -1.6, 0.49999988, -2, -1.600001, -5.4, -2, -1.75, -8.75, -1.75, -1.75, 8.75, -1.75, -1.600001, -8.6, -1.75, -2, 9, -2, -1.600001, -8.6, -2, -1.600001, -5.4, -2, -1.6, -2.6000004, -1.75, -1.6, 0.49999988, -1.75, -1.6, -2.6000004, -2, -1.600001, -8.6, -1.75, -1.75, 8.75, -1.75, -1.600001, -5.4, -1.75, -1.600001, -5.4, -2, -1.6, 0.49999988, -2, -1.6, 3.4, -2, -1.6, 0.49999988, -1.75, -1.6, 0.49999988, -2, -1.6, -2.6000004, -2, -2, -9, -2, -2, 9, -2, -2, -9, 2, -1.75, -8.75, -1.75, -1.75, -8.75, 1.75, -1.75, 8.75, -1.75, -2, -9, -2, 1.5999991, -8.6, -2, -1.600001, -8.6, -2, -1.600001, -8.6, -1.75, -1.600001, -8.6, -2, 1.5999991, -8.6, -2, -1.75, -8.75, -1.75, -1.600001, -8.6, -1.75, 1.5999991, -8.6, -1.75, -1.600001, -5.4, -1.75, 1.5999991, -5.4, -1.75, -1.600001, -5.4, -2, -2, -9, -2, -2, -9, 2, 2, -9, -2, -1.75, -8.75, -1.75, 1.75, -8.75, -1.75, -1.75, -8.75, 1.75, -1.6, -2.6000004, -2, -1.600001, -5.4, -2, 1.6, -2.6000004, -2, -1.600001, -5.4, -1.75, -1.6, -2.6000004, -1.75, 1.6, -2.6000004, -1.75, -1.6, -2.6000004, -1.75, -1.6, -2.6000004, -2, 1.6, -2.6000004, -2, -1.600001, -5.4, -1.75, -1.75, 8.75, -1.75, -1.6, -2.6000004, -1.75, -1.6, -2.6000004, -1.75, -1.75, 8.75, -1.75, -1.6, 0.49999988, -1.75, -2, 9, -2, -1.600001, -5.4, -2, -1.6, 3.4, -2, -1.6, 3.4, -1.75, -1.6, 6.6, -1.75, -1.6, 3.4, -2, -1.6, 0.49999988, -1.75, -1.75, 8.75, -1.75, -1.6, 3.4, -1.75, -1.6, 6.6, -1.75, -1.6, 6.6, -2, -1.6, 3.4, -2, -2, 9, -2, -1.6, 3.4, -2, -1.6, 6.6, -2, -1.6, 3.4, -1.75, -1.75, 8.75, -1.75, -1.6, 6.6, -1.75, -1.6, 0.49999988, -1.75, 1.6, 0.49999988, -1.75, -1.6, 0.49999988, -2, -1.6, 3.4, -2, -1.6, 0.49999988, -2, 1.6, 3.4, -2, -1.6, 0.49999988, -1.75, -1.6, 3.4, -1.75, 1.6, 3.4, -1.75, -1.6, 3.4, -1.75, -1.6, 3.4, -2, 1.6, 3.4, -2, -1.6, 6.6, -1.75, 1.6, 6.6, -1.75, -1.6, 6.6, -2, -2, 9, -2, -1.6, 6.6, -2, 2, 9, -2, -1.6, 6.6, -1.75, -1.75, 8.75, -1.75, 1.75, 8.75, -1.75, -2, -9, 2, -2, 9, -2, -2, 9, 2, -1.75, -8.75, 1.75, -1.75, 8.75, 1.75, -1.75, 8.75, -1.75, -2, -9, 2, -2, 9, 2, 2, 9, 2, -1.75, -8.75, 1.75, 1.75, 8.75, 1.75, -1.75, 8.75, 1.75, -2, 9, -2, 2, 9, 2, -2, 9, 2, -1.75, 8.75, -1.75, -1.75, 8.75, 1.75, 1.75, 8.75, 1.75, -2, -9, -2, 2, -9, -2, 1.5999991, -8.6, -2, -1.600001, -8.6, -1.75, 1.5999991, -8.6, -2, 1.5999991, -8.6, -1.75, -1.75, -8.75, -1.75, 1.5999991, -8.6, -1.75, 1.75, -8.75, -1.75, 1.5999991, -5.4, -1.75, 1.5999991, -5.4, -2, -1.600001, -5.4, -2, -1.600001, -5.4, -2, 1.5999991, -5.4, -2, 1.6, -2.6000004, -2, -1.600001, -5.4, -1.75, 1.6, -2.6000004, -1.75, 1.5999991, -5.4, -1.75, -1.6, -2.6000004, -1.75, 1.6, -2.6000004, -2, 1.6, -2.6000004, -1.75, 1.5999991, -8.6, -1.75, 1.5999991, -8.6, -2, 1.5999991, -5.4, -2, 2, -9, -2, 1.5999991, -5.4, -2, 1.5999991, -8.6, -2, 1.5999991, -8.6, -1.75, 1.5999991, -5.4, -1.75, 1.75, -8.75, -1.75, 1.5999991, -8.6, -1.75, 1.5999991, -5.4, -2, 1.5999991, -5.4, -1.75, 2, -9, -2, 1.6, -2.6000004, -2, 1.5999991, -5.4, -2, 2, -9, -2, 1.6, 0.49999988, -2, 1.6, -2.6000004, -2, 1.6, -2.6000004, -1.75, 1.6, -2.6000004, -2, 1.6, 0.49999988, -2, 2, -9, -2, 1.6, 3.4, -2, 1.6, 0.49999988, -2, 1.75, -8.75, -1.75, 1.5999991, -5.4, -1.75, 1.75, 8.75, -1.75, 1.6, -2.6000004, -1.75, 1.6, 0.49999988, -2, 1.6, 0.49999988, -1.75, -1.75, -8.75, 1.75, 1.75, -8.75, -1.75, 1.75, -8.75, 1.75, -2, -9, 2, 2, -9, 2, 2, -9, -2, -1.75, -8.75, 1.75, 1.75, -8.75, 1.75, 1.75, 8.75, 1.75, -2, -9, 2, 2, 9, 2, 2, -9, 2, 1.75, -8.75, -1.75, 1.75, 8.75, 1.75, 1.75, -8.75, 1.75, 2, -9, -2, 2, -9, 2, 2, 9, 2, 1.6, 0.49999988, -1.75, 1.6, 0.49999988, -2, -1.6, 0.49999988, -2, -1.6, 0.49999988, -2, 1.6, 0.49999988, -2, 1.6, 3.4, -2, -1.6, 0.49999988, -1.75, 1.6, 3.4, -1.75, 1.6, 0.49999988, -1.75, -1.6, 3.4, -1.75, 1.6, 3.4, -2, 1.6, 3.4, -1.75, 1.6, 6.6, -1.75, 1.6, 6.6, -2, -1.6, 6.6, -2, 2, 9, -2, -1.6, 6.6, -2, 1.6, 6.6, -2, -1.6, 6.6, -1.75, 1.75, 8.75, -1.75, 1.6, 6.6, -1.75, -1.75, 8.75, -1.75, 1.75, 8.75, 1.75, 1.75, 8.75, -1.75, -2, 9, -2, 2, 9, -2, 2, 9, 2, 2, -9, -2, 1.6, 6.6, -2, 1.6, 3.4, -2, 1.5999991, -5.4, -1.75, 1.6, -2.6000004, -1.75, 1.75, 8.75, -1.75, 1.6, -2.6000004, -1.75, 1.6, 0.49999988, -1.75, 1.75, 8.75, -1.75, 2, -9, -2, 2, 9, -2, 1.6, 6.6, -2, 1.6, 3.4, -1.75, 1.6, 3.4, -2, 1.6, 6.6, -2, 1.6, 0.49999988, -1.75, 1.6, 3.4, -1.75, 1.75, 8.75, -1.75, 1.75, -8.75, -1.75, 1.75, 8.75, -1.75, 1.75, 8.75, 1.75, 2, -9, -2, 2, 9, 2, 2, 9, -2, 1.6, 3.4, -1.75, 1.6, 6.6, -2, 1.6, 6.6, -1.75, 1.6, 3.4, -1.75, 1.6, 6.6, -1.75, 1.75, 8.75, -1.75)
@@ -57,36 +52,11 @@ environment = SubResource("Environment_2jbd6")
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 10.5, -0.68499994, 0)
 sensitivity = null
 
-[node name="CSGCombiner3D" parent="." unique_id=417930232 instance=ExtResource("3_2jbd6")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.999927, 0.00031793118, 6.3449144e-05)
-
-[node name="I_Korrus" parent="." unique_id=1282690104 instance=ExtResource("3_2jbd6")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0, 0)
-korruse_nr = 1
-
-[node name="II_Korrus" parent="." unique_id=1175373041 instance=ExtResource("3_2jbd6")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 6, 0)
-korruse_nr = 2
-
-[node name="CSGBakedMeshInstance3D" parent="II_Korrus" index="2" unique_id=583211159]
-surface_material_override/0 = SubResource("StandardMaterial3D_qtc24")
-
-[node name="III_Korrus" parent="." unique_id=961538416 instance=ExtResource("3_2jbd6")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 12, 0)
-korruse_nr = 3
-
-[node name="CSGBakedMeshInstance3D" parent="III_Korrus" index="2" unique_id=583211159]
-surface_material_override/0 = SubResource("StandardMaterial3D_6j1t0")
-
-[node name="StaticBody3D" parent="." unique_id=675066969 instance=ExtResource("4_gpam4")]
+[node name="Spiritbox" parent="." unique_id=675066969 instance=ExtResource("4_gpam4")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, -2.5, 0.5)
 
 [node name="Lift" parent="." unique_id=1577381922 instance=ExtResource("5_r6sel")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 12, -1, 5)
-
-[node name="Door" parent="." unique_id=2032582818 instance=ExtResource("6_6j1t0")]
-transform = Transform3D(-2.1855694e-08, 0, 0.5, 0, 0.5, 0, -0.5, 0, -2.1855694e-08, 6.3742986, -2.4639952, 2.6842647)
-visible = false
 
 [node name="LiftShaft" type="StaticBody3D" parent="." unique_id=1280454587]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, -3, 5)
@@ -126,23 +96,23 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 9, 0)
 mesh = SubResource("ArrayMesh_p3qnk")
 
 [node name="Room" parent="." unique_id=761609105 instance=ExtResource("9_yet4f")]
-transform = Transform3D(-5.2453668e-08, 0, 1, 0, 1, 0, -1.2, 0, -4.371139e-08, 5.571467, -0.9545511, 5.078169)
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 5.6, 20, 4.5)
 hint = "Ta toa numbris ei ole numbrit 7 ega 9"
 
 [node name="Room2" parent="." unique_id=2072915804 instance=ExtResource("9_yet4f")]
-transform = Transform3D(-5.2453668e-08, 0, 1.2, 0, 1, 0, -1.2, 0, -5.2453668e-08, 0.7355616, -0.955, 5.078)
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0.6, 20, 4.5)
 hint = "Ei ela esimesel korrusel"
 
 [node name="Room3" parent="." unique_id=725028300 instance=ExtResource("9_yet4f")]
-transform = Transform3D(-5.2453668e-08, 0, 1.2, 0, 1, 0, -1.2, 0, -5.2453668e-08, -4.294446, 10.99448, 5.078)
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -34.4, 11, 4.75)
 hint = " kolis lärmist eemale"
 
 [node name="Room4" parent="." unique_id=368561165 instance=ExtResource("9_yet4f")]
-transform = Transform3D(-5.2453668e-08, 0, 1.2, 0, 1, 0, -1.2, 0, -5.2453668e-08, -9.260667, -0.955, 5.078)
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -9.4, 20, 4.5)
 hint = "Toa viimane number on 3"
 
 [node name="Room5" parent="." unique_id=403945894 instance=ExtResource("9_yet4f")]
-transform = Transform3D(-5.2453668e-08, 0, 1.2, 0, 1, 0, -1.2, 0, -5.2453668e-08, -14.3526325, -0.955, 5.078)
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -24.400002, 20, 4.5)
 hint = "Toa keskmine number on suurem kui kahe ülejäänu korrutis"
 
 [node name="UI" type="CanvasLayer" parent="." unique_id=248393262 node_paths=PackedStringArray("panel", "label")]
@@ -175,9 +145,16 @@ vertical_alignment = 1
 [node name="Pesumaja" parent="." unique_id=576066586 instance=ExtResource("7_p3qnk")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 13.999999, -2.5, 0)
 
-[node name="FriendsRoom" parent="." unique_id=680632543 instance=ExtResource("10_bwj4m")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.5079103, -0.5360642, -4.9913454)
+[node name="I_Korrus" parent="." unique_id=1969630484 instance=ExtResource("3_bwj4m")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0, 0)
 
-[editable path="II_Korrus"]
-[editable path="III_Korrus"]
+[node name="II_Korrus" parent="." unique_id=1413118622 instance=ExtResource("4_abdvo")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 6, 0)
+
+[node name="III_Korrus" parent="." unique_id=932541873 instance=ExtResource("10_bwj4m")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 12, 0)
+
+[node name="FriendsRoom" parent="." unique_id=680632543 instance=ExtResource("11_abdvo")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.4573791, -0.5397172, -5.0784307)
+
 [editable path="Lift"]
