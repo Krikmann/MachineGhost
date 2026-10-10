@@ -29,7 +29,7 @@ mesh = SubResource("CylinderMesh_8jl1e")
 shape = SubResource("SphereShape3D_g4v7s")
 
 [node name="Camera3D" type="Camera3D" parent="." unique_id=1772030264]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.6465173, -0.5467455)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.647, 0)
 
 [node name="Skeleton3D" type="Skeleton3D" parent="Camera3D" unique_id=871092802]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.6465173, 0.5467455)
