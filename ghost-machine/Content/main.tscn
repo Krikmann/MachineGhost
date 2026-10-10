@@ -56,10 +56,13 @@ sensitivity = null
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, -2.5, 0.5)
 
 [node name="Lift" parent="." unique_id=1577381922 instance=ExtResource("5_r6sel")]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 12, -1, 5)
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 11.75, -1, 5)
+
+[node name="CallButton" parent="Lift/Node3D/Floor3Parts/ButtonLocation" parent_id_path=PackedInt32Array(1577381922, 2503683, 1728680340) index="0" unique_id=1879242147]
+to_floor = 3
 
 [node name="LiftShaft" type="StaticBody3D" parent="." unique_id=1280454587]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, -3, 5)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.75, -3, 5)
 
 [node name="CSGCombiner3D" type="CSGCombiner3D" parent="LiftShaft" unique_id=411040200]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 9, 0)
@@ -163,3 +166,5 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 12, 0)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -22.542622, 5.460283, -11.07843)
 
 [editable path="Lift"]
+[editable path="Lift/LiftBody"]
+[editable path="Lift/Node3D/Floor3Parts"]

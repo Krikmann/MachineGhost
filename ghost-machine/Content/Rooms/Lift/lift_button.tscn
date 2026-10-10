@@ -124,7 +124,7 @@ mesh = SubResource("ArrayMesh_pnjas")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.35, -0.19)
 
 [node name="Button" type="MeshInstance3D" parent="Terminal2" unique_id=943798494]
-transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, -0.014232864)
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
 mesh = SubResource("ArrayMesh_hyqsi")
 
 [node name="Button frame" type="MeshInstance3D" parent="Terminal2" unique_id=51796501]
