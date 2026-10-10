@@ -21,6 +21,8 @@ operator = 2
 [sub_resource type="VisualShaderNodeColorParameter" id="VisualShaderNodeColorParameter_8payu"]
 output_port_for_preview = 0
 parameter_name = "Color"
+default_value_enabled = true
+default_value = Color(0.32156864, 0.32156864, 0.32156864, 1)
 
 [sub_resource type="VisualShaderNodeVectorDecompose" id="VisualShaderNodeVectorDecompose_j8dcf"]
 default_input_values = [0, Vector2(0, 0)]
@@ -37,7 +39,6 @@ operator = 2
 
 [sub_resource type="VisualShaderNodeFloatParameter" id="VisualShaderNodeFloatParameter_8payu"]
 parameter_name = "overlay_strength"
-qualifier = 2
 default_value_enabled = true
 
 [sub_resource type="VisualShaderNodeInput" id="VisualShaderNodeInput_d0f4t"]
