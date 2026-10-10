@@ -24,14 +24,15 @@ func _physics_process(_delta: float) -> void:
 				if last_collider != collider:
 					_set_overlay_strength(last_collider, 0.0)
 					last_collider = collider
+				
+				return
 			else:
 				# Cant currently interact with object
 				return
 		
-		_set_overlay_strength(collider, 1.0)
-		
 		if collider and collider.has_method("interact"):
 			Services.hud.show_interactiontext()
+			_set_overlay_strength(collider, 1.0)
 		else:
 			Services.hud.hide_interactiontext()
 		
