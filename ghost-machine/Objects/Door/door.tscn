@@ -1,17 +1,138 @@
 [gd_scene format=3 uid="uid://c7pjas5aodici"]
 
 [ext_resource type="Script" uid="uid://bt36svb0qkfyq" path="res://Objects/Door/door.gd" id="1_xnqow"]
-[ext_resource type="Script" uid="uid://cajnbtd4j5vlo" path="res://Objects/InteractionSystem/Interactable.gd" id="2_c24xa"]
 [ext_resource type="PackedScene" uid="uid://dix5xjw7vjsxd" path="res://Objects/Door/uks.glb" id="2_yh2pu"]
+[ext_resource type="Shader" uid="uid://exsoc8831120" path="res://Objects/InteractionSystem/HoverOverlay.tres" id="3_c24xa"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_v36i1"]
 size = Vector3(3.3635254, 6.466919, 3.375)
 
-[node name="Door" type="Node3D" unique_id=2032582818 node_paths=PackedStringArray("DoorAnchor")]
+[sub_resource type="VisualShaderNodeFloatFunc" id="VisualShaderNodeFloatFunc_yh2pu"]
+output_port_for_preview = 0
+function = 18
+
+[sub_resource type="VisualShaderNodeInput" id="VisualShaderNodeInput_c24xa"]
+input_name = "time"
+
+[sub_resource type="VisualShaderNodeVec2Parameter" id="VisualShaderNodeVec2Parameter_qxoed"]
+parameter_name = "Speed"
+default_value_enabled = true
+default_value = Vector2(0, 0.03)
+
+[sub_resource type="VisualShaderNodeVectorOp" id="VisualShaderNodeVectorOp_y42rg"]
+output_port_for_preview = 0
+default_input_values = [0, Vector2(0, 0), 1, Vector2(0, 0)]
+op_type = 0
+operator = 2
+
+[sub_resource type="VisualShaderNodeColorParameter" id="VisualShaderNodeColorParameter_p0hg6"]
+output_port_for_preview = 0
+parameter_name = "Color"
+
+[sub_resource type="VisualShaderNodeVectorDecompose" id="VisualShaderNodeVectorDecompose_ucsix"]
+default_input_values = [0, Vector2(0, 0)]
+op_type = 0
+
+[sub_resource type="VisualShaderNodeFloatOp" id="VisualShaderNodeFloatOp_afebq"]
+default_input_values = [0, 0.0, 1, 2.55]
+
+[sub_resource type="VisualShaderNodeVectorOp" id="VisualShaderNodeVectorOp_1xy3w"]
+output_port_for_preview = 0
+default_input_values = [0, Quaternion(0, 0, 0, 0), 1, Quaternion(0, 0, 0, 0)]
+op_type = 2
+operator = 2
+
+[sub_resource type="VisualShaderNodeFloatParameter" id="VisualShaderNodeFloatParameter_1buim"]
+parameter_name = "overlay_strength"
+qualifier = 2
+default_value_enabled = true
+
+[sub_resource type="VisualShaderNodeInput" id="VisualShaderNodeInput_y2sq3"]
+expanded_output_ports = [0]
+input_name = "uv"
+
+[sub_resource type="VisualShaderNodeFloatParameter" id="VisualShaderNodeFloatParameter_dw2a6"]
+parameter_name = "Num_of_Lines"
+default_value_enabled = true
+default_value = 120.0
+
+[sub_resource type="VisualShaderNodeFloatOp" id="VisualShaderNodeFloatOp_cwva4"]
+operator = 2
+
+[sub_resource type="VisualShaderNodeFloatFunc" id="VisualShaderNodeFloatFunc_dbgar"]
+function = 0
+
+[sub_resource type="VisualShaderNodeFloatParameter" id="VisualShaderNodeFloatParameter_uwsey"]
+parameter_name = "Line_Thickness"
+default_value_enabled = true
+default_value = -10.0
+
+[sub_resource type="VisualShaderNodeFloatOp" id="VisualShaderNodeFloatOp_jld7t"]
+output_port_for_preview = 0
+operator = 5
+
+[sub_resource type="VisualShader" id="VisualShader_7oqdc"]
+modes/blend = 1
+preview_params/Color = "Color(0.32156864, 0.32156864, 0.32156864, 1)"
+nodes/vertex/0/position = Vector2(186.66667, 160)
+nodes/fragment/0/position = Vector2(640, 613.3333)
+nodes/fragment/2/node = SubResource("VisualShaderNodeColorParameter_p0hg6")
+nodes/fragment/2/position = Vector2(-333.33334, 226.66667)
+nodes/fragment/3/node = SubResource("VisualShaderNodeInput_y2sq3")
+nodes/fragment/3/position = Vector2(-1773.3334, 640)
+nodes/fragment/5/node = SubResource("VisualShaderNodeFloatParameter_dw2a6")
+nodes/fragment/5/position = Vector2(-1386.6666, 866.6667)
+nodes/fragment/6/node = SubResource("VisualShaderNodeFloatOp_cwva4")
+nodes/fragment/6/position = Vector2(-1026.6666, 706.6667)
+nodes/fragment/7/node = SubResource("VisualShaderNodeFloatFunc_dbgar")
+nodes/fragment/7/position = Vector2(-760, 746.6667)
+nodes/fragment/8/node = SubResource("VisualShaderNodeFloatParameter_uwsey")
+nodes/fragment/8/position = Vector2(-893.3333, 893.3333)
+nodes/fragment/9/node = SubResource("VisualShaderNodeFloatOp_jld7t")
+nodes/fragment/9/position = Vector2(-493.33334, 720)
+nodes/fragment/10/node = SubResource("VisualShaderNodeFloatFunc_yh2pu")
+nodes/fragment/10/position = Vector2(-226.66667, 746.6667)
+nodes/fragment/13/node = SubResource("VisualShaderNodeInput_c24xa")
+nodes/fragment/13/position = Vector2(-2213.3333, 893.3333)
+nodes/fragment/17/node = SubResource("VisualShaderNodeVec2Parameter_qxoed")
+nodes/fragment/17/position = Vector2(-2213.3333, 1013.3333)
+nodes/fragment/18/node = SubResource("VisualShaderNodeVectorOp_y42rg")
+nodes/fragment/18/position = Vector2(-1826.6666, 933.3333)
+nodes/fragment/24/node = SubResource("VisualShaderNodeVectorDecompose_ucsix")
+nodes/fragment/24/position = Vector2(-1626.6666, 853.3333)
+nodes/fragment/26/node = SubResource("VisualShaderNodeFloatOp_afebq")
+nodes/fragment/26/position = Vector2(-1360, 680)
+nodes/fragment/27/node = SubResource("VisualShaderNodeVectorOp_1xy3w")
+nodes/fragment/27/position = Vector2(133.33333, 546.6667)
+nodes/fragment/28/node = SubResource("VisualShaderNodeFloatParameter_1buim")
+nodes/fragment/28/position = Vector2(40, 973.3333)
+nodes/fragment/connections = PackedInt32Array(5, 0, 6, 1, 6, 0, 7, 0, 7, 0, 9, 0, 8, 0, 9, 1, 9, 0, 10, 0, 17, 0, 18, 1, 13, 0, 18, 0, 18, 0, 24, 0, 26, 0, 6, 0, 24, 1, 26, 1, 2, 0, 27, 0, 10, 0, 27, 1, 27, 0, 0, 0, 3, 1, 26, 0, 28, 0, 0, 1)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_6hnio"]
+render_priority = 0
+shader = SubResource("VisualShader_7oqdc")
+shader_parameter/Color = Color(0.5396635, 0.5396635, 0.53966343, 1)
+shader_parameter/Speed = Vector2(0, 0.03)
+shader_parameter/Num_of_Lines = 21.525
+shader_parameter/Line_Thickness = -10.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_c24xa"]
+render_priority = 0
+shader = ExtResource("3_c24xa")
+shader_parameter/Color = Color(0.35156304, 0.35156283, 0.35156286, 1)
+shader_parameter/Speed = Vector2(0, 0.03)
+shader_parameter/Num_of_Lines = 120.0
+shader_parameter/Line_Thickness = -10.0
+
+[node name="Door" type="StaticBody3D" unique_id=1652005241 node_paths=PackedStringArray("DoorAnchor")]
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
 script = ExtResource("1_xnqow")
 DoorAnchor = NodePath("DoorAnchor")
 IsOpen = true
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=994696413]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0.06347649, 2.7334595, -1.7326994)
+shape = SubResource("BoxShape3D_v36i1")
 
 [node name="DoorAnchor" type="Node3D" parent="." unique_id=1065094316]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 0, 0)
@@ -19,16 +140,11 @@ transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 0
 [node name="uks" parent="DoorAnchor" unique_id=1945532782 instance=ExtResource("2_yh2pu")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.7499113, 0, 0)
 
+[node name="Cube" parent="DoorAnchor/uks" index="0" unique_id=1835882070]
+material_overlay = SubResource("ShaderMaterial_6hnio")
+
 [node name="Cube_001" parent="DoorAnchor/uks" index="1" unique_id=1634366284]
 layers = 3
-
-[node name="Area3D" type="Area3D" parent="DoorAnchor/uks" unique_id=920215893]
-script = ExtResource("2_c24xa")
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="DoorAnchor/uks/Area3D" unique_id=994696413]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.017211914, 2.7334595, 0.06347656)
-shape = SubResource("BoxShape3D_v36i1")
-
-[connection signal="interacted" from="DoorAnchor/uks/Area3D" to="." method="_on_area_3d_interacted"]
+material_overlay = SubResource("ShaderMaterial_c24xa")
 
 [editable path="DoorAnchor/uks"]

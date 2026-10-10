@@ -37,6 +37,7 @@ operator = 2
 
 [sub_resource type="VisualShaderNodeFloatParameter" id="VisualShaderNodeFloatParameter_8payu"]
 parameter_name = "overlay_strength"
+qualifier = 2
 default_value_enabled = true
 
 [sub_resource type="VisualShaderNodeInput" id="VisualShaderNodeInput_d0f4t"]
