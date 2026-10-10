@@ -18,6 +18,7 @@ var ClosedRotation: float = 0.0
 var locked: bool  
 
 @onready var audio_stream_player_3d: AudioStreamPlayer3D = $AudioStreamPlayer3D
+@onready var close_door_stream_player: AudioStreamPlayer3D = $CloseDoorStreamPlayer
 
 
 # Called when the node enters the scene tree for the first time.
@@ -59,6 +60,8 @@ func close_door() -> void:
 		ClosedRotation,
 		Duration
 	)
+	audio_stream_player_3d.play()
+	tween.tween_callback(play_close_door_audio)
 	if IsNeighbour:
 		leave_neighbour()
 
@@ -95,3 +98,7 @@ func hide_text() -> void:
 func set_door_number(nr: int) -> void: 
 	door_number = nr 
 	label.text = str(nr) 
+	
+	
+func play_close_door_audio() -> void:
+	close_door_stream_player.play()
