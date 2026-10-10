@@ -4,6 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://bh0f4pqhqta3q" path="res://Content/Player/player.tscn" id="1_u3q0n"]
 [ext_resource type="PackedScene" uid="uid://bnvylwcddx1jo" path="res://Content/Rooms/korrus.tscn" id="3_2jbd6"]
 [ext_resource type="PackedScene" uid="uid://csdx6ivtf8pbs" path="res://Objects/SpiritBox/spiritbox.tscn" id="4_gpam4"]
+[ext_resource type="PackedScene" uid="uid://2bpyhwiiblkv" path="res://Content/Rooms/Lift/lift.tscn" id="5_r6sel"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_u3q0n"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -41,3 +42,8 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 12, 0)
 
 [node name="StaticBody3D" parent="." unique_id=675066969 instance=ExtResource("4_gpam4")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, -2.5, 0.5)
+
+[node name="Lift" parent="." unique_id=1577381922 instance=ExtResource("5_r6sel")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 12, -1, 5)
+
+[editable path="Lift"]

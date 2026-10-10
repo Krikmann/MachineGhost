@@ -1,4 +1,4 @@
-extends StaticBody3D
+class_name Spiritbox extends StaticBody3D
 
 @onready var collision_shape := $CollisionShape3D
 @onready var audio_player = $AudioStreamPlayer
