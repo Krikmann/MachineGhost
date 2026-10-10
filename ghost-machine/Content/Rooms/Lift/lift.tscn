@@ -3,6 +3,8 @@
 [ext_resource type="Script" uid="uid://ct1vfxs4wqg6i" path="res://Content/Rooms/Lift/lift.gd" id="1_oiu5u"]
 [ext_resource type="PackedScene" uid="uid://i7r5h8hvh0dy" path="res://Content/Rooms/Lift/lift_door.tscn" id="2_x4uxs"]
 [ext_resource type="PackedScene" uid="uid://c73a05jnjnx6w" path="res://Content/Rooms/Lift/lift_button.tscn" id="3_x4uxs"]
+[ext_resource type="PackedScene" uid="uid://bf6a4hxdhn6ma" path="res://Objects/Dice/dice.tscn" id="4_gdg3e"]
+[ext_resource type="ArrayMesh" uid="uid://di8rajhap4ww1" path="res://Objects/Dice/secondDice.tres" id="5_xin34"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vxpo8"]
 albedo_color = Color(0.3349706, 0.3349706, 0.33497056, 1)
@@ -87,3 +89,8 @@ to_floor = 2
 [node name="LiftButton3" parent="Buttons" unique_id=1580302313 instance=ExtResource("3_x4uxs")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.3, 0)
 to_floor = 3
+
+[node name="Dice" parent="." unique_id=1668943469 instance=ExtResource("4_gdg3e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.52994996, 0.5542377, -1.3886095)
+item_name = "Red 2"
+item_mesh = ExtResource("5_xin34")

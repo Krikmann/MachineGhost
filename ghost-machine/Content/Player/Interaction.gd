@@ -12,9 +12,9 @@ func _physics_process(_delta: float) -> void:
 		collider = get_collider()
 		
 		if CanInteractVar in collider:
+			
 			if collider.get(CanInteractVar) == true:
 				# Can currently interact with object
-				
 				_set_overlay_strength(collider, 1.0)
 				if collider and collider.has_method("interact"):
 					Services.hud.show_interactiontext()
