@@ -3,11 +3,17 @@ class_name Player extends CharacterBody3D
 @export var sensitivity := 0.002
 @export var cam: Camera3D
 
+@onready var hand_slot := $MeshInstance3D/Skeleton3D/BoneAttachment3D
+@onready var pickup_area := $Area3D
+
 const SPEED = 5.0
 const JUMP_VELOCITY = 4.5
+var held_item: Node3D = null
 
 func _ready() -> void:
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
+	pickup_area.body_entered.connect(_on_body_entered)
+	pickup_area.body_exited.connect(_on_body_exited)
 
 func _unhandled_input(event: InputEvent) -> void:
 	# Capture mouse at the start of game
@@ -19,6 +25,13 @@ func _unhandled_input(event: InputEvent) -> void:
 		rotate_y(-event.relative.x * sensitivity)
 		cam.rotate_x(-event.relative.y * sensitivity)
 		cam.rotation.x = clamp(cam.rotation.x, -1.5, 1.5)
+	
+	if event.is_action_pressed("interact"):
+		print(held_item)
+		if held_item == null:
+			_try_pickup()
+		else:
+			_drop()
 
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
@@ -40,3 +53,22 @@ func _physics_process(delta: float) -> void:
 		velocity.z = move_toward(velocity.z, 0, SPEED)
 
 	move_and_slide()
+
+func _on_body_entered(body):
+	if body.has_method("pickup"):
+		body._can_pickup = true
+
+func _on_body_exited(body):
+	if body.has_method("pickup"):
+		body._can_pickup = false
+
+func _try_pickup():
+	for body in pickup_area.get_overlapping_bodies():
+		if body.has_method("pickup"):
+			held_item = body
+			held_item.pickup(hand_slot)
+			return
+
+func _drop():
+	held_item.drop()
+	held_item = null

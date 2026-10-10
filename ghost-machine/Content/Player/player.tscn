@@ -6,6 +6,9 @@
 
 [sub_resource type="CylinderMesh" id="CylinderMesh_8jl1e"]
 
+[sub_resource type="SphereShape3D" id="SphereShape3D_g4v7s"]
+radius = 1.5
+
 [node name="CharacterBody3D" type="CharacterBody3D" unique_id=1311759364 node_paths=PackedStringArray("cam")]
 script = ExtResource("1_thq5r")
 cam = NodePath("Camera3D")
@@ -15,6 +18,15 @@ shape = SubResource("CylinderShape3D_8jl1e")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1502258144]
 mesh = SubResource("CylinderMesh_8jl1e")
+
+[node name="Skeleton3D" type="Skeleton3D" parent="MeshInstance3D" unique_id=871092802]
+
+[node name="BoneAttachment3D" type="BoneAttachment3D" parent="MeshInstance3D/Skeleton3D" unique_id=192659059]
+
+[node name="Area3D" type="Area3D" parent="." unique_id=1518125393]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" unique_id=2097608092]
+shape = SubResource("SphereShape3D_g4v7s")
 
 [node name="Camera3D" type="Camera3D" parent="." unique_id=1772030264]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.6465173, -0.5467455)
