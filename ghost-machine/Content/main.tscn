@@ -38,6 +38,12 @@ _surfaces = [{
 "vertex_data": PackedByteArray("1czMv5qZCcEAAOC/1czMv83MrMAAAOC/1czMv5qZCcEAAADA1czMv83MrMAAAOC/1czMv83MrMAAAADA1czMv5qZCcEAAADAAAAAwAAAEMEAAADA1czMv5qZCcEAAADAAAAAwAAAEEEAAADAzczMv2hmJsAAAADAzczMv/z//z4AAADA1czMv83MrMAAAADAAADgvwAADMEAAOC/AADgvwAADEEAAOC/1czMv5qZCcEAAOC/AAAAwAAAEEEAAADA1czMv5qZCcEAAADA1czMv83MrMAAAADAzczMv2hmJsAAAOC/zczMv/z//z4AAOC/zczMv2hmJsAAAADA1czMv5qZCcEAAOC/AADgvwAADEEAAOC/1czMv83MrMAAAOC/1czMv83MrMAAAADAzczMv/z//z4AAADAzczMv5qZWUAAAADAzczMv/z//z4AAOC/zczMv/z//z4AAADAzczMv2hmJsAAAADAAAAAwAAAEMEAAADAAAAAwAAAEEEAAADAAAAAwAAAEMEAAABAAADgvwAADMEAAOC/AADgvwAADMEAAOA/AADgvwAADEEAAOC/AAAAwAAAEMEAAADAxczMP5qZCcEAAADA1czMv5qZCcEAAADA1czMv5qZCcEAAOC/1czMv5qZCcEAAADAxczMP5qZCcEAAADAAADgvwAADMEAAOC/1czMv5qZCcEAAOC/xczMP5qZCcEAAOC/1czMv83MrMAAAOC/xczMP83MrMAAAOC/1czMv83MrMAAAADAAAAAwAAAEMEAAADAAAAAwAAAEMEAAABAAAAAQAAAEMEAAADAAADgvwAADMEAAOC/AADgPwAADMEAAOC/AADgvwAADMEAAOA/zczMv2hmJsAAAADA1czMv83MrMAAAADAzczMP2hmJsAAAADA1czMv83MrMAAAOC/zczMv2hmJsAAAOC/zczMP2hmJsAAAOC/zczMv2hmJsAAAOC/zczMv2hmJsAAAADAzczMP2hmJsAAAADA1czMv83MrMAAAOC/AADgvwAADEEAAOC/zczMv2hmJsAAAOC/zczMv2hmJsAAAOC/AADgvwAADEEAAOC/zczMv/z//z4AAOC/AAAAwAAAEEEAAADA1czMv83MrMAAAADAzczMv5qZWUAAAADAzczMv5qZWUAAAOC/zczMvzMz00AAAOC/zczMv5qZWUAAAADAzczMv/z//z4AAOC/AADgvwAADEEAAOC/zczMv5qZWUAAAOC/zczMvzMz00AAAOC/zczMvzMz00AAAADAzczMv5qZWUAAAADAAAAAwAAAEEEAAADAzczMv5qZWUAAAADAzczMvzMz00AAAADAzczMv5qZWUAAAOC/AADgvwAADEEAAOC/zczMvzMz00AAAOC/zczMv/z//z4AAOC/zczMP/z//z4AAOC/zczMv/z//z4AAADAzczMv5qZWUAAAADAzczMv/z//z4AAADAzczMP5qZWUAAAADAzczMv/z//z4AAOC/zczMv5qZWUAAAOC/zczMP5qZWUAAAOC/zczMv5qZWUAAAOC/zczMv5qZWUAAAADAzczMP5qZWUAAAADAzczMvzMz00AAAOC/zczMPzMz00AAAOC/zczMvzMz00AAAADAAAAAwAAAEEEAAADAzczMvzMz00AAAADAAAAAQAAAEEEAAADAzczMvzMz00AAAOC/AADgvwAADEEAAOC/AADgPwAADEEAAOC/AAAAwAAAEMEAAABAAAAAwAAAEEEAAADAAAAAwAAAEEEAAABAAADgvwAADMEAAOA/AADgvwAADEEAAOA/AADgvwAADEEAAOC/AAAAwAAAEMEAAABAAAAAwAAAEEEAAABAAAAAQAAAEEEAAABAAADgvwAADMEAAOA/AADgPwAADEEAAOA/AADgvwAADEEAAOA/AAAAwAAAEEEAAADAAAAAQAAAEEEAAABAAAAAwAAAEEEAAABAAADgvwAADEEAAOC/AADgvwAADEEAAOA/AADgPwAADEEAAOA/AAAAwAAAEMEAAADAAAAAQAAAEMEAAADAxczMP5qZCcEAAADA1czMv5qZCcEAAOC/xczMP5qZCcEAAADAxczMP5qZCcEAAOC/AADgvwAADMEAAOC/xczMP5qZCcEAAOC/AADgPwAADMEAAOC/xczMP83MrMAAAOC/xczMP83MrMAAAADA1czMv83MrMAAAADA1czMv83MrMAAAADAxczMP83MrMAAAADAzczMP2hmJsAAAADA1czMv83MrMAAAOC/zczMP2hmJsAAAOC/xczMP83MrMAAAOC/zczMv2hmJsAAAOC/zczMP2hmJsAAAADAzczMP2hmJsAAAOC/xczMP5qZCcEAAOC/xczMP5qZCcEAAADAxczMP83MrMAAAADAAAAAQAAAEMEAAADAxczMP83MrMAAAADAxczMP5qZCcEAAADAxczMP5qZCcEAAOC/xczMP83MrMAAAOC/AADgPwAADMEAAOC/xczMP5qZCcEAAOC/xczMP83MrMAAAADAxczMP83MrMAAAOC/AAAAQAAAEMEAAADAzczMP2hmJsAAAADAxczMP83MrMAAAADAAAAAQAAAEMEAAADAzczMP/z//z4AAADAzczMP2hmJsAAAADAzczMP2hmJsAAAOC/zczMP2hmJsAAAADAzczMP/z//z4AAADAAAAAQAAAEMEAAADAzczMP5qZWUAAAADAzczMP/z//z4AAADAAADgPwAADMEAAOC/xczMP83MrMAAAOC/AADgPwAADEEAAOC/zczMP2hmJsAAAOC/zczMP/z//z4AAADAzczMP/z//z4AAOC/AADgvwAADMEAAOA/AADgPwAADMEAAOC/AADgPwAADMEAAOA/AAAAwAAAEMEAAABAAAAAQAAAEMEAAABAAAAAQAAAEMEAAADAAADgvwAADMEAAOA/AADgPwAADMEAAOA/AADgPwAADEEAAOA/AAAAwAAAEMEAAABAAAAAQAAAEEEAAABAAAAAQAAAEMEAAABAAADgPwAADMEAAOC/AADgPwAADEEAAOA/AADgPwAADMEAAOA/AAAAQAAAEMEAAADAAAAAQAAAEMEAAABAAAAAQAAAEEEAAABAzczMP/z//z4AAOC/zczMP/z//z4AAADAzczMv/z//z4AAADAzczMv/z//z4AAADAzczMP/z//z4AAADAzczMP5qZWUAAAADAzczMv/z//z4AAOC/zczMP5qZWUAAAOC/zczMP/z//z4AAOC/zczMv5qZWUAAAOC/zczMP5qZWUAAAADAzczMP5qZWUAAAOC/zczMPzMz00AAAOC/zczMPzMz00AAAADAzczMvzMz00AAAADAAAAAQAAAEEEAAADAzczMvzMz00AAAADAzczMPzMz00AAAADAzczMvzMz00AAAOC/AADgPwAADEEAAOC/zczMPzMz00AAAOC/AADgvwAADEEAAOC/AADgPwAADEEAAOA/AADgPwAADEEAAOC/AAAAwAAAEEEAAADAAAAAQAAAEEEAAADAAAAAQAAAEEEAAABAAAAAQAAAEMEAAADAzczMPzMz00AAAADAzczMP5qZWUAAAADAxczMP83MrMAAAOC/zczMP2hmJsAAAOC/AADgPwAADEEAAOC/zczMP2hmJsAAAOC/zczMP/z//z4AAOC/AADgPwAADEEAAOC/AAAAQAAAEMEAAADAAAAAQAAAEEEAAADAzczMPzMz00AAAADAzczMP5qZWUAAAOC/zczMP5qZWUAAAADAzczMPzMz00AAAADAzczMP/z//z4AAOC/zczMP5qZWUAAAOC/AADgPwAADEEAAOC/AADgPwAADMEAAOC/AADgPwAADEEAAOC/AADgPwAADEEAAOA/AAAAQAAAEMEAAADAAAAAQAAAEEEAAABAAAAAQAAAEEEAAADAzczMP5qZWUAAAOC/zczMPzMz00AAAADAzczMPzMz00AAAOC/zczMP5qZWUAAAOC/zczMPzMz00AAAOC/AADgPwAADEEAAOC/////f/9/AID///9//38AgP///3//fwCA////f/9/AID///9//38AgP///3//fwCA/////wAA/z//////AAD/P/////8AAP8//////wAA/z//////AAD/P/////8AAP8//3//fwAA/7//f/9/AAD/v/9//38AAP+//////wAA/z//////AAD/P/////8AAP8/////f/9/AID///9//38AgP///3//fwCA/3//fwAA/7//f/9/AAD/v/9//38AAP+//////wAA/z//////AAD/P/////8AAP8/////f/9/AID///9//38AgP///3//fwCAAAD/f/9//n8AAP9//3/+fwAA/3//f/5/////f/9/AID///9//38AgP///3//fwCA/////wAA/z//////AAD/P/////8AAP8//3//////////f/////////9//////////3//fwAA/7//f/9/AAD/v/9//38AAP+//38AAP//////fwAA//////9/AAD//////38AAP//AAD/fwAA//8AAP9/AAD//wAA/3//////////f/////////9//////////////wAA/z//////AAD/P/////8AAP8//3//fwAA/7//f/9/AAD/v/9//38AAP+//3//////////f/////////9//////////3//fwAA/7//f/9/AAD/v/9//38AAP+//3//fwAA/7//f/9/AAD/v/9//38AAP+//////wAA/z//////AAD/P/////8AAP8/////f/9/AID///9//38AgP///3//fwCA/3//fwAA/7//f/9/AAD/v/9//38AAP+/////f/9/AID///9//38AgP///3//fwCA/////wAA/z//////AAD/P/////8AAP8//3//fwAA/7//f/9/AAD/v/9//38AAP+//38AAP//////fwAA//////9/AAD//////////wAA/z//////AAD/P/////8AAP8//3//fwAA/7//f/9/AAD/v/9//38AAP+//3//////////f/////////9//////////38AAP//////fwAA//////9/AAD//////////wAA/z//////AAD/P/////8AAP8//3//fwAA/7//f/9/AAD/v/9//38AAP+/AAD/f/9//n8AAP9//3/+fwAA/3//f/5/////f/9/AID///9//38AgP///3//fwCA/3//fwAA/z//f/9/AAD/P/9//38AAP8//////wAA/7//////AAD/v/////8AAP+//3//////AAD/f/////8AAP9//////wAA/38AAP//////fwAA//////9/AAD//////////wAA/z//////AAD/P/////8AAP8//3//////////f/////////9//////////3//fwAA/7//f/9/AAD/v/9//38AAP+//38AAP//////fwAA//////9/AAD//////////wAA/z//////AAD/P/////8AAP8//3//fwAA/7//f/9/AAD/v/9//38AAP+//3//////////f/////////9/////////AAD/f/9/AIAAAP9//38AgAAA/3//fwCA/////wAA/z//////AAD/P/////8AAP8//3//fwAA/7//f/9/AAD/v/9//38AAP+/AAD/f/9/AIAAAP9//38AgAAA/3//fwCA/////wAA/z//////AAD/P/////8AAP8//////wAA/z//////AAD/P/////8AAP8/AAD/f/9/AIAAAP9//38AgAAA/3//fwCA/////wAA/z//////AAD/P/////8AAP8//3//fwAA/7//f/9/AAD/v/9//38AAP+/AAD/f/9/AIAAAP9//38AgAAA/3//fwCA/3//////////f/////////9//////////38AAP//AAD/fwAA//8AAP9/AAD//wAA/////wAA/7//////AAD/v/////8AAP+//3//fwAA/z//f/9/AAD/P/9//38AAP8/AAD/f/9/AIAAAP9//38AgAAA/3//fwCA////f/9//n////9//3/+f////3//f/5//38AAP//////fwAA//////9/AAD//////////wAA/z//////AAD/P/////8AAP8//3//fwAA/7//f/9/AAD/v/9//38AAP+//3//////////f/////////9//////////38AAP//////fwAA//////9/AAD//////////wAA/z//////AAD/P/////8AAP8//3//fwAA/7//f/9/AAD/v/9//38AAP+//38AAP//////fwAA//////9/AAD//////3//////AAD/f/////8AAP9//////wAA/////wAA/z//////AAD/P/////8AAP8//3//fwAA/7//f/9/AAD/v/9//38AAP+//3//fwAA/7//f/9/AAD/v/9//38AAP+//////wAA/z//////AAD/P/////8AAP8/AAD/f/9/AIAAAP9//38AgAAA/3//fwCA/3//fwAA/7//f/9/AAD/v/9//38AAP+/AAD/f/9/AIAAAP9//38AgAAA/3//fwCA////f/9//n////9//3/+f////3//f/5/AAD/f/9/AIAAAP9//38AgAAA/3//fwCA/3//fwAA/7//f/9/AAD/v/9//38AAP+/")
 }]
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8jl1e"]
+bg_color = Color(1, 0.5882353, 0.2, 1)
+corner_radius_top_left = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 50
+
 [node name="Node3D" type="Node3D" unique_id=926375845]
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=480295303]
@@ -58,9 +64,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, -2.5, 0.5)
 
 [node name="Lift" parent="." unique_id=1577381922 instance=ExtResource("5_r6sel")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 11.75, -1, 5)
-
-[node name="CallButton" parent="Lift/Node3D/Floor3Parts/ButtonLocation" parent_id_path=PackedInt32Array(1577381922, 2503683, 1728680340) index="0" unique_id=1879242147]
-to_floor = 3
 
 [node name="LiftShaft" type="StaticBody3D" parent="." unique_id=1280454587]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.75, -3, 5)
@@ -124,10 +127,12 @@ transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -4.4
 hint = "Toa keskmine number on suurem kui kahe ülejäänu korrutis"
 number = 251
 
-[node name="UI" type="CanvasLayer" parent="." unique_id=248393262 node_paths=PackedStringArray("panel", "label")]
+[node name="UI" type="CanvasLayer" parent="." unique_id=248393262 node_paths=PackedStringArray("panel", "label", "notes", "labels")]
 script = ExtResource("8_blo7t")
 panel = NodePath("PanelContainer")
 label = NodePath("PanelContainer/MarginContainer/Label")
+notes = NodePath("Notes")
+labels = [NodePath("Notes/PanelContainer/MarginContainer/VBoxContainer/Label"), NodePath("Notes/PanelContainer/MarginContainer/VBoxContainer/Label2"), NodePath("Notes/PanelContainer/MarginContainer/VBoxContainer/Label3"), NodePath("Notes/PanelContainer/MarginContainer/VBoxContainer/Label4"), NodePath("Notes/PanelContainer/MarginContainer/VBoxContainer/Label5")]
 
 [node name="PanelContainer" type="PanelContainer" parent="UI" unique_id=1715858289]
 anchors_preset = 7
@@ -149,6 +154,77 @@ theme_override_constants/margin_right = 10
 
 [node name="Label" type="Label" parent="UI/PanelContainer/MarginContainer" unique_id=996218233]
 layout_mode = 2
+vertical_alignment = 1
+
+[node name="Notes" type="MarginContainer" parent="UI" unique_id=1427597628]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -40.0
+offset_bottom = 40.0
+grow_horizontal = 0
+theme_override_constants/margin_left = 0
+theme_override_constants/margin_top = 12
+theme_override_constants/margin_right = 12
+
+[node name="PanelContainer" type="PanelContainer" parent="UI/Notes" unique_id=537004978]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_8jl1e")
+
+[node name="MarginContainer" type="MarginContainer" parent="UI/Notes/PanelContainer" unique_id=299266489]
+layout_mode = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 20
+
+[node name="VBoxContainer" type="VBoxContainer" parent="UI/Notes/PanelContainer/MarginContainer" unique_id=1087512356]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="UI/Notes/PanelContainer/MarginContainer/VBoxContainer" unique_id=2113171322]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 12
+text = "
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="UI/Notes/PanelContainer/MarginContainer/VBoxContainer" unique_id=985608452]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 12
+text = "
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label3" type="Label" parent="UI/Notes/PanelContainer/MarginContainer/VBoxContainer" unique_id=615482416]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 12
+text = "
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label4" type="Label" parent="UI/Notes/PanelContainer/MarginContainer/VBoxContainer" unique_id=1940004669]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 12
+text = "
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label5" type="Label" parent="UI/Notes/PanelContainer/MarginContainer/VBoxContainer" unique_id=1488829922]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 12
+text = "
+"
+horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Pesumaja" parent="." unique_id=576066586 instance=ExtResource("7_p3qnk")]

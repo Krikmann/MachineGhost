@@ -64,6 +64,7 @@ func _on_area_3d_interacted() -> void:
 
 func call_neighbour() -> void:
 	var text = get_parent_node_3d().hint
+	if not GameState.found_door_hints.has(text): GameState.add_door_hint(text)
 	get_parent_node_3d().get_node("AnimationPlayer").play("new_animation")
 	var ui = get_parent_node_3d().get_parent_node_3d().get_node("UI")
 	var panel = ui.get_node("PanelContainer")
