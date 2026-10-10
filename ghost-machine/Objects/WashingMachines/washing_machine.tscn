@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://dl2lph15rqxaa"]
+
+[ext_resource type="PackedScene" uid="uid://cylnivno7ixf5" path="res://Imported/Washing Machine.glb" id="1_mdy7k"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_8jl1e"]
+size = Vector3(1, 1.3000001, 1)
+
+[node name="WashingMachine" type="StaticBody3D" unique_id=1832593851]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1563849050]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.65000004, 0)
+shape = SubResource("BoxShape3D_8jl1e")
+
+[node name="Washing Machine" parent="." unique_id=449913682 instance=ExtResource("1_mdy7k")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)

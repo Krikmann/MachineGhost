@@ -7,13 +7,18 @@ extends Node3D
 
 @export var OpenRotation: float = 90.0
 @export var Duration: float = 1.0
+@export var StartsLocked: bool = true 
 
 @export var IsOpen: bool = false
 @export var IsNeighbour: bool = false
 var ClosedRotation: float = 0.0
+ 
+var ClosedRotation: float = 0.0 
+var locked: bool  
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	locked = StartsLocked
 	if DoorAnchor:
 		ClosedRotation = DoorAnchor.rotation_degrees.y
 
