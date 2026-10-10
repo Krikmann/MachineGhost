@@ -2,6 +2,8 @@
 
 [ext_resource type="Script" uid="uid://bt36svb0qkfyq" path="res://Objects/Door/door.gd" id="1_xnqow"]
 [ext_resource type="PackedScene" uid="uid://dix5xjw7vjsxd" path="res://Objects/Door/uks.glb" id="2_yh2pu"]
+[ext_resource type="AudioStream" uid="uid://4q88vvhjypsu" path="res://Objects/Door/Door_Open_v2.wav" id="3_yh2pu"]
+[ext_resource type="AudioStream" uid="uid://bdkmbbhh4ckuh" path="res://Objects/Door/Door_shut.mp3" id="4_c24xa"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_c24xa"]
 size = Vector3(1.7, 3, 0.3)
@@ -16,7 +18,7 @@ label = NodePath("DoorAnchor/Label3D")
 [node name="uks" parent="DoorAnchor" unique_id=1350037183 instance=ExtResource("2_yh2pu")]
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0.876, 0, 0)
 
-[node name="Cube_001" parent="DoorAnchor/uks" index="1" unique_id=1534890597]
+[node name="Cube_001" parent="DoorAnchor/uks" index="1" unique_id=1634366284]
 layers = 3
 
 [node name="Label3D" type="Label3D" parent="DoorAnchor" unique_id=1058341734]
@@ -27,5 +29,17 @@ font_size = 64
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=106703506]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.876, 1.5, 0)
 shape = SubResource("BoxShape3D_c24xa")
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="." unique_id=1048146144]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5829011, 0)
+stream = ExtResource("3_yh2pu")
+attenuation_model = 1
+max_distance = 8.0
+
+[node name="CloseDoorStreamPlayer" type="AudioStreamPlayer3D" parent="." unique_id=790572970]
+stream = ExtResource("4_c24xa")
+attenuation_model = 1
+volume_db = 4.434
+max_distance = 8.0
 
 [editable path="DoorAnchor/uks"]

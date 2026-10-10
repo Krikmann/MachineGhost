@@ -3,7 +3,7 @@ extends Node3D
 
 @export var can_interact = true
 @export var next_scene: PackedScene
-@export var delay: float = 5.0
+@export var delay: float = 30.0
 
 const Fire_Scene = preload("res://Objects/Fire/Fire.tscn")
 
