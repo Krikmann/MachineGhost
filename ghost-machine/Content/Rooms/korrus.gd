@@ -13,7 +13,7 @@ extends StaticBody3D
 @export var missing_door_indices_l: Array[int] = []
 @export var missing_door_indices_r: Array[int] = []
  
-@export_tool_button("Generate Doors") var _gen_btn = _generate_doors
+#@export_tool_button("Generate Doors") var _gen_btn = _generate_doors
  
 const SPECIAL_DOOR = preload("uid://cao0eiv51bi4e")
 

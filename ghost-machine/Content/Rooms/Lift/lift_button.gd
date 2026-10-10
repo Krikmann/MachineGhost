@@ -18,7 +18,7 @@ func interact() -> void:
 	tween.set_trans(Tween.TRANS_BACK).set_ease(Tween.EASE_OUT)
 	 
 	var starting_z = position.z
-	tween.tween_property(button, "position:z", -0.1, 0.4) 
+	tween.tween_property(button, "position:z", -0.06, 0.4) 
 	tween.tween_property(button, "position:z", starting_z, 0.4) 
 	
 	button_pressed.emit(to_floor)

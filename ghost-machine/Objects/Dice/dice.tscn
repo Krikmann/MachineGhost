@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://bf6a4hxdhn6ma"]
+
+[ext_resource type="Script" uid="uid://dk6cc0s8dj13m" path="res://Objects/Dice/dice.gd" id="1_moi4r"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_agiha"]
+size = Vector3(0.1, 0.1, 0.1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_g4v7s"]
+size = Vector3(0.2, 0.2, 0.2)
+
+[node name="Dice" type="RigidBody3D" unique_id=1668943469]
+script = ExtResource("1_moi4r")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=714997647]
+mesh = SubResource("BoxMesh_agiha")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1444184808]
+shape = SubResource("BoxShape3D_g4v7s")

@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://cci74jciatdpy"]
+
+[ext_resource type="PackedScene" uid="uid://c73a05jnjnx6w" path="res://Content/Rooms/Lift/lift_button.tscn" id="1_1i8j5"]
+[ext_resource type="Script" uid="uid://cug7ib3sd1jai" path="res://Content/Rooms/Lift/outer_lift_parts.gd" id="1_t1g70"]
+[ext_resource type="PackedScene" uid="uid://i7r5h8hvh0dy" path="res://Content/Rooms/Lift/lift_door.tscn" id="2_t1g70"]
+
+[node name="OuterLiftParts" type="Node3D" unique_id=353504258 node_paths=PackedStringArray("lift_door", "lift_door_2", "call_button")]
+script = ExtResource("1_t1g70")
+lift_door = NodePath("LiftDoor")
+lift_door_2 = NodePath("LiftDoor2")
+call_button = NodePath("ButtonLocation/CallButton")
+
+[node name="LiftDoor" parent="." unique_id=70762990 instance=ExtResource("2_t1g70")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 1.9999999, 0, 1.5000001)
+
+[node name="LiftDoor2" parent="." unique_id=1273849757 instance=ExtResource("2_t1g70")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.9999999, 0, -1.5)
+
+[node name="ButtonLocation" type="Node3D" parent="." unique_id=1728680340]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.5, -0.3, -1.75)
+
+[node name="CallButton" parent="ButtonLocation" unique_id=1879242147 instance=ExtResource("1_1i8j5")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 0, 0)
+
+[connection signal="button_pressed" from="ButtonLocation/CallButton" to="." method="_on_call_button_button_pressed"]
