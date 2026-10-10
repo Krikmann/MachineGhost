@@ -5,7 +5,7 @@
 [ext_resource type="Shader" uid="uid://exsoc8831120" path="res://Objects/InteractionSystem/HoverOverlay.tres" id="3_c24xa"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_v36i1"]
-size = Vector3(3.3635254, 6.466919, 3.375)
+size = Vector3(3.3635254, 6.466919, 2.1759033)
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_yh2pu"]
 render_priority = 0
@@ -14,16 +14,22 @@ shader_parameter/Color = Color(0.321569, 0.321569, 0.321569, 1)
 shader_parameter/Speed = Vector2(0, 0.03)
 shader_parameter/Num_of_Lines = 120.0
 shader_parameter/Line_Thickness = -10.0
-shader_parameter/overlay_strength = 1.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_c24xa"]
+render_priority = 0
+shader = ExtResource("3_c24xa")
+shader_parameter/Color = Color(0.321569, 0.321569, 0.321569, 1)
+shader_parameter/Speed = Vector2(0, 0.03)
+shader_parameter/Num_of_Lines = 120.0
+shader_parameter/Line_Thickness = -10.0
 
 [node name="Door" type="StaticBody3D" unique_id=1652005241 node_paths=PackedStringArray("DoorAnchor")]
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
 script = ExtResource("1_xnqow")
 DoorAnchor = NodePath("DoorAnchor")
-IsOpen = true
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=994696413]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0.06347649, 2.7334595, -1.7326994)
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -0.53607184, 2.7334595, -1.7326994)
 shape = SubResource("BoxShape3D_v36i1")
 
 [node name="DoorAnchor" type="Node3D" parent="." unique_id=1065094316]
@@ -32,11 +38,11 @@ transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 0
 [node name="uks" parent="DoorAnchor" unique_id=1945532782 instance=ExtResource("2_yh2pu")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.7499113, 0, 0)
 
-[node name="Cube" parent="DoorAnchor/uks" index="0" unique_id=1826801439]
-material_overlay = SubResource("ShaderMaterial_6hnio")
-
-[node name="Cube_001" parent="DoorAnchor/uks" index="1" unique_id=110047295]
-layers = 3
+[node name="Cube" parent="DoorAnchor/uks" index="0" unique_id=1835882070]
 material_overlay = SubResource("ShaderMaterial_yh2pu")
+
+[node name="Cube_001" parent="DoorAnchor/uks" index="1" unique_id=1634366284]
+layers = 3
+material_overlay = SubResource("ShaderMaterial_c24xa")
 
 [editable path="DoorAnchor/uks"]
