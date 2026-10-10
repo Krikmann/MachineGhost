@@ -41,6 +41,7 @@ operator = 2
 parameter_name = "overlay_strength"
 qualifier = 2
 default_value_enabled = true
+default_value = 1.0
 
 [sub_resource type="VisualShaderNodeInput" id="VisualShaderNodeInput_d0f4t"]
 expanded_output_ports = [0]

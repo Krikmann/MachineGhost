@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://c58y4bxegvvji" path="res://Objects/DeadBody/deadbody.gd" id="1_hyqsh"]
 [ext_resource type="Texture2D" uid="uid://76a8yiyqdq7p" path="res://Objects/DeadBody/deadbody_KEHACOLOR.png" id="1_q0jiq"]
+[ext_resource type="PackedScene" uid="uid://cj3xql5t24xnd" path="res://Content/Menus/EndMenu/end_screen.tscn" id="2_211pg"]
 [ext_resource type="Texture2D" uid="uid://l4arg7bdvrah" path="res://Objects/DeadBody/deadbody_-KEHAROUGH.png" id="2_hyqsh"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0yu0m"]
@@ -51,6 +52,7 @@ size = Vector3(1.5059204, 0.57128906, 1)
 
 [node name="Deadbody" type="StaticBody3D" unique_id=1901039700]
 script = ExtResource("1_hyqsh")
+next_scene = ExtResource("2_211pg")
 
 [node name="deadbody" type="Node3D" parent="." unique_id=521514746]
 
