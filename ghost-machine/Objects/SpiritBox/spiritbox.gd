@@ -3,32 +3,15 @@ class_name Spiritbox extends StaticBody3D
 @onready var collision_shape := $CollisionShape3D
 @onready var audio_player = $AudioStreamPlayer
 
-var _can_pickup := false
-var _original_parent: Node = null
-
-# Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	pass # Replace with function body.
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
-
-func pickup(slot: Node):
-	_original_parent = get_parent()
-	collision_shape.disabled = true  
+func interact() -> void:
+	collision_shape.disabled = true
 	position = Vector3.ZERO
 	rotation = Vector3.ZERO
 
 	position = Vector3(0.7,-0.5,-1)
 	rotation_degrees = Vector3(0, 90, 0)
  
-	reparent(slot, false)
-
-func drop():
-	collision_shape.disabled = false
-	reparent(_original_parent, true)
+	reparent(Services.player.hand_slot, false)
 
 func speech():
 	audio_player.play()

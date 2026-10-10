@@ -11,13 +11,13 @@
 [sub_resource type="SphereShape3D" id="SphereShape3D_g4v7s"]
 radius = 1.5
 
-[node name="CharacterBody3D" type="CharacterBody3D" unique_id=1311759364 node_paths=PackedStringArray("cam", "hand_slot", "pickup_area")]
+[node name="CharacterBody3D" type="CharacterBody3D" unique_id=1311759364 node_paths=PackedStringArray("cam", "interact_ray", "hand_slot")]
 collision_layer = 2
 collision_mask = 65535
 script = ExtResource("1_thq5r")
 cam = NodePath("Camera3D")
-hand_slot = NodePath("Camera3D/Node3D")
-pickup_area = NodePath("Area3D")
+interact_ray = NodePath("Camera3D/InteractRay")
+hand_slot = NodePath("Camera3D/Slot")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=336464480]
 shape = SubResource("CylinderShape3D_8jl1e")
@@ -33,11 +33,7 @@ shape = SubResource("SphereShape3D_g4v7s")
 [node name="Camera3D" type="Camera3D" parent="." unique_id=1772030264]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.647, 0)
 
-[node name="Node3D" type="Node3D" parent="Camera3D" unique_id=92378537]
-
-[node name="Skeleton3D" type="Skeleton3D" parent="Camera3D" unique_id=871092802]
-
-[node name="BoneAttachment3D" type="BoneAttachment3D" parent="Camera3D/Skeleton3D" unique_id=192659059]
+[node name="Slot" type="Node3D" parent="Camera3D" unique_id=92378537]
 
 [node name="InteractRay" type="RayCast3D" parent="Camera3D" unique_id=362050513]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0)

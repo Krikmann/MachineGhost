@@ -45,6 +45,7 @@ environment = SubResource("Environment_2jbd6")
 
 [node name="CharacterBody3D" parent="." unique_id=1311759364 instance=ExtResource("1_u3q0n")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 10.5, -0.68499994, 0)
+sensitivity = null
 
 [node name="CSGCombiner3D" parent="." unique_id=417930232 instance=ExtResource("3_2jbd6")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0, 0)
