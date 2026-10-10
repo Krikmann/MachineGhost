@@ -15,6 +15,9 @@ var ClosedRotation: float = 0.0
  
 var locked: bool  
 
+@onready var audio_stream_player_3d: AudioStreamPlayer3D = $AudioStreamPlayer3D
+
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	locked = StartsLocked
@@ -37,6 +40,7 @@ func open_door() -> void:
 		ClosedRotation + OpenRotation,
 		Duration
 	)
+	audio_stream_player_3d.play()
 	
 	if IsNeighbour:
 		call_neighbour()

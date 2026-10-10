@@ -74,3 +74,6 @@ transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 2.9,
 
 [node name="Deadbody" parent="." unique_id=1901039700 instance=ExtResource("3_347sm")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.28933823, 4.7683716e-07, 7.87662)
+
+[editable path="OtherContent/WashingMachine"]
+[editable path="OtherContent/WashingMachine/Washing Machine"]
