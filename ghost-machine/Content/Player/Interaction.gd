@@ -5,6 +5,8 @@ class_name Interaciton extends RayCast3D
 var collider
 var last_collider
 
+@export var highlight_material: Material
+
 var CanInteractVar : String = "can_interact"
 
 func _physics_process(_delta: float) -> void:
@@ -62,11 +64,21 @@ func _set_overlay_strength(target_node: Node3D, strength: float) -> void:
 	if not is_instance_valid(target_node): 
 		return
 		
-	# Using "GeometryInstance3D" catches all types of 3D meshes no matter their node names
+	
 	var meshes = target_node.find_children("*", "MeshInstance3D")
 	
 	for mesh in meshes:
-		if mesh.material_overlay: #and mesh.material_overlay.get_shader_parameter("overlay_strength") != null:
-			# Checking the shader's uniform list is much safer than checking parameter data values
-			#var shader = mesh.material_overlay.get("shader")
-			mesh.set_instance_shader_parameter("overlay_strength", strength)
+		if strength > 0.0:
+			# Apply the material to the overlay slot if looking at it
+			mesh.material_overlay = highlight_material
+		else:
+			# Completely clear the slot and free memory when looking away
+			mesh.material_overlay = null
+			
+	#var meshes = target_node.find_children("*", "MeshInstance3D")
+	#
+	#for mesh in meshes:
+		#if mesh.material_overlay: #and mesh.material_overlay.get_shader_parameter("overlay_strength") != null:
+			## Checking the shader's uniform list is much safer than checking parameter data values
+			##var shader = mesh.material_overlay.get("shader")
+			#mesh.set_instance_shader_parameter("overlay_strength", strength)
