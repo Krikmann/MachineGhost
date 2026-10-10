@@ -2,20 +2,17 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://76a8yiyqdq7p"
-path.s3tc="res://.godot/imported/deadbody_KEHACOLOR.png-f60b278341f1aeacc6fbdabe22e7dcb7.s3tc.ctex"
+uid="uid://d13jf0w5k51bx"
+path.s3tc="res://.godot/imported/T_ToonFire.png-ccdc20c28d3b5a4f67d6c1ef3c17dcea.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
-generator_parameters={
-"md5": "0c965b043e9d811c93a53715bd2aabcc"
-}
 
 [deps]
 
-source_file="res://Imported/deadbody_KEHACOLOR.png"
-dest_files=["res://.godot/imported/deadbody_KEHACOLOR.png-f60b278341f1aeacc6fbdabe22e7dcb7.s3tc.ctex"]
+source_file="res://Objects/Fire/T_ToonFire.png"
+dest_files=["res://.godot/imported/T_ToonFire.png-ccdc20c28d3b5a4f67d6c1ef3c17dcea.s3tc.ctex"]
 
 [params]
 
