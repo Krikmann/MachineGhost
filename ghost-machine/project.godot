@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="GhostMachine"
-run/main_scene="uid://cjmby5iqx70im"
+run/main_scene="uid://c2nl407g0akrk"
 config/features=PackedStringArray("4.7", "GL Compatibility")
 config/icon="res://icon.svg"
 

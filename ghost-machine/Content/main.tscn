@@ -1,5 +1,6 @@
 [gd_scene format=4 uid="uid://cjmby5iqx70im"]
 
+[ext_resource type="PackedScene" uid="uid://bdyq3s8it2vn6" path="res://Content/Menus/PauseMenu/pause_menu.tscn" id="1_nf1mn"]
 [ext_resource type="PackedScene" uid="uid://bh0f4pqhqta3q" path="res://Content/Player/player.tscn" id="1_u3q0n"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_u3q0n"]
@@ -35,6 +36,8 @@ shadow_enabled = true
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=151092833]
 environment = SubResource("Environment_2jbd6")
+
+[node name="PauseMenu" parent="." unique_id=2071463520 instance=ExtResource("1_nf1mn")]
 
 [node name="Platform" type="StaticBody3D" parent="." unique_id=753999886]
 

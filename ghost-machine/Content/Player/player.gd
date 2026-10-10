@@ -12,7 +12,7 @@ func _ready() -> void:
 func _unhandled_input(event: InputEvent) -> void:
 	# Capture mouse at the start of game
 	# TODO move elsewhere later maybe
-	if event.is_action_pressed("quit"): get_tree().quit()
+	#if event.is_action_pressed("quit"): get_tree().quit()
 	
 	# Camera movement
 	if event is InputEventMouseMotion:

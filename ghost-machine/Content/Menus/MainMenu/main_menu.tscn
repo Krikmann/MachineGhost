@@ -1,0 +1,61 @@
+[gd_scene format=3 uid="uid://c2nl407g0akrk"]
+
+[ext_resource type="Script" uid="uid://co15d81b5h520" path="res://Content/Menus/MainMenu/main_menu.gd" id="1_urgqi"]
+
+[node name="MainMenu" type="CanvasLayer" unique_id=385488843]
+script = ExtResource("1_urgqi")
+
+[node name="MarginContainer" type="CenterContainer" parent="." unique_id=2018671471]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer" unique_id=1490526150]
+layout_mode = 2
+theme_override_constants/margin_top = 88
+
+[node name="PanelContainer" type="PanelContainer" parent="MarginContainer/MarginContainer" unique_id=1190985772]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/MarginContainer/PanelContainer" unique_id=2106273002]
+layout_mode = 2
+theme_override_constants/margin_left = 50
+theme_override_constants/margin_top = 50
+theme_override_constants/margin_right = 50
+theme_override_constants/margin_bottom = 50
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/MarginContainer/PanelContainer/MarginContainer" unique_id=454052618]
+layout_mode = 2
+alignment = 1
+
+[node name="PlayButton" type="Button" parent="MarginContainer/MarginContainer/PanelContainer/MarginContainer/VBoxContainer" unique_id=1993864965]
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "Play
+"
+
+[node name="QuitButton" type="Button" parent="MarginContainer/MarginContainer/PanelContainer/MarginContainer/VBoxContainer" unique_id=1852139340]
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "Quit
+
+"
+
+[node name="MarginContainer2" type="MarginContainer" parent="." unique_id=950224626]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -20.0
+offset_right = 20.0
+offset_bottom = 40.0
+grow_horizontal = 2
+
+[node name="Label" type="Label" parent="MarginContainer2" unique_id=651687880]
+layout_mode = 2
+theme_override_font_sizes/font_size = 64
+text = "VERY AWESOME GAME NAME"
+
+[connection signal="pressed" from="MarginContainer/MarginContainer/PanelContainer/MarginContainer/VBoxContainer/PlayButton" to="." method="_on_play_button_pressed"]
+[connection signal="pressed" from="MarginContainer/MarginContainer/PanelContainer/MarginContainer/VBoxContainer/QuitButton" to="." method="_on_quit_button_pressed"]
