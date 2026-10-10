@@ -19,7 +19,6 @@ size = Vector3(1.7, 3, 0.3)
 script = ExtResource("1_qtc24")
 DoorAnchor = NodePath("DoorAnchor")
 label = NodePath("DoorAnchor/Label3D")
-door_number = null
 
 [node name="DoorAnchor" type="Node3D" parent="." unique_id=1065094316]
 
@@ -32,8 +31,7 @@ material_overlay = SubResource("ShaderMaterial_c24xa")
 
 [node name="Label3D" type="Label3D" parent="DoorAnchor" unique_id=879640420]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.226, 2.5200002, 0.11000003)
-text = "283
-"
+text = "283"
 font_size = 64
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=994696413]

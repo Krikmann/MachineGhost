@@ -3,6 +3,8 @@
 [ext_resource type="PackedScene" uid="uid://dq7owr1bk48yd" path="res://Content/NPC/NPC.tscn" id="1_n2cmd"]
 [ext_resource type="Script" uid="uid://bvsq63l3qh3ja" path="res://Content/Rooms/Room/room.gd" id="1_toslu"]
 [ext_resource type="PackedScene" uid="uid://c7pjas5aodici" path="res://Objects/Door/door.tscn" id="3_f20ac"]
+[ext_resource type="Material" uid="uid://b3yt3yesjh7ha" path="res://Imported/vaip_mat.tres" id="4_8lvy2"]
+[ext_resource type="Texture2D" uid="uid://dmi3ngexj6vnx" path="res://Imported/Vaip.jpg" id="4_p03ir"]
 
 [sub_resource type="Animation" id="Animation_f20ac"]
 length = 0.001
@@ -62,26 +64,42 @@ _surfaces = [{
 "vertex_data": PackedByteArray("AAAAwP///7////+/AAAAwP///z////+/AAAAwP///7////8/AADAv///v7///7+/AADAv///v7///78/AADAv///vz///7+/AAAAwP///7////+/AAAAwP///7////8/AAAAQP///7////+/AADAv///v7///7+/AAAAQP//v7///7+/AADAv///v7///78/AAAAwP///7////+/AAAAQP///7////+/AAAAwP///z////+/AADAv///v7///7+/AADAv///vz///7+/AAAAQP//v7///7+/AAAAwP///7////8/AAAAwP///z////+/AAAAwP///z////8/AADAv///v7///78/AADAv///vz///78/AADAv///vz///7+/AAAAwP///7////8/AAAAwP///z////8/AAAAQP///z////8/AADAv///v7///78/AAAAQP//vz///78/AADAv///vz///78/AAAAwP///z////+/AAAAQP///z////8/AAAAwP///z////8/AADAv///vz///7+/AADAv///vz///78/AAAAQP//vz///78/AAAAQP///7////+/AAAAQP///7////8/AAAAQP//v7///7+/AAAAQP///7////+/AAAAQP//v7///7+/AAAAQP///z////+/AAAAwP///7////8/AAAAQP///7////8/AAAAQP///7////+/AADAv///v7///78/AAAAQP//v7///7+/AAAAQP//v7///78/AAAAwP///7////8/AAAAQP///z////8/AAAAQP///7////8/AADAv///v7///78/AAAAQP//v7///78/AAAAQP//vz///78/AAAAQP///7////8/AAAAQP//v7///78/AAAAQP//v7///7+/AAAAQP///7////8/AAAAQP//vz///78/AAAAQP//v7///78/AADAv///vz///7+/AAAAQP//vz///7+/AAAAQP//v7///7+/AAAAwP///z////+/AAAAQP///7////+/AAAAQP///z////+/AADAv///vz///7+/AAAAQP//vz///78/AAAAQP//vz///7+/AAAAwP///z////+/AAAAQP///z////+/AAAAQP///z////8/AAAAQP///z////+/AAAAQP//v7///7+/AAAAQP//vz///7+/AAAAQP///z////+/AAAAQP//vz///7+/AAAAQP//vz///78/AAAAQP///7////8/AAAAQP///z////8/AAAAQP//vz///78/AAAAQP///z////+/AAAAQP//vz///78/AAAAQP///z////8/AAD/f/9//n8AAP9//3/+fwAA/3//f/5/////f/9/AID///9//38AgP///3//fwCA/38AAP//AAD/fwAA//8AAP9/AAD//wAA/3//////////f/////////9//////////////wAA/z//////AAD/P/////8AAP8//3//fwAA/7//f/9/AAD/v/9//38AAP+/AAD/f/9//n8AAP9//3/+fwAA/3//f/5/////f/9/AID///9//38AgP///3//fwCA/3//fwAA/z//f/9/AAD/P/9//38AAP8//////wAA/7//////AAD/v/////8AAP+//3//////AAD/f/////8AAP9//////wAA/38AAP//////fwAA//////9/AAD/////////f/9//n////9//3/+f////3//f/5/////f/9//n////9//3/+f////3//f/5//38AAP//AAD/fwAA//8AAP9/AAD//wAA/3//////////f/////////9//////////3//fwAA/z//f/9/AAD/P/9//38AAP8//////wAA/7//////AAD/v/////8AAP+/////f/9//n////9//3/+f////3//f/5/////f/9//n////9//3/+f////3//f/5//3//fwAA/7//f/9/AAD/v/9//38AAP+//////wAA/z//////AAD/P/////8AAP8//38AAP//////fwAA//////9/AAD//////3//////AAD/f/////8AAP9//////wAA////f/9//n////9//3/+f////3//f/5/////f/9//n////9//3/+f////3//f/5/////f/9//n////9//3/+f////3//f/5/////f/9//n////9//3/+f////3//f/5/")
 }]
 
-[node name="Room" type="StaticBody3D" unique_id=1516137746]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_p03ir"]
+albedo_texture = ExtResource("4_p03ir")
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_8lvy2"]
+_surfaces = [{
+"aabb": AABB(-0.5, 0, -0.75, 1, 0.5, 1.5),
+"attribute_data": PackedByteArray("AACAPwAAgD8AAIA/AAAAAAAAAAAAAAAAAACAPwAAgD8AAIA/AAAAAAAAAAAAAAAAAACAPwAAgD8AAIA/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAPwAAgD8AAIA/AACAPwAAgD8AAIA/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAPwAAgD8AAIA/AAAAAAAAAAAAAAAAAACAPwAAgD8AAIA/AAAAAAAAAAAAAAAAAACAPwAAgD8AAIA/AACAPwAAgD8AAIA/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAPwAAgD8AAIA/AACAPwAAgD8AAIA/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAPwAAgD8AAIA/"),
+"format": 34359738391,
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 36,
+"vertex_data": PackedByteArray("AAAAvwAAAAAAAEA/AAAAvwAAAAAAAEC/AAAAvwAAAD8AAEC/AAAAPwAAAAAAAEC/AAAAvwAAAAAAAEC/AAAAvwAAAAAAAEA/AAAAvwAAAD8AAEC/AAAAvwAAAAAAAEC/AAAAPwAAAAAAAEC/AAAAvwAAAD8AAEC/AAAAvwAAAD8AAEA/AAAAvwAAAAAAAEA/AAAAvwAAAAAAAEA/AAAAvwAAAD8AAEA/AAAAPwAAAD8AAEA/AAAAPwAAAD8AAEA/AAAAvwAAAD8AAEA/AAAAvwAAAD8AAEC/AAAAvwAAAAAAAEA/AAAAPwAAAAAAAEA/AAAAPwAAAAAAAEC/AAAAPwAAAD8AAEA/AAAAPwAAAAAAAEA/AAAAvwAAAAAAAEA/AAAAPwAAAAAAAEC/AAAAPwAAAAAAAEA/AAAAPwAAAD8AAEA/AAAAPwAAAAAAAEC/AAAAPwAAAD8AAEC/AAAAvwAAAD8AAEC/AAAAvwAAAD8AAEC/AAAAPwAAAD8AAEC/AAAAPwAAAD8AAEA/AAAAPwAAAD8AAEA/AAAAPwAAAD8AAEC/AAAAPwAAAAAAAEC/AAD/f/9//n8AAP9//3/+fwAA/3//f/5//38AAP//AAD/fwAA//8AAP9/AAD//wAA/////wAA/z//////AAD/P/////8AAP8/AAD/f/9//n8AAP9//3/+fwAA/3//f/5//3//fwAA/z//f/9/AAD/P/9//38AAP8//3//////AAD/f/////8AAP9//////wAA/38AAP//AAD/fwAA//8AAP9/AAD//wAA/3//fwAA/z//f/9/AAD/P/9//38AAP8/////f/9//n////9//3/+f////3//f/5//////wAA/z//////AAD/P/////8AAP8//3//////AAD/f/////8AAP9//////wAA////f/9//n////9//3/+f////3//f/5/")
+}]
+
+[node name="Room" type="StaticBody3D" unique_id=1516137746 node_paths=PackedStringArray("door")]
 script = ExtResource("1_toslu")
+door = NodePath("Door")
 
 [node name="Npc" parent="." unique_id=1202752648 instance=ExtResource("1_n2cmd")]
 
 [node name="Door" parent="." unique_id=2032582818 instance=ExtResource("3_f20ac")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.8962433, -1.4870176, 0.8030832)
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 1.8962433, -1.4870176, 0.8030832)
+door_number = 101
 IsNeighbour = true
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=124067266]
 libraries/ = SubResource("AnimationLibrary_8lvy2")
 
-[node name="CSGCombiner3D" type="CSGCombiner3D" parent="." unique_id=1606624548]
+[node name="Ruum" type="CSGCombiner3D" parent="." unique_id=1606624548]
 visible = false
 
-[node name="CSGBox3D" type="CSGBox3D" parent="CSGCombiner3D" unique_id=1607275721]
+[node name="CSGBox3D" type="CSGBox3D" parent="Ruum" unique_id=1607275721]
 transform = Transform3D(1, 0, 0, 0, 0.99999994, 0, 0, 0, 0.99999994, 0, 0, 0)
 size = Vector3(4, 4, 4)
 
-[node name="CSGBox3D2" type="CSGBox3D" parent="CSGCombiner3D/CSGBox3D" unique_id=1060409459]
+[node name="CSGBox3D2" type="CSGBox3D" parent="Ruum/CSGBox3D" unique_id=1060409459]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.25, 0, 0)
 operation = 2
 size = Vector3(3.5, 3, 3)
@@ -91,3 +109,18 @@ shape = SubResource("ConcavePolygonShape3D_f20ac")
 
 [node name="CSGBakedMeshInstance3D" type="MeshInstance3D" parent="." unique_id=1843817295]
 mesh = SubResource("ArrayMesh_p03ir")
+
+[node name="Vaip" type="CSGCombiner3D" parent="." unique_id=1706204331]
+transform = Transform3D(0.99539614, 0, -0.095845744, 0, 1, 0, 0.095845744, 0, 0.99539614, 2.6, -1.97, 0)
+visible = false
+material_override = ExtResource("4_8lvy2")
+
+[node name="CSGBox3D" type="CSGBox3D" parent="Vaip" unique_id=965118324]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.25, 0)
+material_override = SubResource("StandardMaterial3D_p03ir")
+size = Vector3(1, 0.5, 1.5)
+
+[node name="CSGBakedMeshInstance3D2" type="MeshInstance3D" parent="." unique_id=1470957088]
+transform = Transform3D(0.99539614, 0, -0.095845744, 0, 1, 0, 0.095845744, 0, 0.99539614, 2.6, -1.97, 0)
+material_override = ExtResource("4_8lvy2")
+mesh = SubResource("ArrayMesh_8lvy2")

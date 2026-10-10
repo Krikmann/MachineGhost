@@ -28,6 +28,7 @@ next_door_offset = Vector3(-5, 0, 0)
 doors_begin_l = NodePath("DoorsBeginL")
 doors_begin_r = NodePath("DoorsBeginR")
 missing_door_indices_l = Array[int]([8])
+missing_door_indices_r = Array[int]([4])
 
 [node name="CSGCombiner3D" type="CSGCombiner3D" parent="." unique_id=239346601]
 visible = false
@@ -206,194 +207,187 @@ outline_size = 48
 
 [node name="Doors" type="Node3D" parent="." unique_id=170159607]
 
-[node name="SpecialDoor" type="StaticBody3D" parent="Doors" unique_id=1652005241 node_paths=PackedStringArray("DoorAnchor", "label") instance=ExtResource("2_v2014")]
+[node name="@StaticBody3D@43290" type="StaticBody3D" parent="Doors" unique_id=1652005241 node_paths=PackedStringArray("DoorAnchor", "label") instance=ExtResource("2_v2014")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -1.625, -2.5, 2.75)
 script = ExtResource("3_v2014")
 DoorAnchor = NodePath("DoorAnchor")
 label = NodePath("DoorAnchor/Label3D")
-door_number = 366
+door_number = 353
 
-[node name="@StaticBody3D@65528" type="StaticBody3D" parent="Doors" unique_id=1524370643 node_paths=PackedStringArray("DoorAnchor", "label") instance=ExtResource("2_v2014")]
+[node name="@StaticBody3D@43291" type="StaticBody3D" parent="Doors" unique_id=1383465951 node_paths=PackedStringArray("DoorAnchor", "label") instance=ExtResource("2_v2014")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -6.625, -2.5, 2.75)
 script = ExtResource("3_v2014")
 DoorAnchor = NodePath("DoorAnchor")
 label = NodePath("DoorAnchor/Label3D")
-door_number = 359
+door_number = 395
 
-[node name="@StaticBody3D@65529" type="StaticBody3D" parent="Doors" unique_id=707432346 node_paths=PackedStringArray("DoorAnchor", "label") instance=ExtResource("2_v2014")]
+[node name="@StaticBody3D@43292" type="StaticBody3D" parent="Doors" unique_id=964142009 node_paths=PackedStringArray("DoorAnchor", "label") instance=ExtResource("2_v2014")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -11.625, -2.5, 2.75)
 script = ExtResource("3_v2014")
 DoorAnchor = NodePath("DoorAnchor")
 label = NodePath("DoorAnchor/Label3D")
-door_number = 394
+door_number = 319
 
-[node name="@StaticBody3D@65530" type="StaticBody3D" parent="Doors" unique_id=1802309816 node_paths=PackedStringArray("DoorAnchor", "label") instance=ExtResource("2_v2014")]
+[node name="@StaticBody3D@43293" type="StaticBody3D" parent="Doors" unique_id=812424182 node_paths=PackedStringArray("DoorAnchor", "label") instance=ExtResource("2_v2014")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -16.625, -2.5, 2.75)
-script = ExtResource("3_v2014")
-DoorAnchor = NodePath("DoorAnchor")
-label = NodePath("DoorAnchor/Label3D")
-door_number = 302
-
-[node name="@StaticBody3D@65531" type="StaticBody3D" parent="Doors" unique_id=1157573615 node_paths=PackedStringArray("DoorAnchor", "label") instance=ExtResource("2_v2014")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -21.625, -2.5, 2.75)
-script = ExtResource("3_v2014")
-DoorAnchor = NodePath("DoorAnchor")
-label = NodePath("DoorAnchor/Label3D")
-door_number = 339
-
-[node name="@StaticBody3D@65532" type="StaticBody3D" parent="Doors" unique_id=425897693 node_paths=PackedStringArray("DoorAnchor", "label") instance=ExtResource("2_v2014")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -26.625, -2.5, 2.75)
-script = ExtResource("3_v2014")
-DoorAnchor = NodePath("DoorAnchor")
-label = NodePath("DoorAnchor/Label3D")
-door_number = 306
-
-[node name="@StaticBody3D@65533" type="StaticBody3D" parent="Doors" unique_id=733255338 node_paths=PackedStringArray("DoorAnchor", "label") instance=ExtResource("2_v2014")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -31.625, -2.5, 2.75)
 script = ExtResource("3_v2014")
 DoorAnchor = NodePath("DoorAnchor")
 label = NodePath("DoorAnchor/Label3D")
 door_number = 378
 
-[node name="@StaticBody3D@65534" type="StaticBody3D" parent="Doors" unique_id=1938826111 node_paths=PackedStringArray("DoorAnchor", "label") instance=ExtResource("2_v2014")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -36.625, -2.5, 2.75)
-script = ExtResource("3_v2014")
-DoorAnchor = NodePath("DoorAnchor")
-label = NodePath("DoorAnchor/Label3D")
-door_number = 360
-
-[node name="@StaticBody3D@65535" type="StaticBody3D" parent="Doors" unique_id=1056280854 node_paths=PackedStringArray("DoorAnchor", "label") instance=ExtResource("2_v2014")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -46.625, -2.5, 2.75)
-script = ExtResource("3_v2014")
-DoorAnchor = NodePath("DoorAnchor")
-label = NodePath("DoorAnchor/Label3D")
-door_number = 326
-
-[node name="@StaticBody3D@65536" type="StaticBody3D" parent="Doors" unique_id=1085663001 node_paths=PackedStringArray("DoorAnchor", "label") instance=ExtResource("2_v2014")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -51.625, -2.5, 2.75)
-script = ExtResource("3_v2014")
-DoorAnchor = NodePath("DoorAnchor")
-label = NodePath("DoorAnchor/Label3D")
-door_number = 390
-
-[node name="@StaticBody3D@65537" type="StaticBody3D" parent="Doors" unique_id=1942290491 node_paths=PackedStringArray("DoorAnchor", "label") instance=ExtResource("2_v2014")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -56.625, -2.5, 2.75)
-script = ExtResource("3_v2014")
-DoorAnchor = NodePath("DoorAnchor")
-label = NodePath("DoorAnchor/Label3D")
-door_number = 337
-
-[node name="@StaticBody3D@65538" type="StaticBody3D" parent="Doors" unique_id=42270156 node_paths=PackedStringArray("DoorAnchor", "label") instance=ExtResource("2_v2014")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -61.625, -2.5, 2.75)
+[node name="@StaticBody3D@43294" type="StaticBody3D" parent="Doors" unique_id=257500758 node_paths=PackedStringArray("DoorAnchor", "label") instance=ExtResource("2_v2014")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -21.625, -2.5, 2.75)
 script = ExtResource("3_v2014")
 DoorAnchor = NodePath("DoorAnchor")
 label = NodePath("DoorAnchor/Label3D")
 door_number = 358
 
-[node name="@StaticBody3D@65539" type="StaticBody3D" parent="Doors" unique_id=2037525369 node_paths=PackedStringArray("DoorAnchor", "label") instance=ExtResource("2_v2014")]
+[node name="@StaticBody3D@43295" type="StaticBody3D" parent="Doors" unique_id=1862117382 node_paths=PackedStringArray("DoorAnchor", "label") instance=ExtResource("2_v2014")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -26.625, -2.5, 2.75)
+script = ExtResource("3_v2014")
+DoorAnchor = NodePath("DoorAnchor")
+label = NodePath("DoorAnchor/Label3D")
+door_number = 312
+
+[node name="@StaticBody3D@43296" type="StaticBody3D" parent="Doors" unique_id=1116499475 node_paths=PackedStringArray("DoorAnchor", "label") instance=ExtResource("2_v2014")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -31.625, -2.5, 2.75)
+script = ExtResource("3_v2014")
+DoorAnchor = NodePath("DoorAnchor")
+label = NodePath("DoorAnchor/Label3D")
+door_number = 389
+
+[node name="@StaticBody3D@43297" type="StaticBody3D" parent="Doors" unique_id=1834021714 node_paths=PackedStringArray("DoorAnchor", "label") instance=ExtResource("2_v2014")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -36.625, -2.5, 2.75)
+script = ExtResource("3_v2014")
+DoorAnchor = NodePath("DoorAnchor")
+label = NodePath("DoorAnchor/Label3D")
+door_number = 342
+
+[node name="@StaticBody3D@43298" type="StaticBody3D" parent="Doors" unique_id=1562853751 node_paths=PackedStringArray("DoorAnchor", "label") instance=ExtResource("2_v2014")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -46.625, -2.5, 2.75)
+script = ExtResource("3_v2014")
+DoorAnchor = NodePath("DoorAnchor")
+label = NodePath("DoorAnchor/Label3D")
+door_number = 332
+
+[node name="@StaticBody3D@43299" type="StaticBody3D" parent="Doors" unique_id=2092277315 node_paths=PackedStringArray("DoorAnchor", "label") instance=ExtResource("2_v2014")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -51.625, -2.5, 2.75)
+script = ExtResource("3_v2014")
+DoorAnchor = NodePath("DoorAnchor")
+label = NodePath("DoorAnchor/Label3D")
+door_number = 326
+
+[node name="@StaticBody3D@43300" type="StaticBody3D" parent="Doors" unique_id=1452136005 node_paths=PackedStringArray("DoorAnchor", "label") instance=ExtResource("2_v2014")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -56.625, -2.5, 2.75)
+script = ExtResource("3_v2014")
+DoorAnchor = NodePath("DoorAnchor")
+label = NodePath("DoorAnchor/Label3D")
+door_number = 339
+
+[node name="@StaticBody3D@43301" type="StaticBody3D" parent="Doors" unique_id=205684868 node_paths=PackedStringArray("DoorAnchor", "label") instance=ExtResource("2_v2014")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -61.625, -2.5, 2.75)
+script = ExtResource("3_v2014")
+DoorAnchor = NodePath("DoorAnchor")
+label = NodePath("DoorAnchor/Label3D")
+door_number = 397
+
+[node name="@StaticBody3D@43302" type="StaticBody3D" parent="Doors" unique_id=1403776030 node_paths=PackedStringArray("DoorAnchor", "label") instance=ExtResource("2_v2014")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -66.625, -2.5, 2.75)
 script = ExtResource("3_v2014")
 DoorAnchor = NodePath("DoorAnchor")
 label = NodePath("DoorAnchor/Label3D")
-door_number = 356
+door_number = 362
 
-[node name="@StaticBody3D@65540" type="StaticBody3D" parent="Doors" unique_id=71263788 node_paths=PackedStringArray("DoorAnchor", "label") instance=ExtResource("2_v2014")]
+[node name="@StaticBody3D@43303" type="StaticBody3D" parent="Doors" unique_id=1313417744 node_paths=PackedStringArray("DoorAnchor", "label") instance=ExtResource("2_v2014")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.375, -2.5, -2.75)
 script = ExtResource("3_v2014")
 DoorAnchor = NodePath("DoorAnchor")
 label = NodePath("DoorAnchor/Label3D")
-door_number = 373
+door_number = 325
 
-[node name="@StaticBody3D@65541" type="StaticBody3D" parent="Doors" unique_id=75481986 node_paths=PackedStringArray("DoorAnchor", "label") instance=ExtResource("2_v2014")]
+[node name="@StaticBody3D@43304" type="StaticBody3D" parent="Doors" unique_id=2085091590 node_paths=PackedStringArray("DoorAnchor", "label") instance=ExtResource("2_v2014")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.375, -2.5, -2.75)
+script = ExtResource("3_v2014")
+DoorAnchor = NodePath("DoorAnchor")
+label = NodePath("DoorAnchor/Label3D")
+door_number = 307
+
+[node name="@StaticBody3D@43305" type="StaticBody3D" parent="Doors" unique_id=667863674 node_paths=PackedStringArray("DoorAnchor", "label") instance=ExtResource("2_v2014")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.375, -2.5, -2.75)
+script = ExtResource("3_v2014")
+DoorAnchor = NodePath("DoorAnchor")
+label = NodePath("DoorAnchor/Label3D")
+door_number = 387
+
+[node name="@StaticBody3D@43306" type="StaticBody3D" parent="Doors" unique_id=335198184 node_paths=PackedStringArray("DoorAnchor", "label") instance=ExtResource("2_v2014")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18.375, -2.5, -2.75)
+script = ExtResource("3_v2014")
+DoorAnchor = NodePath("DoorAnchor")
+label = NodePath("DoorAnchor/Label3D")
+door_number = 385
+
+[node name="@StaticBody3D@43307" type="StaticBody3D" parent="Doors" unique_id=1113536378 node_paths=PackedStringArray("DoorAnchor", "label") instance=ExtResource("2_v2014")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -28.375, -2.5, -2.75)
+script = ExtResource("3_v2014")
+DoorAnchor = NodePath("DoorAnchor")
+label = NodePath("DoorAnchor/Label3D")
+door_number = 354
+
+[node name="@StaticBody3D@43308" type="StaticBody3D" parent="Doors" unique_id=416493850 node_paths=PackedStringArray("DoorAnchor", "label") instance=ExtResource("2_v2014")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -33.375, -2.5, -2.75)
 script = ExtResource("3_v2014")
 DoorAnchor = NodePath("DoorAnchor")
 label = NodePath("DoorAnchor/Label3D")
 door_number = 317
 
-[node name="@StaticBody3D@65542" type="StaticBody3D" parent="Doors" unique_id=1237204164 node_paths=PackedStringArray("DoorAnchor", "label") instance=ExtResource("2_v2014")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.375, -2.5, -2.75)
-script = ExtResource("3_v2014")
-DoorAnchor = NodePath("DoorAnchor")
-label = NodePath("DoorAnchor/Label3D")
-door_number = 367
-
-[node name="@StaticBody3D@65543" type="StaticBody3D" parent="Doors" unique_id=58330547 node_paths=PackedStringArray("DoorAnchor", "label") instance=ExtResource("2_v2014")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18.375, -2.5, -2.75)
-script = ExtResource("3_v2014")
-DoorAnchor = NodePath("DoorAnchor")
-label = NodePath("DoorAnchor/Label3D")
-door_number = 330
-
-[node name="@StaticBody3D@65544" type="StaticBody3D" parent="Doors" unique_id=2071662027 node_paths=PackedStringArray("DoorAnchor", "label") instance=ExtResource("2_v2014")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -23.375, -2.5, -2.75)
-script = ExtResource("3_v2014")
-DoorAnchor = NodePath("DoorAnchor")
-label = NodePath("DoorAnchor/Label3D")
-door_number = 376
-
-[node name="@StaticBody3D@65545" type="StaticBody3D" parent="Doors" unique_id=2114551840 node_paths=PackedStringArray("DoorAnchor", "label") instance=ExtResource("2_v2014")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -28.375, -2.5, -2.75)
-script = ExtResource("3_v2014")
-DoorAnchor = NodePath("DoorAnchor")
-label = NodePath("DoorAnchor/Label3D")
-door_number = 320
-
-[node name="@StaticBody3D@65546" type="StaticBody3D" parent="Doors" unique_id=1771038529 node_paths=PackedStringArray("DoorAnchor", "label") instance=ExtResource("2_v2014")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -33.375, -2.5, -2.75)
-script = ExtResource("3_v2014")
-DoorAnchor = NodePath("DoorAnchor")
-label = NodePath("DoorAnchor/Label3D")
-door_number = 315
-
-[node name="@StaticBody3D@65547" type="StaticBody3D" parent="Doors" unique_id=1986071870 node_paths=PackedStringArray("DoorAnchor", "label") instance=ExtResource("2_v2014")]
+[node name="@StaticBody3D@43309" type="StaticBody3D" parent="Doors" unique_id=16322299 node_paths=PackedStringArray("DoorAnchor", "label") instance=ExtResource("2_v2014")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -38.375, -2.5, -2.75)
 script = ExtResource("3_v2014")
 DoorAnchor = NodePath("DoorAnchor")
 label = NodePath("DoorAnchor/Label3D")
 door_number = 314
 
-[node name="@StaticBody3D@65548" type="StaticBody3D" parent="Doors" unique_id=1092191377 node_paths=PackedStringArray("DoorAnchor", "label") instance=ExtResource("2_v2014")]
+[node name="@StaticBody3D@43310" type="StaticBody3D" parent="Doors" unique_id=229503084 node_paths=PackedStringArray("DoorAnchor", "label") instance=ExtResource("2_v2014")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -43.375, -2.5, -2.75)
 script = ExtResource("3_v2014")
 DoorAnchor = NodePath("DoorAnchor")
 label = NodePath("DoorAnchor/Label3D")
-door_number = 325
+door_number = 374
 
-[node name="@StaticBody3D@65549" type="StaticBody3D" parent="Doors" unique_id=331386687 node_paths=PackedStringArray("DoorAnchor", "label") instance=ExtResource("2_v2014")]
+[node name="@StaticBody3D@43311" type="StaticBody3D" parent="Doors" unique_id=509116405 node_paths=PackedStringArray("DoorAnchor", "label") instance=ExtResource("2_v2014")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -48.375, -2.5, -2.75)
 script = ExtResource("3_v2014")
 DoorAnchor = NodePath("DoorAnchor")
 label = NodePath("DoorAnchor/Label3D")
-door_number = 344
+door_number = 379
 
-[node name="@StaticBody3D@65550" type="StaticBody3D" parent="Doors" unique_id=775457988 node_paths=PackedStringArray("DoorAnchor", "label") instance=ExtResource("2_v2014")]
+[node name="@StaticBody3D@43312" type="StaticBody3D" parent="Doors" unique_id=313123188 node_paths=PackedStringArray("DoorAnchor", "label") instance=ExtResource("2_v2014")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -53.375, -2.5, -2.75)
 script = ExtResource("3_v2014")
 DoorAnchor = NodePath("DoorAnchor")
 label = NodePath("DoorAnchor/Label3D")
-door_number = 343
+door_number = 376
 
-[node name="@StaticBody3D@65551" type="StaticBody3D" parent="Doors" unique_id=1388526435 node_paths=PackedStringArray("DoorAnchor", "label") instance=ExtResource("2_v2014")]
+[node name="@StaticBody3D@43313" type="StaticBody3D" parent="Doors" unique_id=1032665706 node_paths=PackedStringArray("DoorAnchor", "label") instance=ExtResource("2_v2014")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -58.375, -2.5, -2.75)
 script = ExtResource("3_v2014")
 DoorAnchor = NodePath("DoorAnchor")
 label = NodePath("DoorAnchor/Label3D")
-door_number = 365
+door_number = 338
 
-[node name="@StaticBody3D@65552" type="StaticBody3D" parent="Doors" unique_id=1221318791 node_paths=PackedStringArray("DoorAnchor", "label") instance=ExtResource("2_v2014")]
+[node name="@StaticBody3D@43314" type="StaticBody3D" parent="Doors" unique_id=1181100343 node_paths=PackedStringArray("DoorAnchor", "label") instance=ExtResource("2_v2014")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -63.375, -2.5, -2.75)
 script = ExtResource("3_v2014")
 DoorAnchor = NodePath("DoorAnchor")
 label = NodePath("DoorAnchor/Label3D")
-door_number = 335
+door_number = 333
 
-[node name="@StaticBody3D@65553" type="StaticBody3D" parent="Doors" unique_id=1233203280 node_paths=PackedStringArray("DoorAnchor", "label") instance=ExtResource("2_v2014")]
+[node name="@StaticBody3D@43315" type="StaticBody3D" parent="Doors" unique_id=1527912952 node_paths=PackedStringArray("DoorAnchor", "label") instance=ExtResource("2_v2014")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -68.375, -2.5, -2.75)
 script = ExtResource("3_v2014")
 DoorAnchor = NodePath("DoorAnchor")
 label = NodePath("DoorAnchor/Label3D")
-door_number = 340
+door_number = 306
 
 [node name="DoorsBeginL" type="Marker3D" parent="." unique_id=374968347]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -1.625, -2.5, 2.75)
