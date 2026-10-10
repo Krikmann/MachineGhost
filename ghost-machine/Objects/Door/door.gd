@@ -13,7 +13,6 @@ extends Node3D
 @export var IsNeighbour: bool = false
 var ClosedRotation: float = 0.0
  
-var ClosedRotation: float = 0.0 
 var locked: bool  
 
 # Called when the node enters the scene tree for the first time.
