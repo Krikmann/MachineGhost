@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://ct1vfxs4wqg6i" path="res://Content/Rooms/Lift/lift.gd" id="1_oiu5u"]
 [ext_resource type="PackedScene" uid="uid://i7r5h8hvh0dy" path="res://Content/Rooms/Lift/lift_door.tscn" id="2_x4uxs"]
+[ext_resource type="PackedScene" uid="uid://c73a05jnjnx6w" path="res://Content/Rooms/Lift/lift_button.tscn" id="3_x4uxs"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vxpo8"]
 albedo_color = Color(0.3349706, 0.3349706, 0.33497056, 1)
@@ -33,8 +34,13 @@ _surfaces = [{
 "vertex_data": PackedByteArray("AADAPgAAAL8AAKC/AADAPgAAAL8AAMC/AADAPgAAAD8AAMC/AADAPgAAAL8AAKC/AACQPwAAAL8AAKC/AADAPgAAAL8AAMC/AACQPwAAAL8AAKC/AACQPwAAAL8AAMC/AADAPgAAAL8AAMC/AADAPgAAAL8AAKC/AACQPwAAAD8AAKC/AACQPwAAAL8AAKC/AACQPwAAAL8AAKC/AACQPwAAAD8AAKC/AACQPwAAAL8AAMC/AADAPgAAAL8AAKC/AADAPgAAAD8AAMC/AADAPgAAAD8AAKC/AADAPgAAAL8AAKC/AADAPgAAAD8AAKC/AACQPwAAAD8AAKC/AADAPgAAAD8AAKC/AADAPgAAAD8AAMC/AACQPwAAAD8AAMC/AADAPgAAAD8AAKC/AACQPwAAAD8AAMC/AACQPwAAAD8AAKC/AACQPwAAAD8AAKC/AACQPwAAAD8AAMC/AACQPwAAAL8AAMC/AAD/f/9//n8AAP9//3/+fwAA/3//f/5//38AAP//AAD/fwAA//8AAP9/AAD//wAA/38AAP//AAD/fwAA//8AAP9/AAD//wAA/3//fwAA/z//f/9/AAD/P/9//38AAP8/////f/9//n////9//3/+f////3//f/5/AAD/f/9//n8AAP9//3/+fwAA/3//f/5//3//fwAA/z//f/9/AAD/P/9//38AAP8//3//////AAD/f/////8AAP9//////wAA/3//////AAD/f/////8AAP9//////wAA////f/9//n////9//3/+f////3//f/5/")
 }]
 
-[node name="Lift" type="StaticBody3D" unique_id=1577381922]
+[node name="Lift" type="StaticBody3D" unique_id=1577381922 node_paths=PackedStringArray("lift_door", "lift_door_2", "buttons")]
 script = ExtResource("1_oiu5u")
+lift_door = NodePath("LiftDoor")
+lift_door_2 = NodePath("LiftDoor2")
+buttons = NodePath("Buttons")
+floor_height = 6.0
+up_speed = 1.0
 
 [node name="CSGCombiner3D" type="CSGCombiner3D" parent="." unique_id=1924107743]
 visible = false
@@ -64,7 +70,21 @@ mesh = SubResource("ArrayMesh_x4uxs")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.25, 0)
 
 [node name="LiftDoor" parent="." unique_id=213718484 instance=ExtResource("2_x4uxs")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.9, 0, -1)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.9, 0, -2.5)
 
 [node name="LiftDoor2" parent="." unique_id=1835245417 instance=ExtResource("2_x4uxs")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.9, 0, 1)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.9, 0, 2.5)
+
+[node name="Buttons" type="Node3D" parent="." unique_id=1918161754]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.75, 0, -1.2)
+
+[node name="LiftButton" parent="Buttons" unique_id=1879242147 instance=ExtResource("3_x4uxs")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.3, 0)
+to_floor = 1
+
+[node name="LiftButton2" parent="Buttons" unique_id=1843867557 instance=ExtResource("3_x4uxs")]
+to_floor = 2
+
+[node name="LiftButton3" parent="Buttons" unique_id=1580302313 instance=ExtResource("3_x4uxs")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.3, 0)
+to_floor = 3
