@@ -1,6 +1,10 @@
 [gd_scene format=3 uid="uid://cbob4ecemygu5"]
 
-[node name="HUD" type="CanvasLayer" unique_id=1781044374]
+[ext_resource type="Script" uid="uid://bky2dj0mhk23g" path="res://Content/Player/hud.gd" id="1_fi4k0"]
+
+[node name="HUD" type="CanvasLayer" unique_id=1781044374 node_paths=PackedStringArray("interaction_label")]
+script = ExtResource("1_fi4k0")
+interaction_label = NodePath("CenterContainer/InteractionLabel")
 
 [node name="CenterContainer" type="CenterContainer" parent="." unique_id=1184168279]
 anchors_preset = 15
@@ -13,3 +17,12 @@ mouse_filter = 2
 [node name="Label" type="Label" parent="CenterContainer" unique_id=724636993]
 layout_mode = 2
 text = "+"
+
+[node name="InteractionLabel" type="Label" parent="CenterContainer" unique_id=2144008486]
+visible = false
+layout_mode = 2
+offset_transform_enabled = true
+offset_transform_position_ratio = Vector2(0, 1.53)
+text = "[E] to interact"
+horizontal_alignment = 1
+vertical_alignment = 1
