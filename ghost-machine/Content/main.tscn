@@ -1,8 +1,9 @@
-[gd_scene format=4 uid="uid://cjmby5iqx70im"]
+[gd_scene format=3 uid="uid://cjmby5iqx70im"]
 
 [ext_resource type="PackedScene" uid="uid://bdyq3s8it2vn6" path="res://Content/Menus/PauseMenu/pause_menu.tscn" id="1_nf1mn"]
 [ext_resource type="PackedScene" uid="uid://bh0f4pqhqta3q" path="res://Content/Player/player.tscn" id="1_u3q0n"]
 [ext_resource type="PackedScene" uid="uid://csdx6ivtf8pbs" path="res://Objects/SpiritBox/spiritbox.tscn" id="3_2jbd6"]
+[ext_resource type="PackedScene" uid="uid://bnvylwcddx1jo" path="res://Content/Rooms/korrus.tscn" id="3_2jbd6"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_u3q0n"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -15,20 +16,6 @@ sky_material = SubResource("ProceduralSkyMaterial_u3q0n")
 background_mode = 2
 sky = SubResource("Sky_nf1mn")
 
-[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_nf1mn"]
-data = PackedVector3Array(-5, -0.5, 5, -5, -0.5, -5, -5, 0.5, -5, 5, -0.5, -5, -5, -0.5, -5, -5, -0.5, 5, -5, 0.5, -5, -5, -0.5, -5, 5, -0.5, -5, -5, 0.5, -5, -5, 0.5, 5, -5, -0.5, 5, -5, -0.5, 5, -5, 0.5, 5, 5, 0.5, 5, 5, 0.5, 5, -5, 0.5, 5, -5, 0.5, -5, -5, -0.5, 5, 5, -0.5, 5, 5, -0.5, -5, 5, 0.5, 5, 5, -0.5, 5, -5, -0.5, 5, 5, -0.5, -5, 5, -0.5, 5, 5, 0.5, 5, 5, -0.5, -5, 5, 0.5, -5, -5, 0.5, -5, -5, 0.5, -5, 5, 0.5, -5, 5, 0.5, 5, 5, 0.5, 5, 5, 0.5, -5, 5, -0.5, -5)
-
-[sub_resource type="ArrayMesh" id="ArrayMesh_2jbd6"]
-_surfaces = [{
-"aabb": AABB(-5, -0.5, -5, 10, 1, 10),
-"attribute_data": PackedByteArray("AACAPwAAgD8AAIA/AAAAAAAAAAAAAAAAAACAPwAAgD8AAIA/AAAAAAAAAAAAAAAAAACAPwAAgD8AAIA/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAPwAAgD8AAIA/AACAPwAAgD8AAIA/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAPwAAgD8AAIA/AAAAAAAAAAAAAAAAAACAPwAAgD8AAIA/AAAAAAAAAAAAAAAAAACAPwAAgD8AAIA/AACAPwAAgD8AAIA/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAPwAAgD8AAIA/AACAPwAAgD8AAIA/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAPwAAgD8AAIA/"),
-"format": 34359738391,
-"primitive": 3,
-"uv_scale": Vector4(0, 0, 0, 0),
-"vertex_count": 36,
-"vertex_data": PackedByteArray("AACgwAAAAL8AAKBAAACgwAAAAL8AAKDAAACgwAAAAD8AAKDAAACgQAAAAL8AAKDAAACgwAAAAL8AAKDAAACgwAAAAL8AAKBAAACgwAAAAD8AAKDAAACgwAAAAL8AAKDAAACgQAAAAL8AAKDAAACgwAAAAD8AAKDAAACgwAAAAD8AAKBAAACgwAAAAL8AAKBAAACgwAAAAL8AAKBAAACgwAAAAD8AAKBAAACgQAAAAD8AAKBAAACgQAAAAD8AAKBAAACgwAAAAD8AAKBAAACgwAAAAD8AAKDAAACgwAAAAL8AAKBAAACgQAAAAL8AAKBAAACgQAAAAL8AAKDAAACgQAAAAD8AAKBAAACgQAAAAL8AAKBAAACgwAAAAL8AAKBAAACgQAAAAL8AAKDAAACgQAAAAL8AAKBAAACgQAAAAD8AAKBAAACgQAAAAL8AAKDAAACgQAAAAD8AAKDAAACgwAAAAD8AAKDAAACgwAAAAD8AAKDAAACgQAAAAD8AAKDAAACgQAAAAD8AAKBAAACgQAAAAD8AAKBAAACgQAAAAD8AAKDAAACgQAAAAL8AAKDAAAD/f/9//n8AAP9//3/+fwAA/3//f/5//38AAP//AAD/fwAA//8AAP9/AAD//wAA/////wAA/z//////AAD/P/////8AAP8/AAD/f/9//n8AAP9//3/+fwAA/3//f/5//3//fwAA/z//f/9/AAD/P/9//38AAP8//3//////AAD/f/////8AAP9//////wAA/38AAP//AAD/fwAA//8AAP9/AAD//wAA/3//fwAA/z//f/9/AAD/P/9//38AAP8/////f/9//n////9//3/+f////3//f/5//////wAA/z//////AAD/P/////8AAP8//3//////AAD/f/////8AAP9//////wAA////f/9//n////9//3/+f////3//f/5/")
-}]
-
 [node name="Node3D" type="Node3D" unique_id=926375845]
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=480295303]
@@ -40,22 +27,14 @@ environment = SubResource("Environment_2jbd6")
 
 [node name="PauseMenu" parent="." unique_id=2071463520 instance=ExtResource("1_nf1mn")]
 
-[node name="Platform" type="StaticBody3D" parent="." unique_id=753999886]
-
-[node name="CSGBakedCollisionShape3D" type="CollisionShape3D" parent="Platform" unique_id=82826354]
-shape = SubResource("ConcavePolygonShape3D_nf1mn")
-
-[node name="CSGBakedMeshInstance3D" type="MeshInstance3D" parent="Platform" unique_id=1824810330]
-mesh = SubResource("ArrayMesh_2jbd6")
-
 [node name="CharacterBody3D" parent="." unique_id=1311759364 instance=ExtResource("1_u3q0n")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.565, 0)
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 10.5, -0.68499994, 0)
 
-[node name="CSGBox3D" type="CSGBox3D" parent="." unique_id=970076484]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 1, -4)
+[node name="CSGCombiner3D" parent="." unique_id=417930232 instance=ExtResource("3_2jbd6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0, 0)
 
-[node name="CSGBox3D2" type="CSGBox3D" parent="." unique_id=1404294833]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 1, 4)
+[node name="CSGCombiner3D2" parent="." unique_id=1175373041 instance=ExtResource("3_2jbd6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 6, 0)
 
 [node name="CSGBox3D3" type="CSGBox3D" parent="." unique_id=2076367258]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 1, -4)
@@ -65,3 +44,5 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 1, 4)
 
 [node name="spiritbox" parent="." unique_id=1740919655 instance=ExtResource("3_2jbd6")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.21289301, 0.5000001, -2.7620401)
+[node name="CSGCombiner3D3" parent="." unique_id=961538416 instance=ExtResource("3_2jbd6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 12, 0)
