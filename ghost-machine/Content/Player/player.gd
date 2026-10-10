@@ -29,6 +29,11 @@ func _unhandled_input(event: InputEvent) -> void:
 	if event.is_action_pressed("interact"):
 		if held_item is Spiritbox:
 			_try_pickup()
+	
+	if event.is_action_pressed("sb_voice"):
+		if held_item:
+			if !held_item.audio_player.is_playing():
+				_get_sb_speech()
 
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
@@ -69,3 +74,6 @@ func _try_pickup():
 func _drop():
 	held_item.drop()
 	held_item = null
+
+func _get_sb_speech():
+	held_item.speech()

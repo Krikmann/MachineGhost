@@ -1,6 +1,7 @@
 class_name Spiritbox extends StaticBody3D
 
 @onready var collision_shape := $CollisionShape3D
+@onready var audio_player = $AudioStreamPlayer
 
 var _can_pickup := false
 var _original_parent: Node = null
@@ -28,3 +29,6 @@ func pickup(slot: Node):
 func drop():
 	collision_shape.disabled = false
 	reparent(_original_parent, true)
+
+func speech():
+	audio_player.play()
