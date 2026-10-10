@@ -1,4 +1,6 @@
 class_name Player extends CharacterBody3D
+ 
+@export var collision_shape: CollisionShape3D
 
 @export var sensitivity := 0.002
 @export var cam: Camera3D
@@ -49,3 +51,7 @@ func _physics_process(delta: float) -> void:
 	 
 func _get_sb_speech():
 	held_item.speech()
+
+func disable_collision() -> void: collision_shape.disabled = true
+func enable_collision() -> void: collision_shape.disabled = false 
+	

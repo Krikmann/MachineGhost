@@ -1,0 +1,45 @@
+[gd_scene format=3 uid="uid://bgdx4p0ed8j1"]
+
+[ext_resource type="Script" uid="uid://6newyknaxi53" path="res://Objects/WashingMachines/special_washing_machine.gd" id="1_xakdj"]
+[ext_resource type="PackedScene" uid="uid://cylnivno7ixf5" path="res://Imported/Washing Machine.glb" id="2_tg0c1"]
+[ext_resource type="Shader" uid="uid://exsoc8831120" path="res://Objects/InteractionSystem/HoverOverlay.tres" id="3_tg0c1"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_xakdj"]
+size = Vector3(1, 1.3000001, 1)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_tg0c1"]
+render_priority = 0
+shader = ExtResource("3_tg0c1")
+shader_parameter/Color = Color(0, 0, 0, 1)
+shader_parameter/Speed = Vector2(0, 0.03)
+shader_parameter/Num_of_Lines = 120.0
+shader_parameter/Line_Thickness = -10.0
+
+[node name="SpecialWashingMachine" type="StaticBody3D" unique_id=1867960611 node_paths=PackedStringArray("camera_path")]
+script = ExtResource("1_xakdj")
+camera_path = [NodePath("Marker3D"), NodePath("Marker3D2"), NodePath("Marker3D3"), NodePath("Marker3D4")]
+camera_point_speeds = Array[float]([0.3, 1.2, 2.6, 1.8])
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1198182846]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.65000004, 0)
+shape = SubResource("BoxShape3D_xakdj")
+
+[node name="Washing Machine" parent="." unique_id=449913682 instance=ExtResource("2_tg0c1")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
+
+[node name="Buttons" parent="Washing Machine" index="0" unique_id=1957571665]
+material_overlay = SubResource("ShaderMaterial_tg0c1")
+
+[node name="Marker3D" type="Marker3D" parent="." unique_id=1464472252]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.2, 1.6000001, 0)
+
+[node name="Marker3D2" type="Marker3D" parent="." unique_id=1567346569]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.8000001, 0.80000013, 0)
+
+[node name="Marker3D3" type="Marker3D" parent="." unique_id=2089404861]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0.7000001, 0)
+
+[node name="Marker3D4" type="Marker3D" parent="." unique_id=1287764818]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5, 1.4000001, 0)
+
+[editable path="Washing Machine"]

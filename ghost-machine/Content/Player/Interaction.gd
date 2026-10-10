@@ -6,7 +6,7 @@ var collider
 var last_collider
 
 
-func _physics_process(delta: float) -> void:
+func _physics_process(_delta: float) -> void:
 	if is_colliding():
 		collider = get_collider()
 		_set_overlay_strength(collider, 1.0)
