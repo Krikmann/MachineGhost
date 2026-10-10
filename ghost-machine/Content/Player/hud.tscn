@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://cbob4ecemygu5"]
+
+[node name="HUD" type="CanvasLayer" unique_id=1781044374]
+
+[node name="CenterContainer" type="CenterContainer" parent="." unique_id=1184168279]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="Label" type="Label" parent="CenterContainer" unique_id=724636993]
+layout_mode = 2
+text = "+"

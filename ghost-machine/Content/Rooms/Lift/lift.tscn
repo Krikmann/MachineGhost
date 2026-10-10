@@ -70,17 +70,16 @@ mesh = SubResource("ArrayMesh_x4uxs")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.25, 0)
 
 [node name="LiftDoor" parent="." unique_id=213718484 instance=ExtResource("2_x4uxs")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.9, 0, -2.5)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.9, 0, -2.6)
 
 [node name="LiftDoor2" parent="." unique_id=1835245417 instance=ExtResource("2_x4uxs")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.9, 0, 2.5)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.9, 0, 2.6)
 
 [node name="Buttons" type="Node3D" parent="." unique_id=1918161754]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.75, 0, -1.2)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.75, 0, -1.25)
 
 [node name="LiftButton" parent="Buttons" unique_id=1879242147 instance=ExtResource("3_x4uxs")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.3, 0)
-to_floor = 1
 
 [node name="LiftButton2" parent="Buttons" unique_id=1843867557 instance=ExtResource("3_x4uxs")]
 to_floor = 2

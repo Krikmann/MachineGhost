@@ -22,7 +22,7 @@ func _ready() -> void:
 	for button: LiftButton in buttons.get_children():
 		button.button_pressed.connect(change_floor)
 		 
-func change_floor(floor: int) -> void:
+func change_floor(to_floor: int) -> void:
 	if tween: tween.kill()
 	tween = create_tween()
 	tween.set_trans(Tween.TRANS_QUAD).set_ease(Tween.EASE_OUT)
@@ -30,10 +30,10 @@ func change_floor(floor: int) -> void:
 	tween.tween_property(lift_door, "position:z", -1.0, 1.0)
 	tween.parallel().tween_property(lift_door_2, "position:z", 1.0, 1.0)
 	# Switch floor
-	tween.tween_property(self, "global_position:y", starting_y + (floor-1) * floor_height, 2.0)
+	tween.tween_property(self, "global_position:y", starting_y + (to_floor-1) * floor_height, 2.0)
 	# Open doors
-	tween.tween_property(lift_door, "position:z", -2.5, 1.0)
-	tween.parallel().tween_property(lift_door_2, "position:z", 2.5, 1.0)
+	tween.tween_property(lift_door, "position:z", -2.6, 1.0)
+	tween.parallel().tween_property(lift_door_2, "position:z", 2.6, 1.0)
 
 func close_doors() -> void:
 	if tween: tween.kill()
@@ -46,5 +46,5 @@ func open_doors() -> void:
 	if tween: tween.kill()
 	tween = create_tween()
 	tween.set_trans(Tween.TRANS_QUAD).set_ease(Tween.EASE_OUT)
-	tween.tween_property(lift_door, "position:z", -2.5, 1.0)
-	tween.parallel().tween_property(lift_door_2, "position:z", 2.5, 1.0)
+	tween.tween_property(lift_door, "position:z", -2.6, 1.0)
+	tween.parallel().tween_property(lift_door_2, "position:z", 2.6, 1.0)

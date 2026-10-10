@@ -2,6 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://dhe5rl1nx4gpq" path="res://Objects/SpiritBox/spiritbox.glb" id="1_q357u"]
 [ext_resource type="Script" uid="uid://duq4j4ynq3tl5" path="res://Objects/SpiritBox/spiritbox.gd" id="2_ffhuh"]
+[ext_resource type="AudioStream" uid="uid://ew2xxrxxy18m" path="res://Imported/sounds/Walkietalkie_v1.mp3" id="3_agiha"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_g4v7s"]
 
@@ -14,3 +15,7 @@ shape = SubResource("SphereShape3D_g4v7s")
 
 [node name="spiritbox" parent="." unique_id=1740919655 instance=ExtResource("1_q357u")]
 transform = Transform3D(0.15, 0, 0, 0, 0.15, 0, 0, 0, 0.15, 0, 0, 0)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1136070221]
+stream = ExtResource("3_agiha")
+volume_db = 7.298
