@@ -27,10 +27,8 @@ func _unhandled_input(event: InputEvent) -> void:
 		cam.rotation.x = clamp(cam.rotation.x, -1.5, 1.5)
 	
 	if event.is_action_pressed("interact"):
-		if held_item == null:
+		if held_item is Spiritbox:
 			_try_pickup()
-		else:
-			_drop()
 
 func _physics_process(delta: float) -> void:
 	# Add the gravity.

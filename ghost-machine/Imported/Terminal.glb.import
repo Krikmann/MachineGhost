@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://by4xsbrlmvcbo"
-path="res://.godot/imported/Dice1.glb-6e5426bff81120174ae98a7342a9f321.scn"
+uid="uid://chwkoa344t2nr"
+path="res://.godot/imported/Terminal.glb-ab953d1898fab373d681b56a342df082.scn"
 
 [deps]
 
-source_file="res://Content/Rooms/Lift/Dice1.glb"
-dest_files=["res://.godot/imported/Dice1.glb-6e5426bff81120174ae98a7342a9f321.scn"]
+source_file="res://Imported/Terminal.glb"
+dest_files=["res://.godot/imported/Terminal.glb-ab953d1898fab373d681b56a342df082.scn"]
 
 [params]
 
