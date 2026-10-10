@@ -9,7 +9,8 @@
 script = ExtResource("2_ffhuh")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1683743331]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.32295883, 0)
 shape = SubResource("SphereShape3D_g4v7s")
 
 [node name="spiritbox" parent="." unique_id=1740919655 instance=ExtResource("1_q357u")]
-transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, 0, 0)
+transform = Transform3D(0.15, 0, 0, 0, 0.15, 0, 0, 0, 0.15, 0, 0, 0)
