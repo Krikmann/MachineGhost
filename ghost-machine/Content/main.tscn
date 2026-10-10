@@ -7,6 +7,8 @@
 [ext_resource type="PackedScene" uid="uid://2bpyhwiiblkv" path="res://Content/Rooms/Lift/lift.tscn" id="5_r6sel"]
 [ext_resource type="PackedScene" uid="uid://c7pjas5aodici" path="res://Objects/Door/door.tscn" id="6_6j1t0"]
 [ext_resource type="PackedScene" uid="uid://cqon3a8htdjql" path="res://Content/Rooms/pesumaja.tscn" id="7_p3qnk"]
+[ext_resource type="Script" uid="uid://brs6mop14ddta" path="res://Content/ui.gd" id="8_blo7t"]
+[ext_resource type="PackedScene" uid="uid://kntd225lupx0" path="res://Content/Rooms/Room/room.tscn" id="9_yet4f"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_u3q0n"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -54,7 +56,10 @@ environment = SubResource("Environment_2jbd6")
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 10.5, -0.68499994, 0)
 sensitivity = null
 
-[node name="I_Korrus" parent="." unique_id=417930232 instance=ExtResource("3_2jbd6")]
+[node name="CSGCombiner3D" parent="." unique_id=417930232 instance=ExtResource("3_2jbd6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.999927, 0.00031793118, 6.3449144e-05)
+
+[node name="I_Korrus" parent="." unique_id=1282690104 instance=ExtResource("3_2jbd6")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0, 0)
 korruse_nr = 1
 
@@ -79,7 +84,8 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, -2.5, 0.5)
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 12, -1, 5)
 
 [node name="Door" parent="." unique_id=2032582818 instance=ExtResource("6_6j1t0")]
-transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 6.0000005, -2.55, 1.2)
+transform = Transform3D(-2.1855694e-08, 0, 0.5, 0, 0.5, 0, -0.5, 0, -2.1855694e-08, 6.3742986, -2.4639952, 2.6842647)
+visible = false
 
 [node name="LiftShaft" type="StaticBody3D" parent="." unique_id=1280454587]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, -3, 5)
@@ -117,6 +123,53 @@ shape = SubResource("ConcavePolygonShape3D_6j1t0")
 [node name="CSGBakedMeshInstance3D" type="MeshInstance3D" parent="LiftShaft" unique_id=1590344680]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 9, 0)
 mesh = SubResource("ArrayMesh_p3qnk")
+
+[node name="Room" parent="." unique_id=761609105 instance=ExtResource("9_yet4f")]
+transform = Transform3D(-5.2453668e-08, 0, 1, 0, 1, 0, -1.2, 0, -4.371139e-08, 5.571467, -0.9545511, 5.078169)
+hint = "Ta toa numbris ei ole numbrit 7 ega 9"
+
+[node name="Room2" parent="." unique_id=2072915804 instance=ExtResource("9_yet4f")]
+transform = Transform3D(-5.2453668e-08, 0, 1.2, 0, 1, 0, -1.2, 0, -5.2453668e-08, 0.7355616, -0.955, 5.078)
+hint = "Ei ela esimesel korrusel"
+
+[node name="Room3" parent="." unique_id=725028300 instance=ExtResource("9_yet4f")]
+transform = Transform3D(-5.2453668e-08, 0, 1.2, 0, 1, 0, -1.2, 0, -5.2453668e-08, -4.294446, 10.99448, 5.078)
+hint = " kolis lärmist eemale"
+
+[node name="Room4" parent="." unique_id=368561165 instance=ExtResource("9_yet4f")]
+transform = Transform3D(-5.2453668e-08, 0, 1.2, 0, 1, 0, -1.2, 0, -5.2453668e-08, -9.260667, -0.955, 5.078)
+hint = "Toa viimane number on 3"
+
+[node name="Room5" parent="." unique_id=403945894 instance=ExtResource("9_yet4f")]
+transform = Transform3D(-5.2453668e-08, 0, 1.2, 0, 1, 0, -1.2, 0, -5.2453668e-08, -14.3526325, -0.955, 5.078)
+hint = "Toa keskmine number on suurem kui kahe ülejäänu korrutis"
+
+[node name="UI" type="CanvasLayer" parent="." unique_id=248393262 node_paths=PackedStringArray("panel", "label")]
+script = ExtResource("8_blo7t")
+panel = NodePath("PanelContainer")
+label = NodePath("PanelContainer/MarginContainer/Label")
+
+[node name="PanelContainer" type="PanelContainer" parent="UI" unique_id=1715858289]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -98.5
+offset_top = -107.0
+offset_right = 98.5
+offset_bottom = -67.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="MarginContainer" type="MarginContainer" parent="UI/PanelContainer" unique_id=1978470754]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_right = 10
+
+[node name="Label" type="Label" parent="UI/PanelContainer/MarginContainer" unique_id=996218233]
+layout_mode = 2
+vertical_alignment = 1
 
 [node name="Pesumaja" parent="." unique_id=576066586 instance=ExtResource("7_p3qnk")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 13.999999, -2.5, 0)

@@ -10,8 +10,9 @@ extends Node3D
 @export var StartsLocked: bool = true 
 
 @export var IsOpen: bool = false
+@export var IsNeighbour: bool = false
+var ClosedRotation: float = 0.0
  
-var ClosedRotation: float = 0.0 
 var locked: bool  
 
 # Called when the node enters the scene tree for the first time.
@@ -37,6 +38,9 @@ func open_door() -> void:
 		Duration
 	)
 	
+	if IsNeighbour:
+		call_neighbour()
+	
 func close_door() -> void:
 	IsOpen = false
 	var tween = create_tween()
@@ -46,7 +50,34 @@ func close_door() -> void:
 		ClosedRotation,
 		Duration
 	)
+	if IsNeighbour:
+		leave_neighbour()
 
 
 func _on_area_3d_interacted() -> void:
 	interact()
+
+func call_neighbour() -> void:
+	var text = get_parent_node_3d().hint
+	get_parent_node_3d().get_node("AnimationPlayer").play("new_animation")
+	var ui = get_parent_node_3d().get_parent_node_3d().get_node("UI")
+	var panel = ui.get_node("PanelContainer")
+	panel.show()
+	panel.modulate.a = 0.0
+	var tween = create_tween()
+	tween.tween_property(panel, "modulate:a", 1.0, 0.3)
+	get_parent_node_3d().get_parent_node_3d().get_node("UI").change_text(text)
+	await get_tree().create_timer(2.0).timeout
+	hide_text()
+
+func leave_neighbour() -> void:
+	get_parent_node_3d().get_node("AnimationPlayer").play("new_animation_2")
+	hide_text()
+
+func hide_text() -> void:
+	var ui = get_parent_node_3d().get_parent_node_3d().get_node("UI")
+	var panel = ui.get_node("PanelContainer")
+	var tween = create_tween()
+	tween.tween_property(panel, "modulate:a", 0.0, 0.3)
+	await tween.finished
+	panel.hide()
