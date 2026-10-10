@@ -10,6 +10,7 @@
 [ext_resource type="Script" uid="uid://brs6mop14ddta" path="res://Content/ui.gd" id="8_blo7t"]
 [ext_resource type="PackedScene" uid="uid://kntd225lupx0" path="res://Content/Rooms/Room/room.tscn" id="9_yet4f"]
 [ext_resource type="PackedScene" uid="uid://c37eww03kyygc" path="res://Content/Rooms/iii_korrus.tscn" id="10_bwj4m"]
+[ext_resource type="PackedScene" uid="uid://hglr4thtvedg" path="res://Content/Rooms/FriendsRoom/friends_room.tscn" id="11_abdvo"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_u3q0n"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -152,5 +153,8 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 6, 0)
 
 [node name="III_Korrus" parent="." unique_id=932541873 instance=ExtResource("10_bwj4m")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 12, 0)
+
+[node name="FriendsRoom" parent="." unique_id=680632543 instance=ExtResource("11_abdvo")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.4573791, -0.5397172, -5.0784307)
 
 [editable path="Lift"]

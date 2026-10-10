@@ -1,0 +1,78 @@
+[gd_scene format=3 uid="uid://hglr4thtvedg"]
+
+[ext_resource type="PackedScene" uid="uid://cqswc5jpl1g3w" path="res://Imported/Fancy_Chair.glb" id="1_22cbj"]
+[ext_resource type="PackedScene" uid="uid://23nk5b3d3q8i" path="res://Imported/VOODI.glb" id="2_fmp0g"]
+[ext_resource type="ArrayMesh" uid="uid://cvqcsmvxbldb5" path="res://Imported/laud.obj" id="3_832nf"]
+[ext_resource type="PackedScene" uid="uid://sgq05cwxebbj" path="res://Imported/riiul1.glb" id="4_vwwxg"]
+[ext_resource type="PackedScene" uid="uid://dh834irthpgej" path="res://Imported/Basic chair.glb" id="5_eotub"]
+[ext_resource type="PackedScene" uid="uid://c7pjas5aodici" path="res://Objects/Door/door.tscn" id="6_fmp0g"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gt0d4"]
+albedo_color = Color(0.45319456, 0.20424142, 2.8878452e-07, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_832nf"]
+albedo_color = Color(0.96862745, 0.99215686, 0.8235294, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_54si4"]
+
+[node name="FriendsRoom" type="StaticBody3D" unique_id=680632543]
+
+[node name="CSGCombiner3D" type="CSGCombiner3D" parent="." unique_id=1553936092]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 0, 0, 0)
+
+[node name="Floor" type="CSGBox3D" parent="CSGCombiner3D" unique_id=1906712357]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0053402185, -0.4494629, -0.2580542)
+size = Vector3(0.984375, 0.1, 1.5)
+material = SubResource("StandardMaterial3D_gt0d4")
+
+[node name="Ceiling" type="CSGBox3D" parent="CSGCombiner3D" unique_id=1399214299]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0053402185, 0.27245736, -0.25805423)
+size = Vector3(0.984375, 0.1, 1.5)
+material = SubResource("StandardMaterial3D_832nf")
+
+[node name="Wall_Back" type="CSGBox3D" parent="CSGCombiner3D" unique_id=1505049928]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.4373681, -0.08958742, -0.26123047)
+size = Vector3(0.1, 0.6195313, 1.484)
+material = SubResource("StandardMaterial3D_54si4")
+
+[node name="Wall_Left" type="CSGBox3D" parent="CSGCombiner3D" unique_id=35739083]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.44802517, -0.084869385, -0.26758468)
+size = Vector3(0.1, 0.6259155, 1.465332)
+material = SubResource("StandardMaterial3D_54si4")
+
+[node name="Wall_Right" type="CSGBox3D" parent="CSGCombiner3D" unique_id=724913372]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -0.0068969727, -0.09289551, -0.9629395)
+size = Vector3(0.1, 0.6203613, 0.98620605)
+material = SubResource("StandardMaterial3D_54si4")
+
+[node name="WallSolid" type="CSGBox3D" parent="CSGCombiner3D" unique_id=1585346389]
+transform = Transform3D(-4.3711392e-08, 0, 1, 0, 1, 0, -1, 0, -4.3711392e-08, -0.0045534135, -0.08731079, 0.44646165)
+size = Vector3(0.1, 0.6201782, 0.9765625)
+material = SubResource("StandardMaterial3D_54si4")
+
+[node name="DoorCutout" type="CSGBox3D" parent="CSGCombiner3D/WallSolid" unique_id=1971831630]
+transform = Transform3D(1, 0, -3.5527137e-15, 0, 1, 0, 3.5527137e-15, 0, 1, -0.0033843815, -0.006881714, -0.1894434)
+operation = 2
+size = Vector3(0.13319702, 0.6031189, 0.34521484)
+
+[node name="Fancy_Chair3" parent="." unique_id=437053861 instance=ExtResource("1_22cbj")]
+transform = Transform3D(-0.7, 0, -1.0569706e-07, 0, 0.7, 0, 1.0569706e-07, 0, -0.7, 1.2924106, -1.7109913, -3.8970752)
+
+[node name="VOODI" parent="." unique_id=1228970455 instance=ExtResource("2_fmp0g")]
+transform = Transform3D(-0.5, 0, -7.54979e-08, 0, 0.5, 0, 7.54979e-08, 0, -0.5, -1.127367, -2.0059574, -2.4124742)
+
+[node name="Laud" type="MeshInstance3D" parent="." unique_id=1187500004]
+transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 1.4036292, -1.9901056, -2.2681942)
+mesh = ExtResource("3_832nf")
+
+[node name="riiul1" parent="." unique_id=616027558 instance=ExtResource("4_vwwxg")]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, -1.7835138, -0.08005917, -1.6451682)
+
+[node name="riiul2" parent="." unique_id=416489962 instance=ExtResource("4_vwwxg")]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, -1.7835138, -0.8002848, -3.245175)
+
+[node name="Basic chair" parent="." unique_id=1902607258 instance=ExtResource("5_eotub")]
+transform = Transform3D(0.2927783, 0, 0.06542822, 0, 0.29999998, 0, -0.06542822, 0, 0.2927783, 0.8822659, -1.7473322, -1.9566706)
+
+[node name="Door" parent="." unique_id=1652005241 instance=ExtResource("6_fmp0g")]
+transform = Transform3D(-2.1855694e-08, 0, -0.5, 0, 0.5, 0, 0.5, 0, -2.1855694e-08, -1.8634809, -1.9452957, 2.3737133)
