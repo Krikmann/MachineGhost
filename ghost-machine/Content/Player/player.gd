@@ -3,8 +3,8 @@ class_name Player extends CharacterBody3D
 @export var sensitivity := 0.002
 @export var cam: Camera3D
 
-@onready var hand_slot := $MeshInstance3D/Skeleton3D/BoneAttachment3D
-@onready var pickup_area := $Area3D
+@export var hand_slot: BoneAttachment3D
+@export var pickup_area: Area3D
 
 const SPEED = 5.0
 const JUMP_VELOCITY = 4.5

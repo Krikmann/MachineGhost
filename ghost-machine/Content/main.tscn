@@ -2,8 +2,8 @@
 
 [ext_resource type="PackedScene" uid="uid://bdyq3s8it2vn6" path="res://Content/Menus/PauseMenu/pause_menu.tscn" id="1_nf1mn"]
 [ext_resource type="PackedScene" uid="uid://bh0f4pqhqta3q" path="res://Content/Player/player.tscn" id="1_u3q0n"]
-[ext_resource type="PackedScene" uid="uid://csdx6ivtf8pbs" path="res://Objects/SpiritBox/spiritbox.tscn" id="3_2jbd6"]
 [ext_resource type="PackedScene" uid="uid://bnvylwcddx1jo" path="res://Content/Rooms/korrus.tscn" id="3_2jbd6"]
+[ext_resource type="PackedScene" uid="uid://csdx6ivtf8pbs" path="res://Objects/SpiritBox/spiritbox.tscn" id="4_gpam4"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_u3q0n"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -36,13 +36,8 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0, 0)
 [node name="CSGCombiner3D2" parent="." unique_id=1175373041 instance=ExtResource("3_2jbd6")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 6, 0)
 
-[node name="CSGBox3D3" type="CSGBox3D" parent="." unique_id=2076367258]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 1, -4)
-
-[node name="CSGBox3D4" type="CSGBox3D" parent="." unique_id=103276977]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 1, 4)
-
-[node name="spiritbox" parent="." unique_id=1740919655 instance=ExtResource("3_2jbd6")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.21289301, 0.5000001, -2.7620401)
 [node name="CSGCombiner3D3" parent="." unique_id=961538416 instance=ExtResource("3_2jbd6")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 12, 0)
+
+[node name="StaticBody3D" parent="." unique_id=675066969 instance=ExtResource("4_gpam4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, -2.5, 0.5)
