@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://c7pjas5aodici"]
 
 [ext_resource type="Script" uid="uid://bt36svb0qkfyq" path="res://Objects/Door/door.gd" id="1_xnqow"]
+[ext_resource type="Script" uid="uid://cajnbtd4j5vlo" path="res://Objects/InteractionSystem/Interactable.gd" id="2_c24xa"]
 [ext_resource type="PackedScene" uid="uid://dix5xjw7vjsxd" path="res://Objects/Door/uks.glb" id="2_yh2pu"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_v36i1"]
@@ -18,10 +19,16 @@ transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 0
 [node name="uks" parent="DoorAnchor" unique_id=1945532782 instance=ExtResource("2_yh2pu")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.7499113, 0, 0)
 
+[node name="Cube_001" parent="DoorAnchor/uks" index="1" unique_id=1634366284]
+layers = 3
+
 [node name="Area3D" type="Area3D" parent="DoorAnchor/uks" unique_id=920215893]
+script = ExtResource("2_c24xa")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="DoorAnchor/uks/Area3D" unique_id=994696413]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.017211914, 2.7334595, 0.06347656)
 shape = SubResource("BoxShape3D_v36i1")
+
+[connection signal="interacted" from="DoorAnchor/uks/Area3D" to="." method="_on_area_3d_interacted"]
 
 [editable path="DoorAnchor/uks"]

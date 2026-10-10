@@ -50,3 +50,8 @@ func close_door() -> void:
 		ClosedRotation,
 		Duration
 	)
+
+
+func _on_area_3d_interacted(body: Variant) -> void:
+	interact()
+	print("Interacted with door")
