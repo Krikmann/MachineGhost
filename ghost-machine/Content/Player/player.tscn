@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://bh0f4pqhqta3q"]
 
 [ext_resource type="Script" uid="uid://ckbthqwicbxcj" path="res://Content/Player/player.gd" id="1_thq5r"]
+[ext_resource type="Script" uid="uid://docq3td8ackv7" path="res://Content/Player/Interaction.gd" id="2_kbsyd"]
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_8jl1e"]
 
@@ -36,3 +37,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.6465173, -0.5467455)
 [node name="Skeleton3D" type="Skeleton3D" parent="Camera3D" unique_id=871092802]
 
 [node name="BoneAttachment3D" type="BoneAttachment3D" parent="Camera3D/Skeleton3D" unique_id=192659059]
+
+[node name="InteractRay" type="RayCast3D" parent="Camera3D" unique_id=362050513]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0)
+target_position = Vector3(0, -4, 0)
+collide_with_areas = true
+script = ExtResource("2_kbsyd")
