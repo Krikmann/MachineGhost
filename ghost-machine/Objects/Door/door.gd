@@ -4,10 +4,12 @@ class_name Door extends Node3D
 @export_tool_button("Door Open") var openginDoor = interact
 
 @export var DoorAnchor: Node3D
+@export var label: Label3D
 
 @export var OpenRotation: float = 90.0
 @export var Duration: float = 1.0
 @export var StartsLocked: bool = true 
+@export var door_number: int 
 
 @export var IsOpen: bool = false
 @export var IsNeighbour: bool = false
@@ -20,6 +22,7 @@ var locked: bool
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	set_door_number(door_number) 
 	locked = StartsLocked
 	if DoorAnchor:
 		ClosedRotation = DoorAnchor.rotation_degrees.y
@@ -31,6 +34,7 @@ func interact() -> void:
 		open_door()
 
 func open_door() -> void:
+	if IsOpen: return 
 	IsOpen = true
 	var tween = create_tween()
 	tween.set_ease(Tween.EASE_IN)
@@ -46,6 +50,7 @@ func open_door() -> void:
 		call_neighbour()
 	
 func close_door() -> void:
+	if !IsOpen: return
 	IsOpen = false
 	var tween = create_tween()
 	tween.tween_property(
@@ -71,8 +76,9 @@ func call_neighbour() -> void:
 	var tween = create_tween()
 	tween.tween_property(panel, "modulate:a", 1.0, 0.3)
 	get_parent_node_3d().get_parent_node_3d().get_node("UI").change_text(text)
-	await get_tree().create_timer(2.0).timeout
+	await get_tree().create_timer(8.0).timeout
 	hide_text()
+	close_door() 
 
 func leave_neighbour() -> void:
 	get_parent_node_3d().get_node("AnimationPlayer").play_backwards("new_animation")
@@ -85,3 +91,7 @@ func hide_text() -> void:
 	tween.tween_property(panel, "modulate:a", 0.0, 0.3)
 	await tween.finished
 	panel.hide()
+
+func set_door_number(nr: int) -> void: 
+	door_number = nr 
+	label.text = str(nr) 

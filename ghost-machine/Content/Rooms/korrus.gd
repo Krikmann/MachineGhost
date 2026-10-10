@@ -26,7 +26,16 @@ func _generate_doors() -> void:
 		c.queue_free()
 
 	var random_nums := range(100)
-	if korruse_nr == 2: random_nums.pop_at(82) 
+	if korruse_nr == 1:
+		random_nums.pop_at(0)
+		random_nums.pop_at(54)
+	elif korruse_nr == 2: 
+		random_nums.pop_at(82)
+		random_nums.pop_at(50)
+	elif korruse_nr == 3: 
+		random_nums.pop_at(32)
+		random_nums.pop_at(68)
+		 
 	random_nums.shuffle()
 
 	# Left row
