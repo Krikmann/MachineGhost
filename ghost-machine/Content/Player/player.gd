@@ -10,6 +10,7 @@ const SPEED = 5.0
 const JUMP_VELOCITY = 4.5
 var held_item: Node3D = null
 
+
 func _ready() -> void:
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 	pickup_area.body_entered.connect(_on_body_entered)
