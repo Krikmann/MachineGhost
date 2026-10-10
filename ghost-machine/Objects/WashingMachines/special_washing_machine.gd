@@ -9,7 +9,7 @@ var can_interact: bool = true
 func interact() -> void:
 	if !can_interact: return
 	
-	var player := Services.player 
+	var player: Player = Services.player 
 	player.disable_collision()
 	 
 	var tween := create_tween()
