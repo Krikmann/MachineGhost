@@ -1,18 +1,9 @@
 [gd_scene format=4 uid="uid://bgdx4p0ed8j1"]
 
 [ext_resource type="Script" uid="uid://6newyknaxi53" path="res://Objects/WashingMachines/special_washing_machine.gd" id="1_xakdj"]
-[ext_resource type="Shader" uid="uid://exsoc8831120" path="res://Objects/InteractionSystem/HoverOverlay.tres" id="3_tg0c1"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_xakdj"]
 size = Vector3(1, 1.3000001, 1)
-
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_xakdj"]
-render_priority = 0
-shader = ExtResource("3_tg0c1")
-shader_parameter/Color = Color(0.321569, 0.321569, 0.321569, 1)
-shader_parameter/Speed = Vector2(0, 0.03)
-shader_parameter/Num_of_Lines = 120.0
-shader_parameter/Line_Thickness = -10.0
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_giwwx"]
 resource_name = "Material"
@@ -217,12 +208,10 @@ shape = SubResource("BoxShape3D_xakdj")
 transform = Transform3D(-2.1855694e-08, 0, 0.5, 0, 0.5, 0, -0.5, 0, -2.1855694e-08, 0, 0, 0)
 
 [node name="Secret wash" type="MeshInstance3D" parent="Secret wash2" unique_id=2135285177]
-material_overlay = SubResource("ShaderMaterial_xakdj")
 mesh = SubResource("ArrayMesh_dn11u")
 
 [node name="Secret wash door_001" type="MeshInstance3D" parent="Secret wash2" unique_id=1461079427]
 transform = Transform3D(-0.14789966, -0.98900247, 4.2146844e-08, 0, 0, -1, 0.98900247, -0.14789966, 4.214685e-08, -1, 1.2, 1.0944265)
-material_overlay = SubResource("ShaderMaterial_xakdj")
 mesh = SubResource("ArrayMesh_htd5b")
 
 [node name="Marker3D" type="Marker3D" parent="." unique_id=1464472252]

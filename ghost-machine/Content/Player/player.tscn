@@ -2,9 +2,18 @@
 
 [ext_resource type="Script" uid="uid://ckbthqwicbxcj" path="res://Content/Player/player.gd" id="1_thq5r"]
 [ext_resource type="Script" uid="uid://docq3td8ackv7" path="res://Content/Player/Interaction.gd" id="2_kbsyd"]
+[ext_resource type="Shader" uid="uid://exsoc8831120" path="res://Objects/InteractionSystem/HoverOverlay.tres" id="3_7d8p2"]
 [ext_resource type="PackedScene" uid="uid://cbob4ecemygu5" path="res://Content/Player/hud.tscn" id="3_x8iml"]
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_8jl1e"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_rn1qw"]
+render_priority = 0
+shader = ExtResource("3_7d8p2")
+shader_parameter/Color = Color(0.321569, 0.321569, 0.321569, 1)
+shader_parameter/Speed = Vector2(0, 0.03)
+shader_parameter/Num_of_Lines = 120.0
+shader_parameter/Line_Thickness = -10.0
 
 [node name="CharacterBody3D" type="CharacterBody3D" unique_id=1311759364 node_paths=PackedStringArray("collision_shape", "cam", "interact_ray", "hand_slot")]
 collision_layer = 2
@@ -29,5 +38,6 @@ transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0
 target_position = Vector3(0, -4, 0)
 collide_with_areas = true
 script = ExtResource("2_kbsyd")
+highlight_material = SubResource("ShaderMaterial_rn1qw")
 
 [node name="HUD" parent="." unique_id=1781044374 instance=ExtResource("3_x8iml")]

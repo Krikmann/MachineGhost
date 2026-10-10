@@ -4,7 +4,7 @@ extends StaticBody3D
 @export var camera_point_speeds: Array[float] 
 @export var door: MeshInstance3D
 
-var can_interact: bool = false
+var can_interact: bool = true
 
 func interact() -> void:
 	if !can_interact: return
