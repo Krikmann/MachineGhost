@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://biya1jp2xjeqt"]
+
+[ext_resource type="PackedScene" uid="uid://23nk5b3d3q8i" path="res://Imported/VOODI/VOODI.glb" id="1_7xum4"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_8jl1e"]
+size = Vector3(1, 1.5699999, 5.5)
+
+[node name="VOODI" unique_id=1623431156 instance=ExtResource("1_7xum4")]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." index="1" unique_id=1396580849]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" index="0" unique_id=583675763]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.78499997, 0)
+shape = SubResource("BoxShape3D_8jl1e")
