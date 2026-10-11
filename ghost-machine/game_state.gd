@@ -45,12 +45,14 @@ var sp_p1_hints: Array[AudioStream] = []
 var sp_p2_hints: Array[AudioStream] = []
 var sp_p3_hints: Array[AudioStream] = []
 
+
 func _ready() -> void:
 	sb_main = _load_all(SB_MAIN_PATHS)
 	sb_p1_neighbour = _load_all(SB_P1_NEIGHBOUR_PATHS)
 	sp_p1_hints = _load_all(SP_P1_HINTS_PATHS)
 	sp_p2_hints = _load_all(SP_P2_HINTS_PATHS)
 	sp_p3_hints = _load_all(SP_P3_HINTS_PATHS)
+
 
 func _load_all(paths: Array) -> Array[AudioStream]:
 	var out: Array[AudioStream] = []
@@ -83,7 +85,12 @@ func trigger_hint_response() -> void:
 		3: pool = sp_p3_hints
 		_: return
 	if pool.is_empty(): return
-	var s: AudioStream = pool[randi() % pool.size()]
+	
+	var s: AudioStream
+	if current_puzzle == 3:
+		s = third_pool_hint()
+	else:
+		s = pool[randi() % pool.size()]
 	Services.global_audio.stream = s
 	Services.global_audio.play()
  
@@ -114,4 +121,48 @@ func start_puzzle_3() -> void:
 	# TODO Play something happened sound
 	 
 	 
-	 
+func third_pool_hint() -> AudioStream:
+	var floor_2_y = 1.0 # teise korruse poranda korgus
+	var floor_3_y = 8.0 # kolmanda korruse poranda korgus
+	var very_hot_dist = 6.0
+	var hot_dist = 12.0
+	var warm_dist = 25.0
+	var cold_dist = 50.0
+	
+	
+	var current_player_pos = Services.player.global_position
+	var item_pos = Services.special_washing_machine.global_position
+	
+	var current_dist = current_player_pos.distance_to(item_pos)
+	
+	if current_player_pos.y > floor_3_y:
+		#print("Very Cold")
+		return sp_p3_hints[0]
+	elif current_player_pos.y > floor_2_y:
+		if current_dist < warm_dist:
+			#print("Getting Warmer")
+			return sp_p3_hints[2]
+		elif current_dist < cold_dist:
+			#print("Cold")
+			return sp_p3_hints[1]
+		else:
+			#print("Very Cold")
+			return sp_p3_hints[0]
+	else:
+		if current_dist < very_hot_dist:
+			#print("Very hot")
+			return sp_p3_hints[4]
+		elif current_dist < hot_dist:
+			#print("Hot")
+			return sp_p3_hints[3]
+		elif current_dist < warm_dist:
+			#print("Getting Warmer")
+			return sp_p3_hints[2]
+		elif current_dist < cold_dist:
+			#print("Cold")
+			return sp_p3_hints[1]
+		else:
+			#print("Very cold")
+			return sp_p3_hints[0]
+	return sp_p3_hints[0]
+	#return AudioStreamWAV.new()
