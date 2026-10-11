@@ -87,10 +87,6 @@ func trigger_hint_response() -> void:
 	Services.global_audio.stream = s
 	Services.global_audio.play()
  
- 
-func next_puzzle() -> void:
-	current_puzzle += 1
-
 # P1 HINTS TO NOTES 
 func add_door_hint(hint: String) -> void:
 	print("adding hint", hint) 
@@ -108,4 +104,14 @@ func correct_room_found() -> void:
 # P2 START 
 func open_correct_room() -> void:
 	Services.friend_door.can_interact = true
+	current_puzzle = 2 
 	# TODO Play something happened sound
+ 
+# P3 START 
+func start_puzzle_3() -> void:
+	current_puzzle = 3
+	Services.special_washing_machine.can_interact = true
+	# TODO Play something happened sound
+	 
+	 
+	 
