@@ -106,6 +106,7 @@ mesh = SubResource("ArrayMesh_p3qnk")
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 5.6, -1, 4.75)
 hint = "Ta toa numbris ei ole numbrit 7 ega 9"
 number = 101
+npc_index = 1
 
 [node name="Room2" parent="." unique_id=2072915804 instance=ExtResource("9_yet4f")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -19.6, -1, -4.75)
@@ -116,16 +117,19 @@ number = 155
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -34.4, 11, 4.75)
 hint = " kolis lärmist eemale"
 number = 369
+npc_index = 1
 
 [node name="Room4" parent="." unique_id=368561165 instance=ExtResource("9_yet4f")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -14.6, 11, -4.75)
 hint = "Toa viimane number on 3"
 number = 333
+npc_index = 1
 
 [node name="Room5" parent="." unique_id=403945894 instance=ExtResource("9_yet4f")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -4.4, 5, 4.75)
-hint = "Toa keskmine number on suurem kui kahe ülejäänu korrutis"
+hint = "Does not live on floor 1"
 number = 251
+npc_index = 1
 
 [node name="UI" type="CanvasLayer" parent="." unique_id=248393262 node_paths=PackedStringArray("panel", "label", "notes", "labels", "hint_label")]
 script = ExtResource("8_blo7t")
