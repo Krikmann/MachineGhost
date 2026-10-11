@@ -53,9 +53,9 @@ func _ready() -> void:
 	sp_p2_hints = _load_all(SP_P2_HINTS_PATHS)
 	sp_p3_hints = _load_all(SP_P3_HINTS_PATHS)
 	 
-	await get_tree().process_frame 
-	 
-	open_correct_room() 
+	#await get_tree().process_frame 
+	 #
+	#open_correct_room() 
 
 
 func _load_all(paths: Array) -> Array[AudioStream]:
