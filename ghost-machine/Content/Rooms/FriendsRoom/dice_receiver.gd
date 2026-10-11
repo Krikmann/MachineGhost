@@ -11,3 +11,6 @@ func check_item(item: Node) -> void:
 		item.queue_free()
 		print(item.item_name)
 		print("Correct item!")
+
+func is_collected() -> bool:
+	return visible

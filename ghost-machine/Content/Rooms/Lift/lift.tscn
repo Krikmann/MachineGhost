@@ -3,8 +3,6 @@
 [ext_resource type="Script" uid="uid://ct1vfxs4wqg6i" path="res://Content/Rooms/Lift/lift.gd" id="1_oiu5u"]
 [ext_resource type="PackedScene" uid="uid://dbkxhn8xtj3i1" path="res://Content/Rooms/Lift/lift_body.tscn" id="2_gdg3e"]
 [ext_resource type="PackedScene" uid="uid://cci74jciatdpy" path="res://Content/Rooms/Lift/outer_lift_parts.tscn" id="2_x4uxs"]
-[ext_resource type="PackedScene" uid="uid://bf6a4hxdhn6ma" path="res://Objects/Dice/dice.tscn" id="4_gdg3e"]
-[ext_resource type="ArrayMesh" uid="uid://di8rajhap4ww1" path="res://Objects/Dice/secondDice.tres" id="5_xin34"]
 
 [node name="Lift" type="Node3D" unique_id=700625244 node_paths=PackedStringArray("lift_body", "floors")]
 script = ExtResource("1_oiu5u")
@@ -29,11 +27,6 @@ floor_nr = 3
 
 [node name="CallButton" parent="Node3D/Floor3Parts/ButtonLocation" parent_id_path=PackedInt32Array(2503683, 1728680340) index="0" unique_id=1879242147]
 to_floor = 3
-
-[node name="Dice" parent="." unique_id=1668943469 instance=ExtResource("4_gdg3e")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.52994996, 0.5542377, -1.3886095)
-item_name = "Red 2"
-item_mesh = ExtResource("5_xin34")
 
 [connection signal="change_floor" from="LiftBody" to="." method="_on_lift_body_change_floor"]
 [connection signal="call_lift" from="Node3D/Floor1Parts" to="." method="_on_floor_1_parts_call_lift"]

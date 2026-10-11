@@ -1,9 +1,21 @@
 [gd_scene format=3 uid="uid://c2nl407g0akrk"]
 
 [ext_resource type="Script" uid="uid://co15d81b5h520" path="res://Content/Menus/MainMenu/main_menu.gd" id="1_urgqi"]
+[ext_resource type="Texture2D" uid="uid://kly64yanligw" path="res://Content/Menus/EndMenu/IMG_0039.png" id="2_qjtvx"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qjtvx"]
+bg_color = Color(0.003921569, 0.003921569, 0.003921569, 1)
 
 [node name="MainMenu" type="CanvasLayer" unique_id=385488843]
 script = ExtResource("1_urgqi")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=823571515]
+offset_left = -2.0
+offset_top = -62.000004
+offset_right = 3848.0
+offset_bottom = 2364.6665
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("2_qjtvx")
 
 [node name="MarginContainer" type="CenterContainer" parent="." unique_id=2018671471]
 anchors_preset = 15
@@ -18,6 +30,7 @@ theme_override_constants/margin_top = 88
 
 [node name="PanelContainer" type="PanelContainer" parent="MarginContainer/MarginContainer" unique_id=1190985772]
 layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_qjtvx")
 
 [node name="MarginContainer" type="MarginContainer" parent="MarginContainer/MarginContainer/PanelContainer" unique_id=2106273002]
 layout_mode = 2
@@ -54,8 +67,9 @@ grow_horizontal = 2
 
 [node name="Label" type="Label" parent="MarginContainer2" unique_id=651687880]
 layout_mode = 2
+theme_override_colors/font_color = Color(0.9607843, 0.7647059, 0.43529412, 1)
 theme_override_font_sizes/font_size = 64
-text = "VERY AWESOME GAME NAME"
+text = "Student's life"
 
 [connection signal="pressed" from="MarginContainer/MarginContainer/PanelContainer/MarginContainer/VBoxContainer/PlayButton" to="." method="_on_play_button_pressed"]
 [connection signal="pressed" from="MarginContainer/MarginContainer/PanelContainer/MarginContainer/VBoxContainer/QuitButton" to="." method="_on_quit_button_pressed"]

@@ -3,7 +3,8 @@ extends Node3D
 
 @export var can_interact = true
 @export var next_scene: PackedScene
-@export var delay: float = 10.0
+@export var delay: float = 30.0
+@export var object_to_show: Node3D
 
 const Fire_Scene = preload("res://Objects/Fire/Fire.tscn")
 
@@ -14,7 +15,19 @@ func _ready() -> void:
 	pass # Replace with function body.
 
 
+var has := false 
 func interact() -> void:
+	if !has: GameState.trigger_main_sb_response(6) 
+	has = true 
+	var hand = Services.player.hand_slot
+
+	if hand.get_child_count() > 0:
+		var item = hand.get_child(0)
+		hand.remove_child(item)
+
+	if object_to_show:
+		object_to_show.show()
+
 	spawn_fire()
 	
 func spawn_fire() -> void:
