@@ -8,4 +8,4 @@ extends StaticBody3D
 
 func _ready() -> void:
 	door.door_number = number
-	door.set_door_number(number) 
+	door.set_door_number(number)

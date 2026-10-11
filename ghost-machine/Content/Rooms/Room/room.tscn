@@ -18,13 +18,14 @@ tracks/0/keys = PackedFloat32Array(0, 1, 0, 0, 0)
 
 [sub_resource type="Animation" id="Animation_p03ir"]
 resource_name = "new_animation"
+length = 1.0333333
 tracks/0/type = "position_3d"
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/path = NodePath("Npc")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
-tracks/0/keys = PackedFloat32Array(0, 1, -0.665, 0, 0, 1, 1, 1.975, 0, 0)
+tracks/0/keys = PackedFloat32Array(0, 1, -0.665, 0, 0, 1, 1, 1.975, 0, 0.87)
 
 [sub_resource type="Animation" id="Animation_8lvy2"]
 resource_name = "new_animation_2"
