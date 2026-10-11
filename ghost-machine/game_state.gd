@@ -166,3 +166,8 @@ func third_pool_hint() -> AudioStream:
 			return sp_p3_hints[0]
 	return sp_p3_hints[0]
 	#return AudioStreamWAV.new()
+	 
+	 
+func load_dorm() -> void:
+	get_tree().change_scene_to_file("res://Content/main.tscn")
+ 

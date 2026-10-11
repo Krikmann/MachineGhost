@@ -32,9 +32,6 @@ var _last_playing := false
 func _process(_delta: float) -> void:
 	if label.text == "": panel.visible = false
 	else: panel.visible = true 
-	print("Services: ", Services)
-	print("global_audio: ", Services.global_audio if Services else null)
-	print("playing: ", Services.global_audio.playing if Services and Services.global_audio else null)
-	print("hint_label: ", hint_label)
+	 
 	if Services and Services.global_audio and Services.global_audio.playing and hint_label: hint_label.hide()
 	elif hint_label: hint_label.show() 

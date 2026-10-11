@@ -115,9 +115,9 @@ number = 155
 
 [node name="Room3" parent="." unique_id=725028300 instance=ExtResource("9_yet4f")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -34.4, 11, 4.75)
-hint = "Rooms 2nd number > 1st * 3rd"
+hint = "He moved away from noise on floor 3"
 number = 369
-npc_index = 1
+npc_index = 2
 
 [node name="Room4" parent="." unique_id=368561165 instance=ExtResource("9_yet4f")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -14.6, 11, -4.75)
@@ -127,7 +127,7 @@ npc_index = 1
 
 [node name="Room5" parent="." unique_id=403945894 instance=ExtResource("9_yet4f")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -4.4, 5, 4.75)
-hint = "Does not live on floor 1"
+hint = "Rooms 2nd number > 1st * 3rd"
 number = 251
 npc_index = 1
 
