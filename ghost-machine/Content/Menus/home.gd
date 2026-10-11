@@ -20,4 +20,3 @@ func wake_up_player() -> void:
 		tween.tween_property(player, "global_position", cam_path_point.global_position - Vector3(0.0, 2.0, 0.0), camera_point_speeds[i]) 
 	 
 	player.enable_collision()
-	

@@ -1,7 +1,5 @@
 class_name PauseMenu extends CanvasLayer
 
-const MAIN_MENU = preload("uid://c2nl407g0akrk")
-
 @export var root: Control
  
 func _ready() -> void:

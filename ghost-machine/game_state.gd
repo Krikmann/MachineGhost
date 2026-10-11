@@ -113,5 +113,6 @@ func start_puzzle_3() -> void:
 	Services.special_washing_machine.can_interact = true
 	# TODO Play something happened sound
 	 
-	 
+func load_dorm() -> void:
+	get_tree().change_scene_to_file("res://Content/main.tscn")
 	 
