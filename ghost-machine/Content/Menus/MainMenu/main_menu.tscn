@@ -69,8 +69,7 @@ grow_horizontal = 2
 layout_mode = 2
 theme_override_colors/font_color = Color(0.9607843, 0.7647059, 0.43529412, 1)
 theme_override_font_sizes/font_size = 64
-text = "Dormy Radio
-"
+text = "Student's life"
 
 [connection signal="pressed" from="MarginContainer/MarginContainer/PanelContainer/MarginContainer/VBoxContainer/PlayButton" to="." method="_on_play_button_pressed"]
 [connection signal="pressed" from="MarginContainer/MarginContainer/PanelContainer/MarginContainer/VBoxContainer/QuitButton" to="." method="_on_quit_button_pressed"]
