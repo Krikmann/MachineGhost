@@ -15,7 +15,10 @@ func _ready() -> void:
 	pass # Replace with function body.
 
 
+var has := false 
 func interact() -> void:
+	if !has: GameState.trigger_main_sb_response(6) 
+	has = true 
 	var hand = Services.player.hand_slot
 
 	if hand.get_child_count() > 0:

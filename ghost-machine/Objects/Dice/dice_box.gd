@@ -3,13 +3,20 @@ extends StaticBody3D
 var can_pickup: bool = false
 var can_interact: bool = true
 
+var has_interacted := false
+var has_2 := false 
 func interact() -> void:
+	if !has_interacted: GameState.trigger_main_sb_response(3)
+	has_interacted = true 
 	var hand = Services.player.hand_slot
 	if can_pickup:
 		if hand.get_child_count() > 0:
 			print("Your hands are full!")
 			return
 			
+			
+		if !has_2: GameState.trigger_main_sb_response(4)
+		has_2 = true 
 		can_interact = false
 		reparent(hand)
 		transform = Transform3D.IDENTITY

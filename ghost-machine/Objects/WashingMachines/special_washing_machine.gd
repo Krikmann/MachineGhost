@@ -9,8 +9,12 @@ class_name SpecialWashingMachine extends StaticBody3D
 func _ready() -> void:
 	Services.special_washing_machine = self
 
+var has := false 
 func interact() -> void:
 	if !can_interact: return
+	
+	if !has: GameState.trigger_main_sb_response(5)
+	has = true 
 	
 	var player: Player = Services.player 
 	player.disable_collision()
