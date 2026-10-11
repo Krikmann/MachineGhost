@@ -52,6 +52,10 @@ func _ready() -> void:
 	sp_p1_hints = _load_all(SP_P1_HINTS_PATHS)
 	sp_p2_hints = _load_all(SP_P2_HINTS_PATHS)
 	sp_p3_hints = _load_all(SP_P3_HINTS_PATHS)
+	 
+	await get_tree().process_frame 
+	 
+	open_correct_room() 
 
 
 func _load_all(paths: Array) -> Array[AudioStream]:
@@ -97,7 +101,7 @@ func trigger_hint_response() -> void:
 # P1 HINTS TO NOTES 
 func add_door_hint(hint: String) -> void:
 	print("adding hint", hint) 
-	if hint in found_door_hints: 
+	if hint in found_door_hints:
 		print("RETURNING") 
 		return
 	found_door_hints.append(hint)

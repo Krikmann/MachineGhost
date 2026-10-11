@@ -7,6 +7,7 @@ class_name Player extends CharacterBody3D
  
 @export var interact_ray: Interaciton
 @export var hand_slot: Node3D
+@export var sb_slot: Node3D 
 
 @export var footsteps_stream_player: AudioStreamPlayer3D
 @export var footstep_sound_effects: Array[AudioStream] = []

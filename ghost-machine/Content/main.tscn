@@ -13,6 +13,7 @@
 [ext_resource type="PackedScene" uid="uid://hglr4thtvedg" path="res://Content/Rooms/FriendsRoom/friends_room.tscn" id="11_abdvo"]
 [ext_resource type="PackedScene" uid="uid://cok0pgoqasciw" path="res://Content/Rooms/kitchen.tscn" id="12_oxv35"]
 [ext_resource type="PackedScene" uid="uid://2ud1osin2p56" path="res://Content/Rooms/lounge_area.tscn" id="13_ki36l"]
+[ext_resource type="PackedScene" uid="uid://csdx6ivtf8pbs" path="res://Objects/SpiritBox/spiritbox.tscn" id="14_1oc8s"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_u3q0n"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -45,8 +46,9 @@ corner_radius_top_left = 10
 corner_radius_bottom_right = 10
 corner_radius_bottom_left = 50
 
-[node name="Node3D" type="Node3D" unique_id=926375845]
+[node name="Node3D" type="Node3D" unique_id=926375845 node_paths=PackedStringArray("spiritbox")]
 script = ExtResource("1_1oc8s")
+spiritbox = NodePath("Spiritbox")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=480295303]
 transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 0, 0, 0)
@@ -115,7 +117,7 @@ number = 155
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -34.4, 11, 4.75)
 hint = "He moved away from noise on floor 3"
 number = 369
-npc_index = 2
+npc_index = 1
 
 [node name="Room4" parent="." unique_id=368561165 instance=ExtResource("9_yet4f")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -14.6, 11, -4.75)
@@ -264,6 +266,8 @@ transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 14, 
 
 [node name="LoungeArea" parent="." unique_id=1885045552 instance=ExtResource("13_ki36l")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 14, 9.5, 0)
+
+[node name="Spiritbox" parent="." unique_id=675066969 instance=ExtResource("14_1oc8s")]
 
 [editable path="Lift"]
 [editable path="Lift/LiftBody"]

@@ -19,6 +19,8 @@ func _unhandled_input(event: InputEvent) -> void:
 		if not Services.global_audio.playing: speech()
 
 func add_to_hand() -> void:
+	await get_tree().process_frame 
+	await get_tree().process_frame 
 	collision_shape.disabled = true
 	position = Vector3.ZERO
 	rotation = Vector3.ZERO
@@ -26,7 +28,7 @@ func add_to_hand() -> void:
 	position = Vector3(0.7,-0.5,-1)
 	rotation_degrees = Vector3(0, 90, 0)
  
-	reparent(Services.player.hand_slot, false)
+	reparent(Services.player.sb_slot, false)
 
 func speech():
 	print("F")

@@ -20,7 +20,7 @@ shader_parameter/Speed = Vector2(0, 0.03)
 shader_parameter/Num_of_Lines = 120.0
 shader_parameter/Line_Thickness = -10.0
 
-[node name="CharacterBody3D" type="CharacterBody3D" unique_id=1311759364 node_paths=PackedStringArray("collision_shape", "cam", "interact_ray", "hand_slot", "footsteps_stream_player")]
+[node name="CharacterBody3D" type="CharacterBody3D" unique_id=1311759364 node_paths=PackedStringArray("collision_shape", "cam", "interact_ray", "hand_slot", "sb_slot", "footsteps_stream_player")]
 collision_layer = 2
 collision_mask = 65535
 script = ExtResource("1_thq5r")
@@ -28,6 +28,7 @@ collision_shape = NodePath("CollisionShape3D")
 cam = NodePath("Camera3D")
 interact_ray = NodePath("Camera3D/InteractRay")
 hand_slot = NodePath("Camera3D/Slot")
+sb_slot = NodePath("Camera3D/SbSlot")
 footsteps_stream_player = NodePath("FootstepsStreamPlayer")
 footstep_sound_effects = Array[AudioStream]([ExtResource("2_uei5y"), ExtResource("3_2mypc"), ExtResource("4_1q6fh")])
 
@@ -39,6 +40,9 @@ shape = SubResource("CylinderShape3D_8jl1e")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.6470001, 0)
 
 [node name="Slot" type="Node3D" parent="Camera3D" unique_id=92378537]
+
+[node name="SbSlot" type="Node3D" parent="Camera3D" unique_id=1460202888]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.3605163, 0, 0)
 
 [node name="InteractRay" type="RayCast3D" parent="Camera3D" unique_id=362050513]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0)
