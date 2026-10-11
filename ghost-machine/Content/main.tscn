@@ -104,24 +104,24 @@ mesh = SubResource("ArrayMesh_p3qnk")
 
 [node name="Room" parent="." unique_id=1516137746 instance=ExtResource("9_yet4f")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 5.6, -1, 4.75)
-hint = "Ta toa numbris ei ole numbrit 7 ega 9"
+hint = "No 7 or  9 in room number"
 number = 101
 npc_index = 1
 
 [node name="Room2" parent="." unique_id=2072915804 instance=ExtResource("9_yet4f")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -19.6, -1, -4.75)
-hint = "Ei ela esimesel korrusel"
+hint = "Does not live on first floor"
 number = 155
 
 [node name="Room3" parent="." unique_id=725028300 instance=ExtResource("9_yet4f")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -34.4, 11, 4.75)
-hint = " kolis lärmist eemale"
+hint = "Rooms 2nd number > 1st * 3rd"
 number = 369
 npc_index = 1
 
 [node name="Room4" parent="." unique_id=368561165 instance=ExtResource("9_yet4f")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -14.6, 11, -4.75)
-hint = "Toa viimane number on 3"
+hint = "Last number is 3"
 number = 333
 npc_index = 1
 
