@@ -9,7 +9,10 @@ class_name Player extends CharacterBody3D
 @export var hand_slot: Node3D
 
 const SPEED = 5.0
+const SPRINT_SPEED = 15.0
 const JUMP_VELOCITY = 4.5
+
+var current_speed = SPEED
 var held_item: Node3D = null
 
 
@@ -28,6 +31,10 @@ func _unhandled_input(event: InputEvent) -> void:
 		if held_item:
 			if !held_item.audio_player.is_playing():
 				_get_sb_speech()
+	 
+	if event.is_action_pressed("sprint"): current_speed = SPRINT_SPEED
+	if event.is_action_released("sprint"): current_speed = SPEED
+		
 
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
@@ -42,11 +49,11 @@ func _physics_process(delta: float) -> void:
 	var input_dir := Input.get_vector("left", "right", "up", "down")
 	var direction := (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
 	if direction:
-		velocity.x = direction.x * SPEED
-		velocity.z = direction.z * SPEED
+		velocity.x = direction.x * current_speed
+		velocity.z = direction.z * current_speed
 	else:
-		velocity.x = move_toward(velocity.x, 0, SPEED)
-		velocity.z = move_toward(velocity.z, 0, SPEED)
+		velocity.x = move_toward(velocity.x, 0, current_speed)
+		velocity.z = move_toward(velocity.z, 0, current_speed)
 
 	move_and_slide()
 	 

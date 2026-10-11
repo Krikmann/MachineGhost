@@ -12,6 +12,11 @@ func add_door_hint(hint: String) -> void:
 		return
 	found_door_hints.append(hint)
 	door_hint_added.emit(hint)
+	if found_door_hints.size() == 5: open_correct_room()
+
+func open_correct_room() -> void:
+	Services.friend_door.can_interact = true
+	# TODO Play something happened sound
 
 func correct_room_found() -> void: 
 	found_door_hints.clear()
