@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://cj3xql5t24xnd"]
 
-[ext_resource type="Texture2D" uid="uid://kly64yanligw" path="res://Content/Menus/EndMenu/IMG_0039.png" id="1_6x71u"]
 [ext_resource type="Script" uid="uid://5vl3q2tovk2c" path="res://Content/Menus/EndMenu/end_screen.gd" id="1_w7f7i"]
+[ext_resource type="Texture2D" uid="uid://cviaabwmdw8jq" path="res://Content/Menus/EndMenu/IMG_0040.png" id="2_w7f7i"]
 
 [node name="EndScreen" type="CanvasLayer" unique_id=1477646465]
 script = ExtResource("1_w7f7i")
@@ -12,7 +12,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("1_6x71u")
+texture = ExtResource("2_w7f7i")
 expand_mode = 1
 
 [node name="Button" type="Button" parent="." unique_id=821357312]
