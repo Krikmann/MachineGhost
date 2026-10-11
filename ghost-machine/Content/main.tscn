@@ -1,5 +1,6 @@
 [gd_scene format=4 uid="uid://cjmby5iqx70im"]
 
+[ext_resource type="Script" uid="uid://ds84vn8c3ydb4" path="res://Content/main.gd" id="1_1oc8s"]
 [ext_resource type="PackedScene" uid="uid://bdyq3s8it2vn6" path="res://Content/Menus/PauseMenu/pause_menu.tscn" id="1_nf1mn"]
 [ext_resource type="PackedScene" uid="uid://bh0f4pqhqta3q" path="res://Content/Player/player.tscn" id="1_u3q0n"]
 [ext_resource type="PackedScene" uid="uid://dmc5qhj0om5id" path="res://Content/Rooms/i_korrus.tscn" id="3_bwj4m"]
@@ -46,6 +47,7 @@ corner_radius_bottom_right = 10
 corner_radius_bottom_left = 50
 
 [node name="Node3D" type="Node3D" unique_id=926375845]
+script = ExtResource("1_1oc8s")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=480295303]
 transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 0, 0, 0)
@@ -241,9 +243,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 12, 0)
 
 [node name="FriendsRoom" parent="." unique_id=680632543 instance=ExtResource("11_abdvo")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -23.53, 5.5, -5.467)
-
-[node name="CSGBakedCollisionShape3D" parent="FriendsRoom" index="1" unique_id=2077849571]
-debug_color = Color(0, 0.6, 0.69803923, 1)
 
 [node name="Kitchen" parent="." unique_id=1340202450 instance=ExtResource("12_oxv35")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 14, 3.5, 0)
