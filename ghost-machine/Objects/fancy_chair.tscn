@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://c1ql6tr3x7xra"]
+
+[ext_resource type="PackedScene" uid="uid://cqswc5jpl1g3w" path="res://Imported/Fancy_Chair.glb" id="1_0jkb2"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_g4v7s"]
+size = Vector3(1, 0.7416992, 1)
+
+[node name="FancyChair" type="StaticBody3D" unique_id=1252357165]
+
+[node name="Fancy_Chair2" parent="." unique_id=437053861 instance=ExtResource("1_0jkb2")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1675660080]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.19360352, 0)
+shape = SubResource("BoxShape3D_g4v7s")

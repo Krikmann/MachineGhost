@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://bet6ghvos56ba"]
+
+[ext_resource type="PackedScene" uid="uid://q4x44fgfhjf8" path="res://Imported/riidekapp.glb" id="1_4xkga"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_g4v7s"]
+size = Vector3(1.5211182, 5.1410522, 3.9632568)
+
+[node name="Riidekapp" type="StaticBody3D" unique_id=2089631720]
+
+[node name="riidekapp" parent="." unique_id=1636619983 instance=ExtResource("1_4xkga")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1453102344]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.051452637, 0.17837524, -0.0051879883)
+shape = SubResource("BoxShape3D_g4v7s")

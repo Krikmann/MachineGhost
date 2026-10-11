@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://c7utn785pek1o"]
+
+[ext_resource type="PackedScene" uid="uid://xvvw4mjahnav" path="res://Imported/pockertable.glb" id="1_jgbu0"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_g4v7s"]
+radius = 27.17075
+
+[node name="PockerTable" type="StaticBody3D" unique_id=527174554]
+
+[node name="pockertable" parent="." unique_id=1931455244 instance=ExtResource("1_jgbu0")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=616083197]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.1860428, 10.285958, 0)
+shape = SubResource("SphereShape3D_g4v7s")
