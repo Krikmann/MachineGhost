@@ -4,6 +4,7 @@ signal door_hint_added(hint_text: String)
 signal clear_door_hints()  
  
 var found_door_hints: Array[String] = []
+var current_puzzle: int = 0
  
 const SB_MAIN_PATHS := [
 	"res://SPIRITBOX_MAIN/1.mp3",
@@ -69,24 +70,27 @@ func trigger_main_sb_response(i: int) -> void:
 
 # TRIGGER NEIGHBOUR RESPONSE 
 func trigger_p1_neighbour_response(i: int) -> void:
-	if i < 0 or i >= sb_main.size(): return
-	Services.global_audio.stream = sb_main[i]
+	if i < 0 or i >= sb_p1_neighbour.size(): return
+	Services.global_audio.stream = sb_p1_neighbour[i]
 	Services.global_audio.play()
-
+	 
 # TRIGGER HINT RESPONSE 
-func trigger_p1_response(i: int) -> void:
-	if i < 0 or i >= sb_main.size(): return
-	Services.global_audio.stream = sb_main[i]
+func trigger_hint_response() -> void:
+	var pool: Array[AudioStream]
+	match current_puzzle:
+		1: pool = sp_p1_hints
+		2: pool = sp_p2_hints
+		3: pool = sp_p3_hints
+		_: return
+	if pool.is_empty(): return
+	var s: AudioStream = pool[randi() % pool.size()]
+	Services.global_audio.stream = s
 	Services.global_audio.play()
-func trigger_p2_response(i: int) -> void:
-	if i < 0 or i >= sb_main.size(): return
-	Services.global_audio.stream = sb_main[i]
-func trigger_p3_response(i: int) -> void:
-	if i < 0 or i >= sb_main.size(): return
-	Services.global_audio.stream = sb_main[i]
-	Services.global_audio.play()
-	 
-	 
+ 
+ 
+func next_puzzle() -> void:
+	current_puzzle += 1
+
 # P1 HINTS TO NOTES 
 func add_door_hint(hint: String) -> void:
 	print("adding hint", hint) 

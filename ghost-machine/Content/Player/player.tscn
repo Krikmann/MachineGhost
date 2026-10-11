@@ -2,9 +2,13 @@
 
 [ext_resource type="Script" uid="uid://ckbthqwicbxcj" path="res://Content/Player/player.gd" id="1_thq5r"]
 [ext_resource type="Script" uid="uid://docq3td8ackv7" path="res://Content/Player/Interaction.gd" id="2_kbsyd"]
+[ext_resource type="AudioStream" uid="uid://hkxd20a33bqo" path="res://Content/Player/Step_1_v2.mp3" id="2_uei5y"]
+[ext_resource type="AudioStream" uid="uid://cv8sd3xb8acev" path="res://Content/Player/Step_2_v2.mp3" id="3_2mypc"]
 [ext_resource type="Shader" uid="uid://exsoc8831120" path="res://Objects/InteractionSystem/HoverOverlay.tres" id="3_7d8p2"]
 [ext_resource type="PackedScene" uid="uid://cbob4ecemygu5" path="res://Content/Player/hud.tscn" id="3_x8iml"]
+[ext_resource type="AudioStream" uid="uid://dbngnir6kj4jg" path="res://Content/Player/Step_3_v2.mp3" id="4_1q6fh"]
 [ext_resource type="PackedScene" uid="uid://bhaciyh37ex0d" path="res://Content/Player/player_audio.tscn" id="5_rn1qw"]
+[ext_resource type="AudioStream" uid="uid://dgb0bqvv5cdlk" path="res://Content/Player/Ambience_v3 (1).mp3" id="6_68xdw"]
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_8jl1e"]
 
@@ -16,7 +20,7 @@ shader_parameter/Speed = Vector2(0, 0.03)
 shader_parameter/Num_of_Lines = 120.0
 shader_parameter/Line_Thickness = -10.0
 
-[node name="CharacterBody3D" type="CharacterBody3D" unique_id=1311759364 node_paths=PackedStringArray("collision_shape", "cam", "interact_ray", "hand_slot")]
+[node name="CharacterBody3D" type="CharacterBody3D" unique_id=1311759364 node_paths=PackedStringArray("collision_shape", "cam", "interact_ray", "hand_slot", "footsteps_stream_player")]
 collision_layer = 2
 collision_mask = 65535
 script = ExtResource("1_thq5r")
@@ -24,6 +28,8 @@ collision_shape = NodePath("CollisionShape3D")
 cam = NodePath("Camera3D")
 interact_ray = NodePath("Camera3D/InteractRay")
 hand_slot = NodePath("Camera3D/Slot")
+footsteps_stream_player = NodePath("FootstepsStreamPlayer")
+footstep_sound_effects = Array[AudioStream]([ExtResource("2_uei5y"), ExtResource("3_2mypc"), ExtResource("4_1q6fh")])
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=336464480]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
@@ -44,3 +50,12 @@ highlight_material = SubResource("ShaderMaterial_rn1qw")
 [node name="HUD" parent="." unique_id=1781044374 instance=ExtResource("3_x8iml")]
 
 [node name="AudioStreamPlayer" parent="." unique_id=1545460500 instance=ExtResource("5_rn1qw")]
+
+[node name="AmbienceStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1633219667]
+stream = ExtResource("6_68xdw")
+autoplay = true
+parameters/looping = true
+
+[node name="FootstepsStreamPlayer" type="AudioStreamPlayer3D" parent="." unique_id=1383181574]
+max_polyphony = 6
+panning_strength = 0.0
