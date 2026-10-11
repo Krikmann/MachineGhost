@@ -29,3 +29,9 @@ func _on_continue_button_pressed() -> void:
 func _on_quit_button_pressed() -> void:
 	print("QUIT") 
 	get_tree().quit() 
+
+
+func _on_restart_button_pressed() -> void:
+	print("RESTART") 
+	get_tree().reload_current_scene() 
+	 

@@ -55,10 +55,16 @@ layout_mode = 2
 theme_override_font_sizes/font_size = 32
 text = "Continue"
 
+[node name="RestartButton" type="Button" parent="Root/CenterContainer/PanelContainer/MarginContainer/VBoxContainer2/VBoxContainer" unique_id=1956955300]
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "Restart"
+
 [node name="QuitButton" type="Button" parent="Root/CenterContainer/PanelContainer/MarginContainer/VBoxContainer2/VBoxContainer" unique_id=1350976344]
 layout_mode = 2
 theme_override_font_sizes/font_size = 32
 text = "Quit"
 
 [connection signal="pressed" from="Root/CenterContainer/PanelContainer/MarginContainer/VBoxContainer2/VBoxContainer/ContinueButton" to="." method="_on_continue_button_pressed"]
+[connection signal="pressed" from="Root/CenterContainer/PanelContainer/MarginContainer/VBoxContainer2/VBoxContainer/RestartButton" to="." method="_on_restart_button_pressed"]
 [connection signal="pressed" from="Root/CenterContainer/PanelContainer/MarginContainer/VBoxContainer2/VBoxContainer/QuitButton" to="." method="_on_quit_button_pressed"]
