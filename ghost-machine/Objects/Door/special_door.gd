@@ -28,7 +28,10 @@ func interact() -> void:
 	if IsOpen: close_door()
 	else: open_door()
 
+var has_spoke := false 
 func open_door() -> void:
+	GameState.trigger_main_sb_response(2) 
+	has_spoke = true 
 	IsOpen = true
 	var tween = create_tween()
 	tween.set_ease(Tween.EASE_IN)

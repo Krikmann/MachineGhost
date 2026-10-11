@@ -2,6 +2,7 @@ extends StaticBody3D
 
 @export var hint: String
 @export var number: int
+@export var npc_index: int 
 
 @export var door: Door
 

@@ -71,6 +71,7 @@ func _on_area_3d_interacted() -> void:
 func call_neighbour() -> void:
 	var text = get_parent_node_3d().hint
 	if not GameState.found_door_hints.has(text): GameState.add_door_hint(text)
+	GameState.trigger_p1_neighbour_response(get_parent_node_3d().npc_index) 
 	get_parent_node_3d().get_node("AnimationPlayer").play("new_animation")
 	var ui = get_parent_node_3d().get_parent_node_3d().get_node("UI")
 	var panel = ui.get_node("PanelContainer")
@@ -98,7 +99,6 @@ func hide_text() -> void:
 func set_door_number(nr: int) -> void: 
 	door_number = nr 
 	label.text = str(nr) 
-	
 	
 func play_close_door_audio() -> void:
 	close_door_stream_player.play()

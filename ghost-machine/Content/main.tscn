@@ -5,7 +5,6 @@
 [ext_resource type="PackedScene" uid="uid://bh0f4pqhqta3q" path="res://Content/Player/player.tscn" id="1_u3q0n"]
 [ext_resource type="PackedScene" uid="uid://dmc5qhj0om5id" path="res://Content/Rooms/i_korrus.tscn" id="3_bwj4m"]
 [ext_resource type="PackedScene" uid="uid://mfq6th4l64g0" path="res://Content/Rooms/ii_korrus.tscn" id="4_abdvo"]
-[ext_resource type="PackedScene" uid="uid://csdx6ivtf8pbs" path="res://Objects/SpiritBox/spiritbox.tscn" id="4_gpam4"]
 [ext_resource type="PackedScene" uid="uid://2bpyhwiiblkv" path="res://Content/Rooms/Lift/lift.tscn" id="5_r6sel"]
 [ext_resource type="PackedScene" uid="uid://cqon3a8htdjql" path="res://Content/Rooms/pesumaja.tscn" id="7_p3qnk"]
 [ext_resource type="Script" uid="uid://brs6mop14ddta" path="res://Content/ui.gd" id="8_blo7t"]
@@ -14,6 +13,7 @@
 [ext_resource type="PackedScene" uid="uid://hglr4thtvedg" path="res://Content/Rooms/FriendsRoom/friends_room.tscn" id="11_abdvo"]
 [ext_resource type="PackedScene" uid="uid://cok0pgoqasciw" path="res://Content/Rooms/kitchen.tscn" id="12_oxv35"]
 [ext_resource type="PackedScene" uid="uid://2ud1osin2p56" path="res://Content/Rooms/lounge_area.tscn" id="13_ki36l"]
+[ext_resource type="PackedScene" uid="uid://csdx6ivtf8pbs" path="res://Objects/SpiritBox/spiritbox.tscn" id="14_1oc8s"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_u3q0n"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -46,8 +46,9 @@ corner_radius_top_left = 10
 corner_radius_bottom_right = 10
 corner_radius_bottom_left = 50
 
-[node name="Node3D" type="Node3D" unique_id=926375845]
+[node name="Node3D" type="Node3D" unique_id=926375845 node_paths=PackedStringArray("spiritbox")]
 script = ExtResource("1_1oc8s")
+spiritbox = NodePath("Spiritbox")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=480295303]
 transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 0, 0, 0)
@@ -60,9 +61,6 @@ environment = SubResource("Environment_2jbd6")
 
 [node name="CharacterBody3D" parent="." unique_id=1311759364 instance=ExtResource("1_u3q0n")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 10.5, -0.68499994, 0)
-
-[node name="Spiritbox" parent="." unique_id=675066969 instance=ExtResource("4_gpam4")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, -2.5, 0.5)
 
 [node name="Lift" parent="." unique_id=1577381922 instance=ExtResource("5_r6sel")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 11.75, -1, 5)
@@ -106,35 +104,40 @@ mesh = SubResource("ArrayMesh_p3qnk")
 
 [node name="Room" parent="." unique_id=1516137746 instance=ExtResource("9_yet4f")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 5.6, -1, 4.75)
-hint = "Ta toa numbris ei ole numbrit 7 ega 9"
+hint = "No 7 or  9 in room number"
 number = 101
+npc_index = 1
 
 [node name="Room2" parent="." unique_id=2072915804 instance=ExtResource("9_yet4f")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -19.6, -1, -4.75)
-hint = "Ei ela esimesel korrusel"
+hint = "Does not live on first floor"
 number = 155
 
 [node name="Room3" parent="." unique_id=725028300 instance=ExtResource("9_yet4f")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -34.4, 11, 4.75)
-hint = " kolis lärmist eemale"
+hint = "He moved away from noise on floor 3"
 number = 369
+npc_index = 2
 
 [node name="Room4" parent="." unique_id=368561165 instance=ExtResource("9_yet4f")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -14.6, 11, -4.75)
-hint = "Toa viimane number on 3"
+hint = "Last number is 3"
 number = 333
+npc_index = 1
 
 [node name="Room5" parent="." unique_id=403945894 instance=ExtResource("9_yet4f")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -4.4, 5, 4.75)
-hint = "Toa keskmine number on suurem kui kahe ülejäänu korrutis"
+hint = "Rooms 2nd number > 1st * 3rd"
 number = 251
+npc_index = 1
 
-[node name="UI" type="CanvasLayer" parent="." unique_id=248393262 node_paths=PackedStringArray("panel", "label", "notes", "labels")]
+[node name="UI" type="CanvasLayer" parent="." unique_id=248393262 node_paths=PackedStringArray("panel", "label", "notes", "labels", "hint_label")]
 script = ExtResource("8_blo7t")
 panel = NodePath("PanelContainer")
 label = NodePath("PanelContainer/MarginContainer/Label")
 notes = NodePath("Notes")
 labels = [NodePath("Notes/PanelContainer/MarginContainer/VBoxContainer/Label"), NodePath("Notes/PanelContainer/MarginContainer/VBoxContainer/Label2"), NodePath("Notes/PanelContainer/MarginContainer/VBoxContainer/Label3"), NodePath("Notes/PanelContainer/MarginContainer/VBoxContainer/Label4"), NodePath("Notes/PanelContainer/MarginContainer/VBoxContainer/Label5")]
+hint_label = NodePath("PanelContainer2")
 
 [node name="PanelContainer" type="PanelContainer" parent="UI" unique_id=1715858289]
 anchors_preset = 7
@@ -229,6 +232,20 @@ text = "
 horizontal_alignment = 1
 vertical_alignment = 1
 
+[node name="PanelContainer2" type="PanelContainer" parent="UI" unique_id=624245863]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="MarginContainer" type="MarginContainer" parent="UI/PanelContainer2" unique_id=1594700019]
+layout_mode = 2
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_right = 5
+
+[node name="HintLabel" type="Label" parent="UI/PanelContainer2/MarginContainer" unique_id=1922982021]
+layout_mode = 2
+text = "F: Play hint from spiritbox"
+horizontal_alignment = 1
+
 [node name="Pesumaja" parent="." unique_id=576066586 instance=ExtResource("7_p3qnk")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 13.999999, -2.5, 0)
 
@@ -249,6 +266,9 @@ transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 14, 
 
 [node name="LoungeArea" parent="." unique_id=1885045552 instance=ExtResource("13_ki36l")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 14, 9.5, 0)
+
+[node name="Spiritbox" parent="." unique_id=675066969 instance=ExtResource("14_1oc8s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.707343, -1.7434775, 0)
 
 [editable path="Lift"]
 [editable path="Lift/LiftBody"]

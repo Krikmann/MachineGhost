@@ -4,6 +4,7 @@ extends CanvasLayer
 @export var label: Label
 @export var notes: MarginContainer
 @export var labels: Array[Label] = []
+@export var hint_label: PanelContainer
 
 func _ready() -> void:
 	hints_cleared() 
@@ -27,6 +28,10 @@ func hide_notes() -> void: notes.visible = false
 func change_text(text) -> void:
 	label.text = text
  
+var _last_playing := false
 func _process(_delta: float) -> void:
 	if label.text == "": panel.visible = false
 	else: panel.visible = true 
+	 
+	if Services and Services.global_audio and Services.global_audio.playing and hint_label: hint_label.hide()
+	elif hint_label: hint_label.show() 
