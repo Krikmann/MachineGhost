@@ -1,6 +1,5 @@
 [gd_scene format=4 uid="uid://hglr4thtvedg"]
 
-[ext_resource type="PackedScene" uid="uid://cqswc5jpl1g3w" path="res://Imported/Fancy_Chair.glb" id="1_22cbj"]
 [ext_resource type="Script" uid="uid://dd1kidajg8vyg" path="res://Content/Rooms/FriendsRoom/friends_room.gd" id="1_26xqa"]
 [ext_resource type="PackedScene" uid="uid://23nk5b3d3q8i" path="res://Imported/VOODI/VOODI.glb" id="2_fmp0g"]
 [ext_resource type="ArrayMesh" uid="uid://cvqcsmvxbldb5" path="res://Imported/laud.obj" id="3_832nf"]
@@ -14,6 +13,7 @@
 [ext_resource type="ArrayMesh" uid="uid://dgcsx5irrc84f" path="res://Objects/Dice/fourthDice.tres" id="9_trqut"]
 [ext_resource type="ArrayMesh" uid="uid://bnjh0malkrsjq" path="res://Objects/Dice/sixthDice.tres" id="10_26xqa"]
 [ext_resource type="ArrayMesh" uid="uid://b1peqh344ssd3" path="res://Objects/Dice/fifthDice.tres" id="11_unmix"]
+[ext_resource type="PackedScene" uid="uid://c1ql6tr3x7xra" path="res://Objects/fancy_chair.tscn" id="14_26xqa"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gt0d4"]
 albedo_color = Color(0.45319456, 0.20424142, 2.8878452e-07, 1)
@@ -258,9 +258,6 @@ debug_color = Color(0, 0.6, 0.69803923, 1)
 transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 0, 0, 0)
 mesh = SubResource("ArrayMesh_unmix")
 
-[node name="Fancy_Chair3" parent="." unique_id=437053861 instance=ExtResource("1_22cbj")]
-transform = Transform3D(-0.7, 0, -1.0569706e-07, 0, 0.7, 0, 1.0569706e-07, 0, -0.7, 1.2924106, -1.7109913, -3.8970752)
-
 [node name="VOODI" parent="." unique_id=1228970455 instance=ExtResource("2_fmp0g")]
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -1.127367, -2.0059574, -3.1124742)
 
@@ -329,3 +326,6 @@ shape = SubResource("BoxShape3D_g4v7s")
 [node name="OmniLight3D" type="OmniLight3D" parent="." unique_id=1504827985]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, -2.1000001)
 omni_range = 3.7
+
+[node name="FancyChair" parent="." unique_id=1252357165 instance=ExtResource("14_26xqa")]
+transform = Transform3D(-0.7, 0, -6.119594e-08, 0, 0.7, 0, 6.119594e-08, 0, -0.7, 1.292, -1.8750913, -3.897)

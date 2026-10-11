@@ -4,10 +4,10 @@
 [ext_resource type="PackedScene" uid="uid://bf6a4hxdhn6ma" path="res://Objects/Dice/dice.tscn" id="2_uhimc"]
 [ext_resource type="PackedScene" uid="uid://clwrsfox7m64p" path="res://pingPongRackets.glb" id="4_wj3ht"]
 [ext_resource type="Shader" uid="uid://bmw8ihjflsfct" path="res://Content/Rooms/lounge_area.gdshader" id="5_vsmgs"]
-[ext_resource type="PackedScene" uid="uid://cqswc5jpl1g3w" path="res://Imported/Fancy_Chair.glb" id="6_uhimc"]
 [ext_resource type="PackedScene" uid="uid://b2iibt6mt3l6t" path="res://Imported/riiul2.glb" id="7_ugfph"]
 [ext_resource type="ArrayMesh" uid="uid://cf0f5g7wb7a76" path="res://Objects/Dice/thirdDice.tres" id="8_vsmgs"]
-[ext_resource type="PackedScene" uid="uid://q4x44fgfhjf8" path="res://Imported/riidekapp.glb" id="8_wj3ht"]
+[ext_resource type="PackedScene" uid="uid://bet6ghvos56ba" path="res://Objects/riidekapp.tscn" id="9_ad4jp"]
+[ext_resource type="PackedScene" uid="uid://c1ql6tr3x7xra" path="res://Objects/fancy_chair.tscn" id="9_vsmgs"]
 
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_ad4jp"]
 data = PackedVector3Array(-4, -0.5, 0, -1.5015618, 0.0017802715, 0, -4, 3.5, 0, -3.5, 0, 0.5, -3.5, 3, 0.5, -1.5015618, 0.0017802715, 0.5, -4, -0.5, 0, -4, 3.5, 0, -4, -0.5, 5.5, -3.5, 0, 0.5, -3.5, 0, 5, -3.5, 3, 0.5, -4, -0.5, 0, 1.4984382, 0.0017802715, 0, -1.5015618, 0.0017802715, 0, -1.5015618, 0.0017802715, 0.5, -1.5015618, 0.0017802715, 0, 1.4984382, 0.0017802715, 0, -3.5, 0, 0.5, -1.5015618, 0.0017802715, 0.5, 3.5, 0, 0.5, -4, -0.5, 0, -4, -0.5, 5.5, 4, -0.5, 0, -3.5, 0, 0.5, 3.5, 0, 0.5, -3.5, 0, 5, -1.5015618, 0.0017802715, 0.5, -1.5015618, 3, 0.5, -1.5015618, 0.0017802715, 0, -4, 3.5, 0, -1.5015618, 0.0017802715, 0, -1.5015618, 3.0017803, 0, -1.5015618, 0.0017802715, 0.5, -3.5, 3, 0.5, -1.5015618, 3, 0.5, -3.5, 3, 0.5, -1.5015618, 3, 0.7509365, -1.5015618, 3, 0.5, -1.5015618, 3, 0.5, -1.5015618, 3.0017803, 0, -1.5015618, 0.0017802715, 0, -1.5015618, 3, 0.5, -1.5015618, 3.0017803, 0.7509365, -1.5015618, 3.0017803, 0, -1.5015618, 3, 0.5, -1.5015618, 3, 0.7509365, -1.5015618, 3.0017803, 0.7509365, -1.5015618, 3.0017803, 0.7509365, 1.4984382, 3.0017803, 0.7509365, -1.5015618, 3.0017803, 0, -4, 3.5, 0, -1.5015618, 3.0017803, 0, 4, 3.5, 0, -1.5015618, 3.0017803, 0.7509365, -1.5015618, 3, 0.7509365, 1.4984382, 3.0017803, 0.7509365, -3.5, 3, 0.5, 3.5, 3, 5, -1.5015618, 3, 0.7509365, -4, -0.5, 5.5, -4, 3.5, 0, -4, 3.5, 5.5, -3.5, 0, 5, -3.5, 3, 5, -3.5, 3, 0.5, -3.5, 0, 5, 3.5, 3, 5, -3.5, 3, 5, -4, -0.5, 5.5, -4, 3.5, 5.5, 4, 3.5, 5.5, -3.5, 3, 0.5, -3.5, 3, 5, 3.5, 3, 5, -4, 3.5, 0, 4, 3.5, 5.5, -4, 3.5, 5.5, -4, -0.5, 0, 4, -0.5, 0, 1.4984382, 0.0017802715, 0, -1.5015618, 0.0017802715, 0.5, 1.4984382, 0.0017802715, 0, 1.4984382, 0.0017802715, 0.5, -1.5015618, 0.0017802715, 0.5, 1.4984382, 0.0017802715, 0.5, 3.5, 0, 0.5, 1.4984382, 0.0017802715, 0.5, 1.4984382, 0.0017802715, 0, 1.4984382, 3.0017803, 0, 4, -0.5, 0, 1.4984382, 3.0017803, 0, 1.4984382, 0.0017802715, 0, 1.4984382, 0.0017802715, 0.5, 1.4984382, 3, 0.5, 3.5, 0, 0.5, -4, -0.5, 5.5, 4, -0.5, 5.5, 4, -0.5, 0, -3.5, 0, 5, 3.5, 0, 0.5, 3.5, 0, 5, -4, -0.5, 5.5, 4, 3.5, 5.5, 4, -0.5, 5.5, -3.5, 0, 5, 3.5, 0, 5, 3.5, 3, 5, 4, -0.5, 0, 4, -0.5, 5.5, 4, 3.5, 5.5, 3.5, 0, 0.5, 3.5, 3, 5, 3.5, 0, 5, 1.4984382, 0.0017802715, 0.5, 1.4984382, 3.0017803, 0, 1.4984382, 3, 0.5, 1.4984382, 3.0017803, 0.7509365, 1.4984382, 3.0017803, 0, -1.5015618, 3.0017803, 0, -1.5015618, 3, 0.7509365, 1.4984382, 3, 0.7509365, 1.4984382, 3.0017803, 0.7509365, 4, 3.5, 0, -1.5015618, 3.0017803, 0, 1.4984382, 3.0017803, 0, 1.4984382, 3, 0.5, 1.4984382, 3.0017803, 0, 1.4984382, 3.0017803, 0.7509365, 1.4984382, 3, 0.5, 1.4984382, 3.0017803, 0.7509365, 1.4984382, 3, 0.7509365, -4, 3.5, 0, 4, 3.5, 0, 4, 3.5, 5.5, -1.5015618, 3, 0.7509365, 3.5, 3, 5, 1.4984382, 3, 0.7509365, 3.5, 0, 0.5, 1.4984382, 3, 0.5, 3.5, 3, 0.5, 4, -0.5, 0, 4, 3.5, 0, 1.4984382, 3.0017803, 0, 3.5, 0, 0.5, 3.5, 3, 0.5, 3.5, 3, 5, 4, -0.5, 0, 4, 3.5, 5.5, 4, 3.5, 0, 1.4984382, 3, 0.5, 1.4984382, 3, 0.7509365, 3.5, 3, 0.5, 1.4984382, 3, 0.7509365, 3.5, 3, 5, 3.5, 3, 0.5)
@@ -159,21 +159,6 @@ mesh = SubResource("PlaneMesh_g4v7s")
 transform = Transform3D(-0.004187567, -0.09991226, 0, 0.09991227, -0.0041875667, 0, 0, 0, 0.09999997, -0.859208, 1.0545739, 2.6123266)
 mesh = SubResource("SphereMesh_g4v7s")
 
-[node name="Fancy_Chair2" parent="." unique_id=437053861 instance=ExtResource("6_uhimc")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 2.9772966, 0.16987719, 2.710241)
-
-[node name="Fancy_Chair5" parent="." unique_id=148244384 instance=ExtResource("6_uhimc")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.99311, 0.16987719, 2.1560855)
-
-[node name="Fancy_Chair6" parent="." unique_id=726395784 instance=ExtResource("6_uhimc")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.99311, 0.16987719, 1.0065243)
-
-[node name="Fancy_Chair3" parent="." unique_id=153472561 instance=ExtResource("6_uhimc")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 2.9772966, 0.16987719, 1.6319065)
-
-[node name="Fancy_Chair4" parent="." unique_id=950552462 instance=ExtResource("6_uhimc")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 2.9772966, 0.16987719, 3.7753456)
-
 [node name="riiul2" parent="." unique_id=1739395147 instance=ExtResource("7_ugfph")]
 transform = Transform3D(-0.3, 0, -2.6226834e-08, 0, 0.29999998, 0, 2.6226834e-08, 0, -0.3, 3.1858523, 2.0643988, 2.6369898)
 
@@ -195,10 +180,25 @@ material = SubResource("StandardMaterial3D_57qmd")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.41806203, 1.5614237, 4.4646306)
 mesh = SubResource("ArrayMesh_ugfph")
 
-[node name="riidekapp" parent="." unique_id=1636619983 instance=ExtResource("8_wj3ht")]
-transform = Transform3D(-0.5, 0, -4.371139e-08, 0, 0.5, 0, 4.371139e-08, 0, -0.5, -3.1329503, 1.2930102, 3.8868384)
-
 [node name="Dice3" parent="." unique_id=1668943469 instance=ExtResource("2_uhimc")]
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -2.554597, 0.058418483, 2.2806926)
 item_name = "Red 3"
 item_mesh = ExtResource("8_vsmgs")
+
+[node name="FancyChair" parent="." unique_id=1252357165 instance=ExtResource("9_vsmgs")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.993, 0.17, 2.156)
+
+[node name="FancyChair3" parent="." unique_id=1249288748 instance=ExtResource("9_vsmgs")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 2.9106185, 0.17, 1.5132518)
+
+[node name="FancyChair4" parent="." unique_id=1208287565 instance=ExtResource("9_vsmgs")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 2.9106185, 0.17, 2.614012)
+
+[node name="FancyChair5" parent="." unique_id=527499328 instance=ExtResource("9_vsmgs")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 2.9106185, 0.17, 3.6918385)
+
+[node name="FancyChair2" parent="." unique_id=796402485 instance=ExtResource("9_vsmgs")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.993, 0.17, 1.007)
+
+[node name="Riidekapp" parent="." unique_id=2089631720 instance=ExtResource("9_ad4jp")]
+transform = Transform3D(-0.5, 0, 4.371139e-08, 0, 0.5, 0, -4.371139e-08, 0, -0.5, -3.133, 1.293, 3.887)
