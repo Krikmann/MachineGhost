@@ -4,7 +4,7 @@ class_name SpecialWashingMachine extends StaticBody3D
 @export var camera_point_speeds: Array[float] 
 @export var door: MeshInstance3D
 
-@export var can_interact: bool = true
+@export var can_interact: bool = false
  
 func _ready() -> void:
 	Services.special_washing_machine = self

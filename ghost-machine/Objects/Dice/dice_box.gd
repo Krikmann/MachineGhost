@@ -17,6 +17,7 @@ func interact() -> void:
 			
 		if !has_2: GameState.trigger_main_sb_response(4)
 		has_2 = true 
+		GameState.start_puzzle_3() 
 		can_interact = false
 		reparent(hand)
 		transform = Transform3D.IDENTITY
