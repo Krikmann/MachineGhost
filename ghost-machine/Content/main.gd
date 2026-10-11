@@ -1,5 +1,5 @@
 extends Node3D
- 
+
 @export var spiritbox: Spiritbox
  
 func _ready() -> void:
