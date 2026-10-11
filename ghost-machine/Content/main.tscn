@@ -121,7 +121,7 @@ npc_index = 2
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -14.6, 11, -4.75)
 hint = "Last number is 3"
 number = 333
-npc_index = 1
+npc_index = 4
 
 [node name="Room5" parent="." unique_id=403945894 instance=ExtResource("9_yet4f")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -4.4, 5, 4.75)
