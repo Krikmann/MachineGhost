@@ -12,8 +12,8 @@
 [ext_resource type="Script" uid="uid://dud3vukw72y8n" path="res://Objects/Dice/dice_box.gd" id="7_trqut"]
 [ext_resource type="ArrayMesh" uid="uid://cf0f5g7wb7a76" path="res://Objects/Dice/thirdDice.tres" id="8_nxj8a"]
 [ext_resource type="ArrayMesh" uid="uid://dgcsx5irrc84f" path="res://Objects/Dice/fourthDice.tres" id="9_trqut"]
-[ext_resource type="ArrayMesh" uid="uid://bnjh0malkrsjq" path="res://Objects/Dice/fifthDice.tres" id="10_26xqa"]
-[ext_resource type="ArrayMesh" uid="uid://b1peqh344ssd3" path="res://Objects/Dice/sixthDice.tres" id="11_unmix"]
+[ext_resource type="ArrayMesh" uid="uid://bnjh0malkrsjq" path="res://Objects/Dice/sixthDice.tres" id="10_26xqa"]
+[ext_resource type="ArrayMesh" uid="uid://b1peqh344ssd3" path="res://Objects/Dice/fifthDice.tres" id="11_unmix"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gt0d4"]
 albedo_color = Color(0.45319456, 0.20424142, 2.8878452e-07, 1)
@@ -252,6 +252,7 @@ size = Vector3(0.13319702, 0.605, 0.34521484)
 [node name="CSGBakedCollisionShape3D" type="CollisionShape3D" parent="." unique_id=2077849571]
 transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 0, 0, 0)
 shape = SubResource("ConcavePolygonShape3D_26xqa")
+debug_color = Color(0, 0.6, 0.69803923, 1)
 
 [node name="CSGBakedMeshInstance3D" type="MeshInstance3D" parent="." unique_id=1410124484]
 transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 0, 0, 0)
@@ -294,7 +295,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.010354042, 0)
 mesh = SubResource("ArrayMesh_o6jyd")
 
 [node name="Red 2" type="MeshInstance3D" parent="Precious DICE/StaticBody3D" unique_id=425305437]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0052165985, -0.31852007)
+transform = Transform3D(1, 0, 0, 0, 0.9999999, 0, 0, 0, 0.99999994, 0, -0.0052165985, -0.31852007)
 mesh = ExtResource("7_o5ga8")
 script = ExtResource("7_nxj8a")
 CorrectName = "Red 2"
@@ -319,6 +320,7 @@ mesh = ExtResource("10_26xqa")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.2934599, 0.005803108, -0.30186892)
 mesh = ExtResource("11_unmix")
 script = ExtResource("7_nxj8a")
+CorrectName = "Red 5"
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Precious DICE/StaticBody3D" unique_id=1934890291]
 transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 0.13108349, -0.15220785, -0.33252192)
