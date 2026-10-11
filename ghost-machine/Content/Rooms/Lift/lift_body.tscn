@@ -2,6 +2,9 @@
 
 [ext_resource type="Script" uid="uid://t83p0woihnbj" path="res://Content/Rooms/Lift/lift_body.gd" id="1_vose1"]
 [ext_resource type="PackedScene" uid="uid://c73a05jnjnx6w" path="res://Content/Rooms/Lift/lift_button.tscn" id="2_dt8oe"]
+[ext_resource type="AudioStream" uid="uid://cp8l25fgcv816" path="res://Content/Rooms/Lift/Elevator_music_v2.mp3" id="3_dt8oe"]
+[ext_resource type="AudioStream" uid="uid://ccknpkat0ass" path="res://Content/Rooms/Lift/Elevator_closing.mp3" id="4_s4nw8"]
+[ext_resource type="AudioStream" uid="uid://5tj5ffap0rad" path="res://Content/Rooms/Lift/Elevator_Ding_v1.mp3" id="5_bcudb"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vxpo8"]
 albedo_color = Color(0.3349706, 0.3349706, 0.33497056, 1)
@@ -33,8 +36,10 @@ _surfaces = [{
 "vertex_data": PackedByteArray("AADAPgAAAL8AAKC/AADAPgAAAL8AAMC/AADAPgAAAD8AAMC/AADAPgAAAL8AAKC/AACQPwAAAL8AAKC/AADAPgAAAL8AAMC/AACQPwAAAL8AAKC/AACQPwAAAL8AAMC/AADAPgAAAL8AAMC/AADAPgAAAL8AAKC/AACQPwAAAD8AAKC/AACQPwAAAL8AAKC/AACQPwAAAL8AAKC/AACQPwAAAD8AAKC/AACQPwAAAL8AAMC/AADAPgAAAL8AAKC/AADAPgAAAD8AAMC/AADAPgAAAD8AAKC/AADAPgAAAL8AAKC/AADAPgAAAD8AAKC/AACQPwAAAD8AAKC/AADAPgAAAD8AAKC/AADAPgAAAD8AAMC/AACQPwAAAD8AAMC/AADAPgAAAD8AAKC/AACQPwAAAD8AAMC/AACQPwAAAD8AAKC/AACQPwAAAD8AAKC/AACQPwAAAD8AAMC/AACQPwAAAL8AAMC/AAD/f/9//n8AAP9//3/+fwAA/3//f/5//38AAP//AAD/fwAA//8AAP9/AAD//wAA/38AAP//AAD/fwAA//8AAP9/AAD//wAA/3//fwAA/z//f/9/AAD/P/9//38AAP8/////f/9//n////9//3/+f////3//f/5/AAD/f/9//n8AAP9//3/+fwAA/3//f/5//3//fwAA/z//f/9/AAD/P/9//38AAP8//3//////AAD/f/////8AAP9//////wAA/3//////AAD/f/////8AAP9//////wAA////f/9//n////9//3/+f////3//f/5/")
 }]
 
-[node name="LiftBody" type="AnimatableBody3D" unique_id=1428678677]
+[node name="LiftBody" type="AnimatableBody3D" unique_id=1428678677 node_paths=PackedStringArray("move_stream_player", "ding_stream_player")]
 script = ExtResource("1_vose1")
+move_stream_player = NodePath("MoveStreamPlayer")
+ding_stream_player = NodePath("DingStreamPlayer")
 
 [node name="CSGCombiner3D" type="CSGCombiner3D" parent="." unique_id=1081621213]
 visible = false
@@ -75,6 +80,24 @@ to_floor = 2
 [node name="Floor3Button" parent="Buttons" unique_id=1346173358 instance=ExtResource("2_dt8oe")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.3, 0)
 to_floor = 3
+
+[node name="MusciStreamPlayer" type="AudioStreamPlayer3D" parent="." unique_id=2079657594]
+stream = ExtResource("3_dt8oe")
+attenuation_model = 2
+volume_db = 5.543
+autoplay = true
+max_distance = 8.0
+parameters/looping = true
+
+[node name="MoveStreamPlayer" type="AudioStreamPlayer3D" parent="." unique_id=856612750]
+stream = ExtResource("4_s4nw8")
+attenuation_model = 1
+volume_db = 7.39
+max_distance = 7.0
+
+[node name="DingStreamPlayer" type="AudioStreamPlayer3D" parent="." unique_id=931917178]
+stream = ExtResource("5_bcudb")
+attenuation_model = 1
 
 [connection signal="button_pressed" from="Buttons/Floor1Button" to="." method="_on_floor_1_button_button_pressed"]
 [connection signal="button_pressed" from="Buttons/Floor2Button" to="." method="_on_floor_2_button_button_pressed"]

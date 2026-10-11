@@ -1,6 +1,7 @@
 [gd_scene format=4 uid="uid://c73a05jnjnx6w"]
 
 [ext_resource type="Script" uid="uid://war7tk4jlpvk" path="res://Content/Rooms/Lift/lift_button.gd" id="1_pnjas"]
+[ext_resource type="AudioStream" uid="uid://r56j31k46sxc" path="res://Content/Rooms/Lift/Elevator_button_v3.mp3" id="2_lu6jh"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jsvog"]
 albedo_color = Color(1, 0, 0, 1)
@@ -101,11 +102,12 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_0pal6")
 
-[node name="LiftButton" type="StaticBody3D" unique_id=1879242147 node_paths=PackedStringArray("button")]
+[node name="LiftButton" type="StaticBody3D" unique_id=1879242147 node_paths=PackedStringArray("button", "button_stream_player")]
 script = ExtResource("1_pnjas")
 to_floor = 1
 button = NodePath("Terminal2/Button")
 press_cooldown = 1.0
+button_stream_player = NodePath("ButtonStreamPlayer")
 
 [node name="CSGBox3D" type="CSGBox3D" parent="." unique_id=1294860744]
 visible = false
@@ -130,3 +132,8 @@ mesh = SubResource("ArrayMesh_hyqsi")
 [node name="Button frame" type="MeshInstance3D" parent="Terminal2" unique_id=51796501]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
 mesh = SubResource("ArrayMesh_a85wy")
+
+[node name="ButtonStreamPlayer" type="AudioStreamPlayer3D" parent="." unique_id=423520086]
+stream = ExtResource("2_lu6jh")
+attenuation_model = 1
+max_distance = 5.0
