@@ -2,6 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://d13jf0w5k51bx" path="res://Objects/Fire/T_ToonFire.png" id="1_2ugiy"]
 [ext_resource type="Texture2D" uid="uid://x45hfqyd4eef" path="res://Objects/Fire/T_VFX_Glow_1.PNG" id="2_et2jb"]
+[ext_resource type="AudioStream" uid="uid://cv2k8kofey4f4" path="res://Objects/Fire/Suits_v1.mp3" id="3_et2jb"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_i61i2"]
 transparency = 1
@@ -117,4 +118,10 @@ draw_pass_1 = SubResource("QuadMesh_6fxmi")
 
 [node name="OmniLight3D" type="OmniLight3D" parent="." unique_id=1835337603]
 light_color = Color(0.89, 0.351995, 0.062299993, 1)
-light_energy = 1.846
+light_energy = 7.054
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="." unique_id=784245025]
+stream = ExtResource("3_et2jb")
+attenuation_model = 2
+volume_db = -2.704
+autoplay = true

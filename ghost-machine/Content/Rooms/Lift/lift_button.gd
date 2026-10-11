@@ -9,6 +9,8 @@ signal button_pressed(floor)
 @export var button: MeshInstance3D
 @export var press_cooldown: float 
  
+@export var button_stream_player: AudioStreamPlayer3D
+
 var last_press_time: float 
 
 func interact() -> void:
@@ -22,3 +24,5 @@ func interact() -> void:
 	tween.tween_property(button, "position:z", starting_z, 0.4) 
 	
 	button_pressed.emit(to_floor)
+	
+	button_stream_player.play()

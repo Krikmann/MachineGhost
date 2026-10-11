@@ -26,6 +26,8 @@ func change_floor(to_floor: int) -> void:
 	close_doors_on_floor(current_floor)
 	 
 	# Switch floor 
+	
+	lift_body.move_stream_player.play()
 	 
 	var tween := create_tween()
 	tween.set_trans(Tween.TRANS_QUAD).set_ease(Tween.EASE_OUT)
@@ -34,7 +36,8 @@ func change_floor(to_floor: int) -> void:
 	current_floor = to_floor
 	 
 	# Open doors
-	tween.tween_callback(open_doors_on_floor.bind(current_floor)) 
+	tween.tween_callback(open_doors_on_floor.bind(current_floor))
+	tween.tween_callback(lift_body.ding_stream_player.play)
 	var other_floors = [1,2,3]
 	other_floors.erase(current_floor)
 	tween.tween_callback(close_doors_on_floor.bind(other_floors[0])) 
