@@ -7,16 +7,16 @@ class_name SpecialDoor extends StaticBody3D
 @onready var cube_001: MeshInstance3D
  
 @export var DoorAnchor: Node3D
+@export var collision: CollisionShape3D
 @export var label: Label3D
 @export var door_number: int = 283 
- 
 
 @export var OpenRotation: float = 90.0
 @export var Duration: float = 1.0
 
 @export var IsOpen: bool = false
  
-var can_interact: bool = false
+@export var can_interact: bool = false
  
 var ClosedRotation: float = 0.0 
 
@@ -33,11 +33,13 @@ func open_door() -> void:
 	var tween = create_tween()
 	tween.set_ease(Tween.EASE_IN)
 	tween.tween_property( DoorAnchor, "rotation_degrees:y", ClosedRotation + OpenRotation, Duration )
+	collision.disabled = true 
 	
 func close_door() -> void:
 	IsOpen = false
 	var tween = create_tween()
 	tween.tween_property( DoorAnchor, "rotation_degrees:y", ClosedRotation, Duration )
+	collision.disabled = false 
 
 func _on_area_3d_interacted() -> void:
 	interact()

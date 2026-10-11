@@ -14,7 +14,6 @@ func hint_added(hint_text: String) -> void:
 	show_notes() 
 	for l in labels: 
 		if l.text == "":
-			print("SETTING TEXT", hint_text, l) 
 			l.text =  hint_text
 			break 
 
