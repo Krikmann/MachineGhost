@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://cqswc5jpl1g3w" path="res://Imported/Fancy_Chair.glb" id="1_22cbj"]
 [ext_resource type="Script" uid="uid://dd1kidajg8vyg" path="res://Content/Rooms/FriendsRoom/friends_room.gd" id="1_26xqa"]
-[ext_resource type="PackedScene" uid="uid://23nk5b3d3q8i" path="res://Imported/VOODI.glb" id="2_fmp0g"]
+[ext_resource type="PackedScene" uid="uid://23nk5b3d3q8i" path="res://Imported/VOODI/VOODI.glb" id="2_fmp0g"]
 [ext_resource type="ArrayMesh" uid="uid://cvqcsmvxbldb5" path="res://Imported/laud.obj" id="3_832nf"]
 [ext_resource type="PackedScene" uid="uid://sgq05cwxebbj" path="res://Imported/riiul1.glb" id="4_vwwxg"]
 [ext_resource type="PackedScene" uid="uid://dh834irthpgej" path="res://Imported/Basic chair.glb" id="5_eotub"]

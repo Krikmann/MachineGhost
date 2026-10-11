@@ -2,20 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c20q58e4y2fvj"
-path.s3tc="res://.godot/imported/VOODI_Material-Roughness.png-77341764da6332a75c30555e9ab8ff50.s3tc.ctex"
+uid="uid://bwu8x1t3uw3b8"
+path.s3tc="res://.godot/imported/fakeaken_link1.png-67edf2d268d3c53beaabaadf83542346.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
 generator_parameters={
-"md5": "5de75ce0a3899ed76c144d7d7c84003b"
+"md5": "e05106a002a8e5062ea699d8acb32ef4"
 }
 
 [deps]
 
-source_file="res://Imported/VOODI_Material-Roughness.png"
-dest_files=["res://.godot/imported/VOODI_Material-Roughness.png-77341764da6332a75c30555e9ab8ff50.s3tc.ctex"]
+source_file="res://Imported/FakeAken/fakeaken_link1.png"
+dest_files=["res://.godot/imported/fakeaken_link1.png-67edf2d268d3c53beaabaadf83542346.s3tc.ctex"]
 
 [params]
 

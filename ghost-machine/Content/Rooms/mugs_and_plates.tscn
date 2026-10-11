@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://crvmcfbvt84ih"]
+
+[ext_resource type="PackedScene" uid="uid://ds241dr203v1k" path="res://Content/Rooms/mug.tscn" id="1_fu0uh"]
+[ext_resource type="PackedScene" uid="uid://c44s8whnyt4lp" path="res://Content/Rooms/plate.tscn" id="2_cy3pq"]
+[ext_resource type="PackedScene" uid="uid://f21u303vu3lt" path="res://Content/Rooms/plate_001.tscn" id="3_rn470"]
+
+[node name="Mugs and Plates" type="Node3D" unique_id=871993133]
+
+[node name="Mug" parent="." unique_id=1279549111 instance=ExtResource("1_fu0uh")]
+transform = Transform3D(-0.7316378, 0.023903554, 0.6812744, 0.017259438, 0.9997141, -0.016541164, -0.68147504, -0.00034372692, -0.7318413, -0.10237646, -0.0882318, 0.057094097)
+
+[node name="Mug2" parent="." unique_id=1051434256 instance=ExtResource("1_fu0uh")]
+transform = Transform3D(-0.7316378, 0.023903554, 0.6812744, 0.017259438, 0.9997141, -0.016541164, -0.68147504, -0.00034372692, -0.7318413, -0.10237646, -0.0882318, 0.057094097)
+
+[node name="Plate" parent="." unique_id=200556822 instance=ExtResource("2_cy3pq")]
+transform = Transform3D(0.7411108, 0, -0.6713828, 0, 1, 0, 0.6713828, 0, 0.7411108, 0.4668212, -0.0941236, -0.21239996)
+
+[node name="Plate_001" parent="." unique_id=561082935 instance=ExtResource("3_rn470")]
+transform = Transform3D(-0.5334818, 0, 0.8458117, 0, 1, 0, -0.8458117, 0, -0.5334818, 1.9554935, -0.093265414, -0.43939543)

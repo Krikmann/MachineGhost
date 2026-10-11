@@ -4,6 +4,7 @@
 [ext_resource type="Script" uid="uid://docq3td8ackv7" path="res://Content/Player/Interaction.gd" id="2_kbsyd"]
 [ext_resource type="Shader" uid="uid://exsoc8831120" path="res://Objects/InteractionSystem/HoverOverlay.tres" id="3_7d8p2"]
 [ext_resource type="PackedScene" uid="uid://cbob4ecemygu5" path="res://Content/Player/hud.tscn" id="3_x8iml"]
+[ext_resource type="PackedScene" uid="uid://bhaciyh37ex0d" path="res://Content/Player/player_audio.tscn" id="5_rn1qw"]
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_8jl1e"]
 
@@ -41,3 +42,5 @@ script = ExtResource("2_kbsyd")
 highlight_material = SubResource("ShaderMaterial_rn1qw")
 
 [node name="HUD" parent="." unique_id=1781044374 instance=ExtResource("3_x8iml")]
+
+[node name="AudioStreamPlayer" parent="." unique_id=1545460500 instance=ExtResource("5_rn1qw")]

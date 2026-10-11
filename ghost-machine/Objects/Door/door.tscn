@@ -8,17 +8,19 @@
 [sub_resource type="BoxShape3D" id="BoxShape3D_c24xa"]
 size = Vector3(1.7, 3, 0.3)
 
-[node name="Door" type="StaticBody3D" unique_id=1652005241 node_paths=PackedStringArray("DoorAnchor", "label")]
+[node name="Door" type="StaticBody3D" unique_id=1652005241 node_paths=PackedStringArray("DoorAnchor", "label", "audio_stream_player_3d", "close_door_stream_player")]
 script = ExtResource("1_xnqow")
 DoorAnchor = NodePath("DoorAnchor")
 label = NodePath("DoorAnchor/Label3D")
+audio_stream_player_3d = NodePath("AudioStreamPlayer3D")
+close_door_stream_player = NodePath("CloseDoorStreamPlayer")
 
 [node name="DoorAnchor" type="Node3D" parent="." unique_id=1915797231]
 
 [node name="uks" parent="DoorAnchor" unique_id=1350037183 instance=ExtResource("2_yh2pu")]
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0.876, 0, 0)
 
-[node name="Cube_001" parent="DoorAnchor/uks" index="1" unique_id=1634366284]
+[node name="Cube_001" parent="DoorAnchor/uks" index="1" unique_id=422189069]
 layers = 3
 
 [node name="Label3D" type="Label3D" parent="DoorAnchor" unique_id=1058341734]

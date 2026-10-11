@@ -16,9 +16,8 @@ class_name Door extends Node3D
 var ClosedRotation: float = 0.0
  
 var locked: bool  
-
-@onready var audio_stream_player_3d: AudioStreamPlayer3D = $AudioStreamPlayer3D
-@onready var close_door_stream_player: AudioStreamPlayer3D = $CloseDoorStreamPlayer
+@export var audio_stream_player_3d: AudioStreamPlayer3D
+@export var close_door_stream_player: AudioStreamPlayer3D
 
 
 # Called when the node enters the scene tree for the first time.

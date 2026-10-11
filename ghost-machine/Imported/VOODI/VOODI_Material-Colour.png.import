@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://kd6bhrmomxh7"
-path.s3tc="res://.godot/imported/VOODI_Material-Colour.png-3effc570080a667c6f56fdce189e970e.s3tc.ctex"
+path.s3tc="res://.godot/imported/VOODI_Material-Colour.png-f1924a88735f85d4084102d9f584c4a8.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -14,8 +14,8 @@ generator_parameters={
 
 [deps]
 
-source_file="res://Imported/VOODI_Material-Colour.png"
-dest_files=["res://.godot/imported/VOODI_Material-Colour.png-3effc570080a667c6f56fdce189e970e.s3tc.ctex"]
+source_file="res://Imported/VOODI/VOODI_Material-Colour.png"
+dest_files=["res://.godot/imported/VOODI_Material-Colour.png-f1924a88735f85d4084102d9f584c4a8.s3tc.ctex"]
 
 [params]
 

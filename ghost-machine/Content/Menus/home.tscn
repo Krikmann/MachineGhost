@@ -1,0 +1,52 @@
+[gd_scene format=3 uid="uid://bbi2nkgbm4ai"]
+
+[ext_resource type="PackedScene" uid="uid://23nk5b3d3q8i" path="res://Imported/VOODI/VOODI.glb" id="1_4n1c3"]
+[ext_resource type="PackedScene" uid="uid://sgq05cwxebbj" path="res://Imported/riiul1.glb" id="2_mfyx0"]
+[ext_resource type="PackedScene" uid="uid://dh834irthpgej" path="res://Imported/Basic chair.glb" id="3_e1ypc"]
+[ext_resource type="PackedScene" uid="uid://cao0eiv51bi4e" path="res://Objects/Door/special_door.tscn" id="4_f4d4u"]
+[ext_resource type="PackedScene" uid="uid://csdx6ivtf8pbs" path="res://Objects/SpiritBox/spiritbox.tscn" id="5_mfyx0"]
+[ext_resource type="PackedScene" uid="uid://7o6hvelkgjv3" path="res://Imported/FakeAken/fakeaken.glb" id="6_e1ypc"]
+[ext_resource type="PackedScene" uid="uid://b61slk7n2jmnw" path="res://Imported/laud.tscn" id="7_f4d4u"]
+[ext_resource type="PackedScene" uid="uid://bria5lest3m2h" path="res://Imported/FRIDGE.glb" id="8_ktnsg"]
+
+[node name="Home" type="Node3D" unique_id=1666819870]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=1964780740]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
+
+[node name="CSGCombiner3D" type="CSGCombiner3D" parent="StaticBody3D" unique_id=336648988]
+
+[node name="CSGBox3D" type="CSGBox3D" parent="StaticBody3D/CSGCombiner3D" unique_id=1601357659]
+size = Vector3(5, 5, 7)
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="StaticBody3D/CSGCombiner3D/CSGBox3D" unique_id=2057752331]
+operation = 2
+size = Vector3(4, 4, 6)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="." unique_id=1656182633]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.45, 0)
+
+[node name="VOODI" parent="." unique_id=1408664411 instance=ExtResource("1_4n1c3")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -1.2080002, 0, -1.4130001)
+
+[node name="riiul1" parent="." unique_id=668420450 instance=ExtResource("2_mfyx0")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -2.039, 1.5610001, -0.93850005)
+
+[node name="Basic chair" parent="." unique_id=1923811454 instance=ExtResource("3_e1ypc")]
+transform = Transform3D(-0.35355338, 0, 0.35355338, 0, 0.5, 0, -0.35355338, 0, -0.35355338, 1.1767367, 0, -0.6320002)
+
+[node name="SpecialDoor" parent="." unique_id=1652005241 instance=ExtResource("4_f4d4u")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0.8570001, 0, 3.102)
+door_number = 401
+
+[node name="Spiritbox" parent="." unique_id=675066969 instance=ExtResource("5_mfyx0")]
+transform = Transform3D(0.70710677, 0, 0.70710677, 0, 1, 0, -0.70710677, 0, 0.70710677, 0.32622612, 0.998, -1.6600441)
+
+[node name="fakeaken" parent="." unique_id=1197428532 instance=ExtResource("6_e1ypc")]
+transform = Transform3D(-8.742278e-09, 0, -0.2, 0, 0.2, 0, 0.2, 0, -8.742278e-09, 1.297529e-07, 1.2870001, -2.9684002)
+
+[node name="Laud" parent="." unique_id=2037154588 instance=ExtResource("7_f4d4u")]
+transform = Transform3D(-1, 0, -1.509958e-07, 0, 1, 0, 1.509958e-07, 0, -1, 0.67100006, 0, -2.107)
+
+[node name="FRIDGE" parent="." unique_id=509767857 instance=ExtResource("8_ktnsg")]
+transform = Transform3D(-2.1855694e-08, 0, -0.5, 0, 0.5, 0, 0.5, 0, -2.1855694e-08, -1.8360002, 0, 1.984)

@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://23nk5b3d3q8i"
-path="res://.godot/imported/VOODI.glb-f1083080584bd4a268e777794c48ccea.scn"
+uid="uid://7o6hvelkgjv3"
+path="res://.godot/imported/fakeaken.glb-6e330e406d9ec55b316693d6c90645a1.scn"
 
 [deps]
 
-source_file="res://Imported/VOODI.glb"
-dest_files=["res://.godot/imported/VOODI.glb-f1083080584bd4a268e777794c48ccea.scn"]
+source_file="res://Imported/FakeAken/fakeaken.glb"
+dest_files=["res://.godot/imported/fakeaken.glb-6e330e406d9ec55b316693d6c90645a1.scn"]
 
 [params]
 
