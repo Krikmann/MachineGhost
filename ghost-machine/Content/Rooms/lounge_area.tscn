@@ -1,11 +1,11 @@
 [gd_scene format=4 uid="uid://2ud1osin2p56"]
 
-[ext_resource type="ArrayMesh" uid="uid://cvqcsmvxbldb5" path="res://Imported/laud.obj" id="1_ffvln"]
 [ext_resource type="PackedScene" uid="uid://bf6a4hxdhn6ma" path="res://Objects/Dice/dice.tscn" id="2_uhimc"]
 [ext_resource type="PackedScene" uid="uid://clwrsfox7m64p" path="res://pingPongRackets.glb" id="4_wj3ht"]
 [ext_resource type="Shader" uid="uid://bmw8ihjflsfct" path="res://Content/Rooms/lounge_area.gdshader" id="5_vsmgs"]
 [ext_resource type="PackedScene" uid="uid://b2iibt6mt3l6t" path="res://Imported/riiul2.glb" id="7_ugfph"]
 [ext_resource type="ArrayMesh" uid="uid://cf0f5g7wb7a76" path="res://Objects/Dice/thirdDice.tres" id="8_vsmgs"]
+[ext_resource type="PackedScene" uid="uid://b61slk7n2jmnw" path="res://Imported/laud.tscn" id="8_wj3ht"]
 [ext_resource type="PackedScene" uid="uid://bet6ghvos56ba" path="res://Objects/riidekapp.tscn" id="9_ad4jp"]
 [ext_resource type="PackedScene" uid="uid://c1ql6tr3x7xra" path="res://Objects/fancy_chair.tscn" id="9_vsmgs"]
 
@@ -115,10 +115,6 @@ shape = SubResource("ConcavePolygonShape3D_ad4jp")
 [node name="CSGBakedMeshInstance3D" type="MeshInstance3D" parent="." unique_id=642706663]
 mesh = SubResource("ArrayMesh_nlrit")
 
-[node name="Laud" type="MeshInstance3D" parent="." unique_id=322543440]
-transform = Transform3D(-6.556708e-08, 0, 1.2, 0, 1, 0, -1.5, 0, -5.2453668e-08, -0.17708445, 0, 2.6844096)
-mesh = ExtResource("1_ffvln")
-
 [node name="pingPongRackets" parent="." unique_id=1964460265 instance=ExtResource("4_wj3ht")]
 transform = Transform3D(-0.0019904508, -0.068664365, -0.07267213, 0.09990189, -0.0042417743, 0.0012715869, -0.0039557167, -0.07257553, 0.068681434, 0.73108745, 1.1160944, 2.6123266)
 
@@ -202,3 +198,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.993, 0.17, 1.007)
 
 [node name="Riidekapp" parent="." unique_id=2089631720 instance=ExtResource("9_ad4jp")]
 transform = Transform3D(-0.5, 0, 4.371139e-08, 0, 0.5, 0, -4.371139e-08, 0, -0.5, -3.133, 1.293, 3.887)
+
+[node name="StaticBody3D" parent="." unique_id=1173495642 instance=ExtResource("8_wj3ht")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.13593423, 2.3841858e-07, 2.6671126)
