@@ -127,12 +127,13 @@ transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -4.4
 hint = "Toa keskmine number on suurem kui kahe ülejäänu korrutis"
 number = 251
 
-[node name="UI" type="CanvasLayer" parent="." unique_id=248393262 node_paths=PackedStringArray("panel", "label", "notes", "labels")]
+[node name="UI" type="CanvasLayer" parent="." unique_id=248393262 node_paths=PackedStringArray("panel", "label", "notes", "labels", "hint_label")]
 script = ExtResource("8_blo7t")
 panel = NodePath("PanelContainer")
 label = NodePath("PanelContainer/MarginContainer/Label")
 notes = NodePath("Notes")
 labels = [NodePath("Notes/PanelContainer/MarginContainer/VBoxContainer/Label"), NodePath("Notes/PanelContainer/MarginContainer/VBoxContainer/Label2"), NodePath("Notes/PanelContainer/MarginContainer/VBoxContainer/Label3"), NodePath("Notes/PanelContainer/MarginContainer/VBoxContainer/Label4"), NodePath("Notes/PanelContainer/MarginContainer/VBoxContainer/Label5")]
+hint_label = NodePath("PanelContainer2")
 
 [node name="PanelContainer" type="PanelContainer" parent="UI" unique_id=1715858289]
 anchors_preset = 7
@@ -226,6 +227,20 @@ text = "
 "
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="PanelContainer2" type="PanelContainer" parent="UI" unique_id=624245863]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="MarginContainer" type="MarginContainer" parent="UI/PanelContainer2" unique_id=1594700019]
+layout_mode = 2
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_right = 5
+
+[node name="HintLabel" type="Label" parent="UI/PanelContainer2/MarginContainer" unique_id=1922982021]
+layout_mode = 2
+text = "F: Play hint from spiritbox"
+horizontal_alignment = 1
 
 [node name="Pesumaja" parent="." unique_id=576066586 instance=ExtResource("7_p3qnk")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 13.999999, -2.5, 0)

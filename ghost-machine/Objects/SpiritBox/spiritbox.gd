@@ -15,6 +15,8 @@ func change_to_main():
 func _unhandled_input(event: InputEvent) -> void:
 	if event.is_action_pressed("skip"):
 		change_to_main() 
+	if event.is_action_pressed("sb_voice"): 
+		if not Services.global_audio.playing: speech()
 
 func add_to_hand() -> void:
 	collision_shape.disabled = true
@@ -27,4 +29,5 @@ func add_to_hand() -> void:
 	reparent(Services.player.hand_slot, false)
 
 func speech():
-	GameState.play_hint()
+	print("F")
+	GameState.trigger_hint_response()
